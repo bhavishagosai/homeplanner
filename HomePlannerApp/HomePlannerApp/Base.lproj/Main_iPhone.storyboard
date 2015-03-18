@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fKC-PB-RS7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fKC-PB-RS7">
     <dependencies>
         <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
@@ -75,7 +75,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tgP-4h-diY">
                                 <rect key="frame" x="46" y="177" width="229" height="30"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogF-g8-qk4">
                                 <rect key="frame" x="100" y="222" width="121" height="32"/>
@@ -146,7 +146,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="2Bt-EJ-tLl"/>
                     <connections>
-                        <segue destination="ajm-kh-eGq" kind="push" identifier="propertySegue" id="fxa-P5-Z7I"/>
                         <segue destination="CgY-eE-LbO" kind="push" identifier="nearBySegue" id="ZyF-X0-Nd0"/>
                         <segue destination="LKp-RH-90l" kind="push" identifier="postReqSegue" id="qPT-x5-n09"/>
                         <segue destination="HL7-w9-Rab" kind="push" id="nSV-0N-oIg"/>
@@ -155,6 +154,7 @@
                         <segue destination="4Rh-M9-uHg" kind="push" identifier="favouriteSegue" id="pT0-ms-n1t"/>
                         <segue destination="lDj-fb-chJ" kind="push" identifier="messagesSegue" id="ecN-Xp-Og6"/>
                         <segue destination="Kbk-5Z-qQv" kind="push" identifier="vaastuSegue" id="O4V-fm-ic9"/>
+                        <segue destination="Ceb-JT-k3k" kind="push" identifier="propertySegue" id="GfQ-He-1Ax"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xUW-Qg-LWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -164,7 +164,7 @@
         <!--Property Search-->
         <scene sceneID="2vH-0k-iP4">
             <objects>
-                <viewController storyboardIdentifier="appDelegate.selectedTab=0;" id="Ceb-JT-k3k" customClass="HPPropertySearchMainVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="appDelegate.selectedTab=0;" automaticallyAdjustsScrollViewInsets="NO" id="Ceb-JT-k3k" customClass="HPPropertySearchMainVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lxc-yx-lwv"/>
                         <viewControllerLayoutGuide type="bottom" id="yg2-Xq-j1X"/>
@@ -172,13 +172,97 @@
                     <view key="view" contentMode="scaleToFill" id="mk2-ji-gI7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="yH0-YJ-MG3">
+                                <rect key="frame" x="0.0" y="101" width="320" height="467"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="propertyCell" id="KSL-zI-jNA" customClass="HPPropertySearchCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KSL-zI-jNA" id="IKq-EB-zV7">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xXL-sG-iSu">
+                                                    <rect key="frame" x="10" y="5" width="80" height="80"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUv-AR-Nm6">
+                                                    <rect key="frame" x="98" y="4" width="180" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPG-Zi-YqG">
+                                                    <rect key="frame" x="98" y="30" width="190" height="16"/>
+                                                    <fontDescription key="fontDescription" name="Courier-Oblique" family="Courier" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196081399917603" green="0.50196081399917603" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oL-8Y-CvK">
+                                                    <rect key="frame" x="98" y="50" width="214" height="16"/>
+                                                    <fontDescription key="fontDescription" name="Courier-Oblique" family="Courier" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196081399917603" green="0.50196081399917603" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaA-64-3oj">
+                                                    <rect key="frame" x="98" y="70" width="214" height="16"/>
+                                                    <fontDescription key="fontDescription" name="Courier-Oblique" family="Courier" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196081399917603" green="0.50196081399917603" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOW-mH-hcJ">
+                                                    <rect key="frame" x="10" y="97" width="289" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cfr-da-k6G">
+                                                    <rect key="frame" x="280" y="1" width="40" height="40"/>
+                                                    <state key="normal" backgroundImage="btnFav.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="selected" backgroundImage="btnFav_Selected.png"/>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="btnFavourite" destination="Cfr-da-k6G" id="oEp-jY-9sg"/>
+                                            <outlet property="imgProperty" destination="xXL-sG-iSu" id="C77-4Y-VkT"/>
+                                            <outlet property="lblPropLocality" destination="NPG-Zi-YqG" id="S8t-Zb-0Tp"/>
+                                            <outlet property="lblPropertyName" destination="WUv-AR-Nm6" id="cga-vW-Zq1"/>
+                                            <outlet property="lblSize" destination="8oL-8Y-CvK" id="5ZM-iS-424"/>
+                                            <outlet property="lblStatus" destination="oaA-64-3oj" id="zA3-Pf-B1i"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ceb-JT-k3k" id="Yx2-fU-BXu"/>
+                                    <outlet property="delegate" destination="Ceb-JT-k3k" id="HlC-s9-ST3"/>
+                                </connections>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CHc-xK-gzg">
+                                <rect key="frame" x="16" y="72" width="288" height="29"/>
+                                <segments>
+                                    <segment title="Rent"/>
+                                    <segment title="Sale"/>
+                                    <segment title="All"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentFilterValueChanged:" destination="Ceb-JT-k3k" eventType="valueChanged" id="hxN-ol-X0P"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Property Search" id="wIq-aO-HEg"/>
+                    <connections>
+                        <outlet property="segFilter" destination="CHc-xK-gzg" id="frA-va-Zov"/>
+                        <outlet property="tblPropertyList" destination="yH0-YJ-MG3" id="GGs-sS-tXf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gpg-vG-8yW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3292" y="-2290"/>
+            <point key="canvasLocation" x="3292" y="-2301"/>
         </scene>
         <!--Register-->
         <scene sceneID="iqx-m5-mdT">
@@ -445,7 +529,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aB3-eA-vRe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2774" y="-2290"/>
+            <point key="canvasLocation" x="2378" y="-2282"/>
         </scene>
         <!--Near By Search-->
         <scene sceneID="1R9-UE-Rc7">
@@ -668,6 +752,8 @@
     <resources>
         <image name="Home1.PNG" width="256" height="256"/>
         <image name="agent_search_tab_icon.png" width="29" height="29"/>
+        <image name="btnFav.png" width="80" height="80"/>
+        <image name="btnFav_Selected.png" width="80" height="80"/>
         <image name="favourite_tab_icon.png" width="29" height="29"/>
         <image name="messages_tab_icon.png" width="29" height="29"/>
         <image name="nearby_search_tab_icon.png" width="29" height="29"/>
@@ -682,4 +768,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="GfQ-He-1Ax"/>
+    </inferredMetricsTieBreakers>
 </document>

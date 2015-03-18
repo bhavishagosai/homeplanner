@@ -45,9 +45,12 @@
     actLoadingSimple.labelText = @"Login...";
     [actLoadingSimple show:YES];
     [PFUser logInWithUsernameInBackground:self.txtUserName.text password:self.txtPassword.text block:^(PFUser *user, NSError *error) {
+        [actLoadingSimple hide:YES];
         if (!error) {
-            [actLoadingSimple hide:YES];
             [self performSegueWithIdentifier:@"homeSegue" sender:nil];
+        }else{
+            UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"Home Planner" message:@"Username or password may be wrong. Please try again." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
         }
     }];
     

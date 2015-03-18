@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HPPropertySearchCell.h"
 
-@interface HPPropertySearchMainVC : UIViewController
-
+@interface HPPropertySearchMainVC : UIViewController<UITableViewDataSource,UITableViewDelegate>
+{
+    NSMutableArray *mutArrProperty;
+    NSInteger *lastSelectedIndex;
+}
+@property (weak, nonatomic) IBOutlet UITableView *tblPropertyList;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segFilter;
+- (IBAction)segmentFilterValueChanged:(id)sender;
 @end
