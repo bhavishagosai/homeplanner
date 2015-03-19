@@ -85,7 +85,24 @@
         [self performSegueWithIdentifier:@"vaastuSegue" sender:nil];
         
     }];
-    
+    [menuView addMenuItemWithTitle:@"About Us" andIcon:[UIImage imageNamed:@"aboutus_icon.png"] andSelectedBlock:^{
+        NSLog(@"Vaastu selected");
+        appDelegate.selectedTab=8;
+        [self performSegueWithIdentifier:@"vaastuSegue" sender:nil];
+        
+    }];
+    [menuView addMenuItemWithTitle:@"Contact Us" andIcon:[UIImage imageNamed:@"ContactUs.png"] andSelectedBlock:^{
+        NSLog(@"Vaastu selected");
+        appDelegate.selectedTab=8;
+        [self performSegueWithIdentifier:@"vaastuSegue" sender:nil];
+        
+    }];
+    [menuView addMenuItemWithTitle:@"Settings" andIcon:[UIImage imageNamed:@"setting_icon.png"] andSelectedBlock:^{
+        NSLog(@"Vaastu selected");
+        appDelegate.selectedTab=8;
+        [self performSegueWithIdentifier:@"vaastuSegue" sender:nil];
+        
+    }];
     
     
     [menuView show];

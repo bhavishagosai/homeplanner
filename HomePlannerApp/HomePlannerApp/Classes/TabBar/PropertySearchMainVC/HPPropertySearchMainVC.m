@@ -7,6 +7,7 @@
 //
 
 #import "HPPropertySearchMainVC.h"
+#import "HPPropSearchDetailVC.h"
 
 @interface HPPropertySearchMainVC ()
 
@@ -35,6 +36,7 @@
     [dictData setObject:@"home2.jpg" forKey:@"home_image"];
     [dictData setObject:@"NO" forKey:@"home_favourite"];
     [mutArrProperty addObject:dictData];
+    
     
     dictData = [[NSMutableDictionary alloc] init];
     [dictData setObject:@"Good Surrounding flat" forKey:@"home_title"];
@@ -117,16 +119,21 @@
         [aPropertyCell.btnFavourite addTarget:self action:@selector(btnFavouriteClick:) forControlEvents:UIControlEventTouchUpInside];
         [aPropertyCell.btnFavourite setTag:indexPath.row];
         
-        
+
     }
     
     return aPropertyCell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    HPPropSearchDetailVC *objHPPropSearchDetailVC = [self.storyboard instantiateViewControllerWithIdentifier:@"HPPropSearchDetailVC"];
+    [self.navigationController pushViewController:objHPPropSearchDetailVC animated:YES];
+}
+
 #pragma mark Button Actions
 
 -(IBAction)btnFavouriteClick:(UIButton*)sender{
-    
+
     if (sender.selected) {
         [[mutArrProperty objectAtIndex:sender.tag] setObject:@"NO" forKey:@"home_favourite"];
         sender.selected=NO;
