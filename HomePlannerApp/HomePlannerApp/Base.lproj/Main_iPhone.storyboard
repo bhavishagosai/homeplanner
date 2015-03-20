@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fKC-PB-RS7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fKC-PB-RS7">
     <dependencies>
         <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
@@ -146,7 +146,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="2Bt-EJ-tLl"/>
                     <connections>
-                        <segue destination="CgY-eE-LbO" kind="push" identifier="nearBySegue" id="ZyF-X0-Nd0"/>
                         <segue destination="LKp-RH-90l" kind="push" identifier="postReqSegue" id="qPT-x5-n09"/>
                         <segue destination="HL7-w9-Rab" kind="push" id="nSV-0N-oIg"/>
                         <segue destination="KkN-MI-NtT" kind="push" id="Jao-oA-tis"/>
@@ -155,6 +154,7 @@
                         <segue destination="lDj-fb-chJ" kind="push" identifier="messagesSegue" id="ecN-Xp-Og6"/>
                         <segue destination="Kbk-5Z-qQv" kind="push" identifier="vaastuSegue" id="O4V-fm-ic9"/>
                         <segue destination="Ceb-JT-k3k" kind="push" identifier="propertySegue" id="GfQ-He-1Ax"/>
+                        <segue destination="g8U-R7-FAz" kind="push" identifier="nearBySegue" id="uny-c5-Aew"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xUW-Qg-LWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -633,7 +633,7 @@
         <!--Near By Search-->
         <scene sceneID="Fqq-JY-3Id">
             <objects>
-                <viewController id="g8U-R7-FAz" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HPNearBySearchMainVC" id="g8U-R7-FAz" customClass="HPNearBySearchMainVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lSx-Yc-c7F"/>
                         <viewControllerLayoutGuide type="bottom" id="P76-Ae-bOR"/>
@@ -641,13 +641,64 @@
                     <view key="view" contentMode="scaleToFill" id="lN1-gl-RSw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="53r-XU-d4C">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="g8U-R7-FAz" id="acX-wH-opP"/>
+                                </connections>
+                            </searchBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fWh-fg-Xri">
+                                <rect key="frame" x="0.0" y="108" width="320" height="460"/>
+                                <connections>
+                                    <outlet property="delegate" destination="g8U-R7-FAz" id="kwY-ST-D6k"/>
+                                </connections>
+                            </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="r2s-wF-qZQ">
+                                <rect key="frame" x="54" y="119" width="213" height="29"/>
+                                <segments>
+                                    <segment title="Normal"/>
+                                    <segment title="Satellite"/>
+                                    <segment title="Hybrid"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segMapTypeValueChanged:" destination="g8U-R7-FAz" eventType="valueChanged" id="zEp-Ff-IaH"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Near By Search" id="IWb-wl-Lz1"/>
+                    <connections>
+                        <outlet property="mapViewNearBy" destination="fWh-fg-Xri" id="TcJ-Yh-jjK"/>
+                        <outlet property="searchbar" destination="53r-XU-d4C" id="RRP-ct-mjj"/>
+                        <outlet property="segMapType" destination="r2s-wF-qZQ" id="hYz-Xj-Nc7"/>
+                        <segue destination="eyS-Hu-Tcv" kind="push" identifier="nearByDetailSegue" id="7Of-fF-Z3C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P4H-AN-6IP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3276" y="-1544"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cSY-gI-Ypg">
+            <objects>
+                <viewController id="eyS-Hu-Tcv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TgT-wf-CjE"/>
+                        <viewControllerLayoutGuide type="bottom" id="IEO-L6-mf8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YFc-0t-KWg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jy3-2U-PkN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NKS-iA-e6J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3672" y="-1544"/>
         </scene>
         <!--Post Requirement-->
         <scene sceneID="eYG-Wf-Blp">
@@ -984,5 +1035,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="GfQ-He-1Ax"/>
+        <segue reference="uny-c5-Aew"/>
     </inferredMetricsTieBreakers>
 </document>

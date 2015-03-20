@@ -16,6 +16,7 @@
 #import "HPAppDelegate.h"
 #import <Parse/Parse.h>
 #import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 #import "MBProgressHUD.h"
 #import "iCarousel.h"
 #endif

@@ -26,9 +26,9 @@
 #import "CHTumblrMenuView.h"
 #define CHTumblrMenuViewTag 1999
 #define CHTumblrMenuViewImageHeight 80
-#define CHTumblrMenuViewTitleHeight 50
-#define CHTumblrMenuViewVerticalPadding 10
-#define CHTumblrMenuViewHorizontalMargin 10
+#define CHTumblrMenuViewTitleHeight 32
+#define CHTumblrMenuViewVerticalPadding 5
+#define CHTumblrMenuViewHorizontalMargin 5
 #define CHTumblrMenuViewRriseAnimationID @"CHTumblrMenuViewRriseAnimationID"
 #define CHTumblrMenuViewDismissAnimationID @"CHTumblrMenuViewDismissAnimationID"
 #define CHTumblrMenuViewAnimationTime 0.36
@@ -53,7 +53,7 @@
     button.titleLabel.numberOfLines =0;
     button.titleLabel.font = [UIFont fontWithName:@"Courier-Bold" size:12.0];
     button.titleLabel.textAlignment = NSTextAlignmentCenter;
-    
+
     button.selectedBlock = block;
  
     return button;

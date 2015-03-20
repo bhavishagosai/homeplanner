@@ -30,6 +30,7 @@
     [defaultACL setPublicReadAccess:YES];
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
     
+    
     return YES;
 }
 							
@@ -58,6 +59,18 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark CLLocationManagerDelegate 
+
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation{
+    
+}
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWithError:(NSError *)error{
+    
 }
 
 @end

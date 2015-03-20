@@ -40,7 +40,6 @@
     }];
     [menuView addMenuItemWithTitle:@"Near By Search" andIcon:[UIImage imageNamed:@"nearby_icon.png"] andSelectedBlock:^{
         NSLog(@"Near By Search selected");
-        appDelegate.selectedTab=1;
         [self performSegueWithIdentifier:@"nearBySegue" sender:nil];
     }];
     [menuView addMenuItemWithTitle:@"Post Requirement" andIcon:[UIImage imageNamed:@"post_req_icon.png"] andSelectedBlock:^{
