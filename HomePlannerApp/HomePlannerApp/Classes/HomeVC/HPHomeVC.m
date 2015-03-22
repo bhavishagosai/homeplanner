@@ -51,7 +51,7 @@
     [menuView addMenuItemWithTitle:@"Agent Search" andIcon:[UIImage imageNamed:@"agent_search_icon.png"] andSelectedBlock:^{
         NSLog(@"Agent Search selected");
         appDelegate.selectedTab=3;
-        [self performSegueWithIdentifier:@"agentSegue" sender:nil];
+        [self performSegueWithIdentifier:@"agentMainSegue" sender:nil];
         
     }];
     [menuView addMenuItemWithTitle:@"Project Search" andIcon:[UIImage imageNamed:@"project_search_icon.png"] andSelectedBlock:^{
@@ -75,7 +75,7 @@
     [menuView addMenuItemWithTitle:@"Messages" andIcon:[UIImage imageNamed:@"messages_icon.png"] andSelectedBlock:^{
         NSLog(@"Messages selected");
         appDelegate.selectedTab=7;
-        [self performSegueWithIdentifier:@"messageSegue" sender:nil];
+        [self performSegueWithIdentifier:@"messagesSegue" sender:nil];
         
     }];
     [menuView addMenuItemWithTitle:@"Vaastu" andIcon:[UIImage imageNamed:@"vaastu_icon.png"] andSelectedBlock:^{
@@ -85,21 +85,20 @@
         
     }];
     [menuView addMenuItemWithTitle:@"About Us" andIcon:[UIImage imageNamed:@"aboutus_icon.png"] andSelectedBlock:^{
-        NSLog(@"Vaastu selected");
-        appDelegate.selectedTab=8;
-        [self performSegueWithIdentifier:@"vaastuSegue" sender:nil];
+        NSLog(@"About Us selected");
+        [self performSegueWithIdentifier:@"aboutusSegue" sender:nil];
         
     }];
     [menuView addMenuItemWithTitle:@"Contact Us" andIcon:[UIImage imageNamed:@"ContactUs.png"] andSelectedBlock:^{
         NSLog(@"Vaastu selected");
         appDelegate.selectedTab=8;
-        [self performSegueWithIdentifier:@"vaastuSegue" sender:nil];
+        [self performSegueWithIdentifier:@"contactusSegue" sender:nil];
         
     }];
     [menuView addMenuItemWithTitle:@"Settings" andIcon:[UIImage imageNamed:@"setting_icon.png"] andSelectedBlock:^{
         NSLog(@"Vaastu selected");
         appDelegate.selectedTab=8;
-        [self performSegueWithIdentifier:@"vaastuSegue" sender:nil];
+        [self performSegueWithIdentifier:@"settingsSegue" sender:nil];
         
     }];
     

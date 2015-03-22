@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HPMessagesMainVC : UIViewController
+@interface HPMessagesMainVC : UIViewController<UITableViewDataSource,UITableViewDelegate>{
+    NSMutableArray *mutArrMessages;
+}
 
 @end

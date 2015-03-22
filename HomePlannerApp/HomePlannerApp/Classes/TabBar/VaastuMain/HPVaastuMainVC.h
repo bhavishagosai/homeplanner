@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HPVaastuMainVC : UIViewController
+@interface HPVaastuMainVC : UIViewController<UITableViewDataSource,UITableViewDelegate>{
+    NSMutableArray *mutArrVaastuMenu;
+}
 
 @end

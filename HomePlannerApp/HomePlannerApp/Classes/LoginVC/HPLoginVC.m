@@ -18,7 +18,17 @@
     [super viewDidLoad];
     self.navigationController.navigationBarHidden=NO;
     self.navigationItem.hidesBackButton=YES;
-    self.navigationController.navigationBar.barTintColor=[UIColor colorWithRed:0/255.0 green:204/255.0 blue:255/255.0 alpha:1.0];
+    self.navigationController.navigationBar.barTintColor=[UIColor colorWithRed:237/255.0 green:71/255.0 blue:99/255.0 alpha:1.0];
+    
+    UINavigationBar *navBar = self.navigationController.navigationBar;
+    UIImage *image = [UIImage imageNamed:@"navigationBar.png"];
+    [navBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+    
+    self.btnSignIn.layer.cornerRadius = 5;
+    self.btnSignIn.layer.masksToBounds=YES;
+    
+    self.btnSignUp.layer.cornerRadius = 5;
+    self.btnSignUp.layer.masksToBounds=YES;
     // Do any additional setup after loading the view.
 }
 

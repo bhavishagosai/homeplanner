@@ -7,6 +7,7 @@
 //
 
 #import "HPAgentSearchMainVC.h"
+#import "HPAgentCell.h"
 
 @interface HPAgentSearchMainVC ()
 
@@ -16,6 +17,38 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSMutableDictionary *dictMenu = [[NSMutableDictionary alloc]init];
+    [dictMenu setObject:@"Dhanesh gosai" forKeyedSubscript:@"agent_name"];
+    [dictMenu setObject:@"sender" forKeyedSubscript:@"chat_type"];
+    [dictMenu setObject:@"dhanesh.png" forKeyedSubscript:@"agent_image"];
+    
+    NSMutableDictionary *dictMenu1 = [[NSMutableDictionary alloc]init];
+    [dictMenu1 setObject:@"bhavisha" forKeyedSubscript:@"agent_name"];
+    [dictMenu1 setObject:@"sender" forKeyedSubscript:@"chat_type"];
+    [dictMenu1 setObject:@"bhavisha.png" forKeyedSubscript:@"agent_image"];
+    
+    NSMutableDictionary *dictMenu2 = [[NSMutableDictionary alloc]init];
+    [dictMenu2 setObject:@"Dhanesh gosai" forKeyedSubscript:@"agent_name"];
+    [dictMenu2 setObject:@"sender" forKeyedSubscript:@"chat_type"];
+    [dictMenu2 setObject:@"dhanesh.png" forKeyedSubscript:@"agent_image"];
+    
+    NSMutableDictionary *dictMenu3 = [[NSMutableDictionary alloc]init];
+    [dictMenu3 setObject:@"bhavisha" forKeyedSubscript:@"agent_name"];
+    [dictMenu3 setObject:@"sender" forKeyedSubscript:@"chat_type"];
+    [dictMenu3 setObject:@"bhavisha.png" forKeyedSubscript:@"agent_image"];
+    
+    NSMutableDictionary *dictMenu4 = [[NSMutableDictionary alloc]init];
+    [dictMenu4 setObject:@"Dhanesh gosai" forKeyedSubscript:@"agent_name"];
+    [dictMenu4 setObject:@"sender" forKeyedSubscript:@"chat_type"];
+    [dictMenu4 setObject:@"dhanesh.png" forKeyedSubscript:@"agent_image"];
+    
+    NSMutableDictionary *dictMenu5 = [[NSMutableDictionary alloc]init];
+    [dictMenu5 setObject:@"bhavisha" forKeyedSubscript:@"agent_name"];
+    [dictMenu5 setObject:@"sender" forKeyedSubscript:@"chat_type"];
+    [dictMenu5 setObject:@"bhavisha.png" forKeyedSubscript:@"agent_image"];
+    
+    mutArrAgent     = [[NSMutableArray alloc]initWithObjects:dictMenu,dictMenu1,dictMenu2,dictMenu3,dictMenu4,dictMenu5, nil];
     // Do any additional setup after loading the view.
 }
 
@@ -33,5 +66,48 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma UITableViewDataSource Methods
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return mutArrAgent.count;
+}
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if ([tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        [tableView setSeparatorInset:UIEdgeInsetsZero];
+    }
+    
+    if ([tableView respondsToSelector:@selector(setLayoutMargins:)]) {
+        [tableView setLayoutMargins:UIEdgeInsetsZero];
+    }
+    
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        [cell setLayoutMargins:UIEdgeInsetsZero];
+    }
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    HPAgentCell *aHPAgentCell= (HPAgentCell*)[tableView dequeueReusableCellWithIdentifier:@"agentCell"];
+    
+    if (aHPAgentCell) {
+        aHPAgentCell.lblName.text = [[mutArrAgent  objectAtIndex:indexPath.row]objectForKey:@"agent_name"];
+        aHPAgentCell.lblSubTitle.text = [[mutArrAgent objectAtIndex:indexPath.row]objectForKey:@"chat_message"];
+        aHPAgentCell.imgAgent.layer.cornerRadius = aHPAgentCell.imgAgent.frame.size.width/2;
+        aHPAgentCell.imgAgent.layer.borderColor = [UIColor whiteColor].CGColor;
+        aHPAgentCell.imgAgent.layer.borderWidth = 1;
+        aHPAgentCell.imgAgent.layer.masksToBounds=YES;
+        aHPAgentCell.imgAgent.image = [UIImage imageNamed:[[mutArrAgent objectAtIndex:indexPath.row]objectForKey:@"agent_image"]];
+    }
+    
+    return aHPAgentCell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
+
 
 @end

@@ -7,6 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B801D2621ABEE86000B29FB1 /* HPAboutusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B801D2611ABEE86000B29FB1 /* HPAboutusVC.m */; };
+		B801D2661ABEE87D00B29FB1 /* HPContactusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B801D2651ABEE87D00B29FB1 /* HPContactusVC.m */; };
+		B801D26A1ABEE8A400B29FB1 /* HPSettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B801D2691ABEE8A400B29FB1 /* HPSettingsVC.m */; };
+		B801D26C1ABEEAD000B29FB1 /* whatsapp-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B801D26B1ABEEAD000B29FB1 /* whatsapp-icon.png */; };
+		B801D26E1ABEEAD700B29FB1 /* facebook-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B801D26D1ABEEAD700B29FB1 /* facebook-icon.png */; };
+		B801D2701ABEEADD00B29FB1 /* twitter-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B801D26F1ABEEADD00B29FB1 /* twitter-icon.png */; };
+		B801D2721ABEF31E00B29FB1 /* navigationBar.png in Resources */ = {isa = PBXBuildFile; fileRef = B801D2711ABEF31E00B29FB1 /* navigationBar.png */; };
+		B801D2751ABEF6C100B29FB1 /* HPSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B801D2741ABEF6C100B29FB1 /* HPSettingCell.m */; };
+		B801D2771ABEF83D00B29FB1 /* arrow-right.png in Resources */ = {isa = PBXBuildFile; fileRef = B801D2761ABEF83D00B29FB1 /* arrow-right.png */; };
+		B801D27C1ABEFD3B00B29FB1 /* HPFAQVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B801D27B1ABEFD3B00B29FB1 /* HPFAQVC.m */; };
+		B801D27F1ABEFD4C00B29FB1 /* HPHelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B801D27E1ABEFD4C00B29FB1 /* HPHelpVC.m */; };
+		B801D2821ABF108600B29FB1 /* HPVaastuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B801D2811ABF108600B29FB1 /* HPVaastuCell.m */; };
+		B801D2891ABF2EFA00B29FB1 /* Colour therapy at home.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B801D2831ABF2EFA00B29FB1 /* Colour therapy at home.jpg */; };
+		B801D28A1ABF2EFA00B29FB1 /* Colour therapy in your home.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B801D2841ABF2EFA00B29FB1 /* Colour therapy in your home.jpg */; };
+		B801D28B1ABF2EFA00B29FB1 /* The Midas Touch Lakshmi and Kuber.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B801D2851ABF2EFA00B29FB1 /* The Midas Touch Lakshmi and Kuber.jpg */; };
+		B801D28C1ABF2EFA00B29FB1 /* Vaastu principles for a well.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B801D2861ABF2EFA00B29FB1 /* Vaastu principles for a well.jpg */; };
+		B801D28D1ABF2EFA00B29FB1 /* Vaastu principles governing a site.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B801D2871ABF2EFA00B29FB1 /* Vaastu principles governing a site.jpg */; };
+		B801D28E1ABF2EFA00B29FB1 /* Vastu tips for the interiors.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B801D2881ABF2EFA00B29FB1 /* Vastu tips for the interiors.jpg */; };
+		B801D2911ABF33B100B29FB1 /* HPVaastuDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B801D2901ABF33B100B29FB1 /* HPVaastuDetailVC.m */; };
+		B801D29A1ABF351000B29FB1 /* Colour therapy at home.html in Resources */ = {isa = PBXBuildFile; fileRef = B801D2941ABF351000B29FB1 /* Colour therapy at home.html */; };
+		B801D29B1ABF351000B29FB1 /* Colour therapy in your home.html in Resources */ = {isa = PBXBuildFile; fileRef = B801D2951ABF351000B29FB1 /* Colour therapy in your home.html */; };
+		B801D29C1ABF351000B29FB1 /* The Midas Touch - Lakshmi and Kuber.html in Resources */ = {isa = PBXBuildFile; fileRef = B801D2961ABF351000B29FB1 /* The Midas Touch - Lakshmi and Kuber.html */; };
+		B801D29D1ABF351000B29FB1 /* Vaastu principles for a well.html in Resources */ = {isa = PBXBuildFile; fileRef = B801D2971ABF351000B29FB1 /* Vaastu principles for a well.html */; };
+		B801D29E1ABF351000B29FB1 /* Vaastu principles governing a site.html in Resources */ = {isa = PBXBuildFile; fileRef = B801D2981ABF351000B29FB1 /* Vaastu principles governing a site.html */; };
+		B801D29F1ABF351000B29FB1 /* Vastu tips for the interiors.html in Resources */ = {isa = PBXBuildFile; fileRef = B801D2991ABF351000B29FB1 /* Vastu tips for the interiors.html */; };
+		B801D2A21ABF3E4100B29FB1 /* HPMessagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B801D2A11ABF3E4100B29FB1 /* HPMessagesCell.m */; };
+		B801D2A51ABF433F00B29FB1 /* bhavisha.png in Resources */ = {isa = PBXBuildFile; fileRef = B801D2A31ABF433F00B29FB1 /* bhavisha.png */; };
+		B801D2A61ABF433F00B29FB1 /* dhanesh.png in Resources */ = {isa = PBXBuildFile; fileRef = B801D2A41ABF433F00B29FB1 /* dhanesh.png */; };
+		B801D2A91ABF495200B29FB1 /* HPAgentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B801D2A81ABF495200B29FB1 /* HPAgentCell.m */; };
 		B81621C61AB4A85C00161525 /* agent_search_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B81621BC1AB4A85C00161525 /* agent_search_icon.png */; };
 		B81621C71AB4A85C00161525 /* favourite_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B81621BD1AB4A85C00161525 /* favourite_icon.png */; };
 		B81621C81AB4A85C00161525 /* messages_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B81621BE1AB4A85C00161525 /* messages_icon.png */; };
@@ -71,6 +100,7 @@
 		B89A58341ABB5643008B1E24 /* prop5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B89A582F1ABB5643008B1E24 /* prop5.jpg */; };
 		B89E6FFF1AB89FBB00E218D8 /* bhavisha.png in Resources */ = {isa = PBXBuildFile; fileRef = B89E6FFE1AB89FBB00E218D8 /* bhavisha.png */; };
 		B89E70031AB8AA9100E218D8 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B89E70021AB8AA9100E218D8 /* MBProgressHUD.m */; };
+		B8A02A1B1ABE011A00C89967 /* aboutUs_back.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A02A1A1ABE011A00C89967 /* aboutUs_back.png */; };
 		B8C88A6E1AB74B3F00E7558C /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C88A6C1AB74B3F00E7558C /* FacebookSDK.framework */; };
 		B8C88A6F1AB74B3F00E7558C /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C88A6D1AB74B3F00E7558C /* Parse.framework */; };
 		B8C88A711AB751A100E7558C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8C88A701AB751A100E7558C /* CFNetwork.framework */; };
@@ -110,6 +140,45 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B801D2601ABEE86000B29FB1 /* HPAboutusVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPAboutusVC.h; sourceTree = "<group>"; };
+		B801D2611ABEE86000B29FB1 /* HPAboutusVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPAboutusVC.m; sourceTree = "<group>"; };
+		B801D2641ABEE87D00B29FB1 /* HPContactusVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPContactusVC.h; sourceTree = "<group>"; };
+		B801D2651ABEE87D00B29FB1 /* HPContactusVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPContactusVC.m; sourceTree = "<group>"; };
+		B801D2681ABEE8A400B29FB1 /* HPSettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPSettingsVC.h; sourceTree = "<group>"; };
+		B801D2691ABEE8A400B29FB1 /* HPSettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPSettingsVC.m; sourceTree = "<group>"; };
+		B801D26B1ABEEAD000B29FB1 /* whatsapp-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whatsapp-icon.png"; sourceTree = "<group>"; };
+		B801D26D1ABEEAD700B29FB1 /* facebook-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook-icon.png"; sourceTree = "<group>"; };
+		B801D26F1ABEEADD00B29FB1 /* twitter-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter-icon.png"; sourceTree = "<group>"; };
+		B801D2711ABEF31E00B29FB1 /* navigationBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigationBar.png; sourceTree = "<group>"; };
+		B801D2731ABEF6C100B29FB1 /* HPSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPSettingCell.h; sourceTree = "<group>"; };
+		B801D2741ABEF6C100B29FB1 /* HPSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPSettingCell.m; sourceTree = "<group>"; };
+		B801D2761ABEF83D00B29FB1 /* arrow-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-right.png"; sourceTree = "<group>"; };
+		B801D27A1ABEFD3B00B29FB1 /* HPFAQVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPFAQVC.h; sourceTree = "<group>"; };
+		B801D27B1ABEFD3B00B29FB1 /* HPFAQVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPFAQVC.m; sourceTree = "<group>"; };
+		B801D27D1ABEFD4C00B29FB1 /* HPHelpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPHelpVC.h; sourceTree = "<group>"; };
+		B801D27E1ABEFD4C00B29FB1 /* HPHelpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPHelpVC.m; sourceTree = "<group>"; };
+		B801D2801ABF108600B29FB1 /* HPVaastuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPVaastuCell.h; sourceTree = "<group>"; };
+		B801D2811ABF108600B29FB1 /* HPVaastuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPVaastuCell.m; sourceTree = "<group>"; };
+		B801D2831ABF2EFA00B29FB1 /* Colour therapy at home.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Colour therapy at home.jpg"; sourceTree = "<group>"; };
+		B801D2841ABF2EFA00B29FB1 /* Colour therapy in your home.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Colour therapy in your home.jpg"; sourceTree = "<group>"; };
+		B801D2851ABF2EFA00B29FB1 /* The Midas Touch Lakshmi and Kuber.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "The Midas Touch Lakshmi and Kuber.jpg"; sourceTree = "<group>"; };
+		B801D2861ABF2EFA00B29FB1 /* Vaastu principles for a well.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Vaastu principles for a well.jpg"; sourceTree = "<group>"; };
+		B801D2871ABF2EFA00B29FB1 /* Vaastu principles governing a site.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Vaastu principles governing a site.jpg"; sourceTree = "<group>"; };
+		B801D2881ABF2EFA00B29FB1 /* Vastu tips for the interiors.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Vastu tips for the interiors.jpg"; sourceTree = "<group>"; };
+		B801D28F1ABF33B100B29FB1 /* HPVaastuDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPVaastuDetailVC.h; sourceTree = "<group>"; };
+		B801D2901ABF33B100B29FB1 /* HPVaastuDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPVaastuDetailVC.m; sourceTree = "<group>"; };
+		B801D2941ABF351000B29FB1 /* Colour therapy at home.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Colour therapy at home.html"; sourceTree = "<group>"; };
+		B801D2951ABF351000B29FB1 /* Colour therapy in your home.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Colour therapy in your home.html"; sourceTree = "<group>"; };
+		B801D2961ABF351000B29FB1 /* The Midas Touch - Lakshmi and Kuber.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "The Midas Touch - Lakshmi and Kuber.html"; sourceTree = "<group>"; };
+		B801D2971ABF351000B29FB1 /* Vaastu principles for a well.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Vaastu principles for a well.html"; sourceTree = "<group>"; };
+		B801D2981ABF351000B29FB1 /* Vaastu principles governing a site.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Vaastu principles governing a site.html"; sourceTree = "<group>"; };
+		B801D2991ABF351000B29FB1 /* Vastu tips for the interiors.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "Vastu tips for the interiors.html"; sourceTree = "<group>"; };
+		B801D2A01ABF3E4100B29FB1 /* HPMessagesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPMessagesCell.h; sourceTree = "<group>"; };
+		B801D2A11ABF3E4100B29FB1 /* HPMessagesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPMessagesCell.m; sourceTree = "<group>"; };
+		B801D2A31ABF433F00B29FB1 /* bhavisha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bhavisha.png; sourceTree = "<group>"; };
+		B801D2A41ABF433F00B29FB1 /* dhanesh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dhanesh.png; sourceTree = "<group>"; };
+		B801D2A71ABF495200B29FB1 /* HPAgentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPAgentCell.h; sourceTree = "<group>"; };
+		B801D2A81ABF495200B29FB1 /* HPAgentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPAgentCell.m; sourceTree = "<group>"; };
 		B81621BC1AB4A85C00161525 /* agent_search_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agent_search_icon.png; sourceTree = "<group>"; };
 		B81621BD1AB4A85C00161525 /* favourite_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favourite_icon.png; sourceTree = "<group>"; };
 		B81621BE1AB4A85C00161525 /* messages_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messages_icon.png; sourceTree = "<group>"; };
@@ -196,6 +265,7 @@
 		B89E6FFE1AB89FBB00E218D8 /* bhavisha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bhavisha.png; sourceTree = "<group>"; };
 		B89E70011AB8AA9100E218D8 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		B89E70021AB8AA9100E218D8 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		B8A02A1A1ABE011A00C89967 /* aboutUs_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aboutUs_back.png; sourceTree = "<group>"; };
 		B8C88A6C1AB74B3F00E7558C /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		B8C88A6D1AB74B3F00E7558C /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		B8C88A701AB751A100E7558C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -267,6 +337,76 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B801D25F1ABEE85400B29FB1 /* AboutusVC */ = {
+			isa = PBXGroup;
+			children = (
+				B801D2601ABEE86000B29FB1 /* HPAboutusVC.h */,
+				B801D2611ABEE86000B29FB1 /* HPAboutusVC.m */,
+			);
+			path = AboutusVC;
+			sourceTree = "<group>";
+		};
+		B801D2631ABEE87200B29FB1 /* ContactusVC */ = {
+			isa = PBXGroup;
+			children = (
+				B801D2641ABEE87D00B29FB1 /* HPContactusVC.h */,
+				B801D2651ABEE87D00B29FB1 /* HPContactusVC.m */,
+			);
+			path = ContactusVC;
+			sourceTree = "<group>";
+		};
+		B801D2671ABEE89A00B29FB1 /* SettingsVC */ = {
+			isa = PBXGroup;
+			children = (
+				B801D2781ABEFD0300B29FB1 /* FAQVC */,
+				B801D2791ABEFD0300B29FB1 /* HelpVC */,
+				B801D2681ABEE8A400B29FB1 /* HPSettingsVC.h */,
+				B801D2691ABEE8A400B29FB1 /* HPSettingsVC.m */,
+				B801D2731ABEF6C100B29FB1 /* HPSettingCell.h */,
+				B801D2741ABEF6C100B29FB1 /* HPSettingCell.m */,
+			);
+			path = SettingsVC;
+			sourceTree = "<group>";
+		};
+		B801D2781ABEFD0300B29FB1 /* FAQVC */ = {
+			isa = PBXGroup;
+			children = (
+				B801D27A1ABEFD3B00B29FB1 /* HPFAQVC.h */,
+				B801D27B1ABEFD3B00B29FB1 /* HPFAQVC.m */,
+			);
+			path = FAQVC;
+			sourceTree = "<group>";
+		};
+		B801D2791ABEFD0300B29FB1 /* HelpVC */ = {
+			isa = PBXGroup;
+			children = (
+				B801D27D1ABEFD4C00B29FB1 /* HPHelpVC.h */,
+				B801D27E1ABEFD4C00B29FB1 /* HPHelpVC.m */,
+			);
+			path = HelpVC;
+			sourceTree = "<group>";
+		};
+		B801D2921ABF351000B29FB1 /* HTML */ = {
+			isa = PBXGroup;
+			children = (
+				B801D2931ABF351000B29FB1 /* Vaastu */,
+			);
+			path = HTML;
+			sourceTree = "<group>";
+		};
+		B801D2931ABF351000B29FB1 /* Vaastu */ = {
+			isa = PBXGroup;
+			children = (
+				B801D2941ABF351000B29FB1 /* Colour therapy at home.html */,
+				B801D2951ABF351000B29FB1 /* Colour therapy in your home.html */,
+				B801D2961ABF351000B29FB1 /* The Midas Touch - Lakshmi and Kuber.html */,
+				B801D2971ABF351000B29FB1 /* Vaastu principles for a well.html */,
+				B801D2981ABF351000B29FB1 /* Vaastu principles governing a site.html */,
+				B801D2991ABF351000B29FB1 /* Vastu tips for the interiors.html */,
+			);
+			path = Vaastu;
+			sourceTree = "<group>";
+		};
 		B81621BB1AB4A85000161525 /* menu icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +435,9 @@
 		B81621D41AB4BBA300161525 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				B801D2671ABEE89A00B29FB1 /* SettingsVC */,
+				B801D2631ABEE87200B29FB1 /* ContactusVC */,
+				B801D25F1ABEE85400B29FB1 /* AboutusVC */,
 				B81622081AB4C16800161525 /* VaastuMain */,
 				B81622041AB4C14D00161525 /* MessagesMain */,
 				B81622001AB4C12200161525 /* FavouriteMain */,
@@ -363,6 +506,8 @@
 			children = (
 				B81621F51AB4C0C500161525 /* HPAgentSearchMainVC.h */,
 				B81621F61AB4C0C500161525 /* HPAgentSearchMainVC.m */,
+				B801D2A71ABF495200B29FB1 /* HPAgentCell.h */,
+				B801D2A81ABF495200B29FB1 /* HPAgentCell.m */,
 			);
 			path = AgentSearchMain;
 			sourceTree = "<group>";
@@ -399,6 +544,8 @@
 			children = (
 				B81622051AB4C15900161525 /* HPMessagesMainVC.h */,
 				B81622061AB4C15900161525 /* HPMessagesMainVC.m */,
+				B801D2A01ABF3E4100B29FB1 /* HPMessagesCell.h */,
+				B801D2A11ABF3E4100B29FB1 /* HPMessagesCell.m */,
 			);
 			path = MessagesMain;
 			sourceTree = "<group>";
@@ -408,6 +555,10 @@
 			children = (
 				B81622091AB4C17600161525 /* HPVaastuMainVC.h */,
 				B816220A1AB4C17600161525 /* HPVaastuMainVC.m */,
+				B801D2801ABF108600B29FB1 /* HPVaastuCell.h */,
+				B801D2811ABF108600B29FB1 /* HPVaastuCell.m */,
+				B801D28F1ABF33B100B29FB1 /* HPVaastuDetailVC.h */,
+				B801D2901ABF33B100B29FB1 /* HPVaastuDetailVC.m */,
 			);
 			path = VaastuMain;
 			sourceTree = "<group>";
@@ -415,6 +566,7 @@
 		B817C72B1AB1FC69009A989E /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
+				B801D2921ABF351000B29FB1 /* HTML */,
 				B817C72C1AB1FC69009A989E /* Images */,
 			);
 			path = Resourses;
@@ -423,6 +575,20 @@
 		B817C72C1AB1FC69009A989E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B801D2A31ABF433F00B29FB1 /* bhavisha.png */,
+				B801D2A41ABF433F00B29FB1 /* dhanesh.png */,
+				B801D2831ABF2EFA00B29FB1 /* Colour therapy at home.jpg */,
+				B801D2841ABF2EFA00B29FB1 /* Colour therapy in your home.jpg */,
+				B801D2851ABF2EFA00B29FB1 /* The Midas Touch Lakshmi and Kuber.jpg */,
+				B801D2861ABF2EFA00B29FB1 /* Vaastu principles for a well.jpg */,
+				B801D2871ABF2EFA00B29FB1 /* Vaastu principles governing a site.jpg */,
+				B801D2881ABF2EFA00B29FB1 /* Vastu tips for the interiors.jpg */,
+				B801D2761ABEF83D00B29FB1 /* arrow-right.png */,
+				B801D2711ABEF31E00B29FB1 /* navigationBar.png */,
+				B801D26F1ABEEADD00B29FB1 /* twitter-icon.png */,
+				B801D26D1ABEEAD700B29FB1 /* facebook-icon.png */,
+				B801D26B1ABEEAD000B29FB1 /* whatsapp-icon.png */,
+				B8A02A1A1ABE011A00C89967 /* aboutUs_back.png */,
 				B849F1A81ABCAFF700E81461 /* home_pin@2x.png */,
 				B849F1A61ABCAC7000E81461 /* home_pin.png */,
 				B89A582B1ABB5643008B1E24 /* prop1.jpg */,
@@ -736,20 +902,30 @@
 				B89A581F1ABB4169008B1E24 /* ContactUs.png in Resources */,
 				B81621EB1AB4BF3400161525 /* vaastu_tab_icon.png in Resources */,
 				B81621CF1AB4A85C00161525 /* vaastu_icon.png in Resources */,
+				B801D28E1ABF2EFA00B29FB1 /* Vastu tips for the interiors.jpg in Resources */,
+				B801D2A51ABF433F00B29FB1 /* bhavisha.png in Resources */,
 				B8F5ABEA1ABA083600AC966F /* home6.jpg in Resources */,
 				B81621CA1AB4A85C00161525 /* post_req_icon.png in Resources */,
 				B856ED5D1AB1F54800F533D1 /* Images.xcassets in Resources */,
+				B801D28D1ABF2EFA00B29FB1 /* Vaastu principles governing a site.jpg in Resources */,
+				B801D26E1ABEEAD700B29FB1 /* facebook-icon.png in Resources */,
 				B81621E41AB4BF3400161525 /* agent_search_tab_icon.png in Resources */,
 				B817C7311AB1FC72009A989E /* sign in.png in Resources */,
+				B801D29E1ABF351000B29FB1 /* Vaastu principles governing a site.html in Resources */,
 				B81621CB1AB4A85C00161525 /* price_trends_icon.png in Resources */,
 				B81621C71AB4A85C00161525 /* favourite_icon.png in Resources */,
 				B89A581E1ABB4169008B1E24 /* aboutus_icon.png in Resources */,
+				B801D29F1ABF351000B29FB1 /* Vastu tips for the interiors.html in Resources */,
+				B801D28C1ABF2EFA00B29FB1 /* Vaastu principles for a well.jpg in Resources */,
+				B801D2721ABEF31E00B29FB1 /* navigationBar.png in Resources */,
 				B849F1A91ABCAFF700E81461 /* home_pin@2x.png in Resources */,
 				B81621DB1AB4BD1A00161525 /* prop_search_tab_icon.png in Resources */,
+				B801D29A1ABF351000B29FB1 /* Colour therapy at home.html in Resources */,
 				B81621E61AB4BF3400161525 /* messages_tab_icon.png in Resources */,
 				B81621CC1AB4A85C00161525 /* project_search_icon.png in Resources */,
 				B89A58331ABB5643008B1E24 /* prop4.jpg in Resources */,
 				B89A58211ABB4344008B1E24 /* setting_icon.png in Resources */,
+				B801D2891ABF2EFA00B29FB1 /* Colour therapy at home.jpg in Resources */,
 				B81621E91AB4BF3400161525 /* price_trends_tab_icon.png in Resources */,
 				B81621C81AB4A85C00161525 /* messages_icon.png in Resources */,
 				B81621E71AB4BF3400161525 /* nearby_search_tab_icon.png in Resources */,
@@ -762,21 +938,31 @@
 				B856ED4C1AB1F54800F533D1 /* InfoPlist.strings in Resources */,
 				B817C7321AB1FC72009A989E /* Home1.PNG in Resources */,
 				B89A58301ABB5643008B1E24 /* prop1.jpg in Resources */,
+				B801D28B1ABF2EFA00B29FB1 /* The Midas Touch Lakshmi and Kuber.jpg in Resources */,
 				B8F5ABE91ABA083600AC966F /* home5.jpg in Resources */,
 				B8F5ABE71ABA083600AC966F /* home3.jpg in Resources */,
 				B81621C91AB4A85C00161525 /* nearby_icon.png in Resources */,
 				B81621CD1AB4A85C00161525 /* property_search_icon.png in Resources */,
 				B89A58311ABB5643008B1E24 /* prop2.jpg in Resources */,
+				B801D29C1ABF351000B29FB1 /* The Midas Touch - Lakshmi and Kuber.html in Resources */,
+				B801D29B1ABF351000B29FB1 /* Colour therapy in your home.html in Resources */,
 				B89A58341ABB5643008B1E24 /* prop5.jpg in Resources */,
 				B81621EA1AB4BF3400161525 /* project_search_tab_icon.png in Resources */,
 				B89A581B1ABB3A52008B1E24 /* logout_icon.png in Resources */,
+				B801D29D1ABF351000B29FB1 /* Vaastu principles for a well.html in Resources */,
+				B8A02A1B1ABE011A00C89967 /* aboutUs_back.png in Resources */,
+				B801D26C1ABEEAD000B29FB1 /* whatsapp-icon.png in Resources */,
 				B8F5ABEE1ABA0CE900AC966F /* btnFav.png in Resources */,
 				B817C7301AB1FC72009A989E /* sign up.png in Resources */,
 				B8F5ABED1ABA0CE800AC966F /* btnFav_Selected.png in Resources */,
+				B801D2771ABEF83D00B29FB1 /* arrow-right.png in Resources */,
 				B8F5ABE81ABA083600AC966F /* home4.jpg in Resources */,
+				B801D2A61ABF433F00B29FB1 /* dhanesh.png in Resources */,
 				B81621E81AB4BF3400161525 /* post_req_tab_icon.png in Resources */,
 				B8F5ABE51ABA083600AC966F /* home1.jpg in Resources */,
+				B801D2701ABEEADD00B29FB1 /* twitter-icon.png in Resources */,
 				B89E6FFF1AB89FBB00E218D8 /* bhavisha.png in Resources */,
+				B801D28A1ABF2EFA00B29FB1 /* Colour therapy in your home.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -795,13 +981,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B801D2911ABF33B100B29FB1 /* HPVaastuDetailVC.m in Sources */,
 				B856ED5B1AB1F54800F533D1 /* HPViewController.m in Sources */,
+				B801D2821ABF108600B29FB1 /* HPVaastuCell.m in Sources */,
 				B816220B1AB4C17600161525 /* HPVaastuMainVC.m in Sources */,
 				B81621D81AB4BBD600161525 /* HPPropertySearchMainVC.m in Sources */,
 				B8CAF9001AB34CF7002D1171 /* HPREgisterVC.m in Sources */,
+				B801D2621ABEE86000B29FB1 /* HPAboutusVC.m in Sources */,
 				B8CAF9031AB34D0A002D1171 /* HPLoginVC.m in Sources */,
 				B81622031AB4C12E00161525 /* HPFavouriteMainVC.m in Sources */,
 				B81621F31AB4C09100161525 /* HPPostReqMainVC.m in Sources */,
+				B801D2751ABEF6C100B29FB1 /* HPSettingCell.m in Sources */,
 				B81621FB1AB4C0EA00161525 /* HPProjectSearrchMainVC.m in Sources */,
 				B849F1A41ABC9D4A00E81461 /* INTULocationManager.m in Sources */,
 				B8CAF8FD1AB34CE5002D1171 /* HPHomeVC.m in Sources */,
@@ -809,15 +999,21 @@
 				B849F1A51ABC9D4A00E81461 /* INTULocationRequest.m in Sources */,
 				B81621F71AB4C0C500161525 /* HPAgentSearchMainVC.m in Sources */,
 				B856ED4E1AB1F54800F533D1 /* main.m in Sources */,
+				B801D27F1ABEFD4C00B29FB1 /* HPHelpVC.m in Sources */,
 				B89A58281ABB4572008B1E24 /* iCarousel.m in Sources */,
+				B801D27C1ABEFD3B00B29FB1 /* HPFAQVC.m in Sources */,
 				B8F5ABDE1ABA02D600AC966F /* HPPropertySearchCell.m in Sources */,
 				B81622071AB4C15900161525 /* HPMessagesMainVC.m in Sources */,
 				B89E70031AB8AA9100E218D8 /* MBProgressHUD.m in Sources */,
+				B801D26A1ABEE8A400B29FB1 /* HPSettingsVC.m in Sources */,
 				B81621D31AB4B17A00161525 /* CHTumblrMenuView.m in Sources */,
 				B89A58241ABB4415008B1E24 /* HPPropSearchDetailVC.m in Sources */,
+				B801D2A21ABF3E4100B29FB1 /* HPMessagesCell.m in Sources */,
 				B81621EF1AB4C06800161525 /* HPNearBySearchMainVC.m in Sources */,
 				B81621FF1AB4C10C00161525 /* HPPriceTrendsMain.m in Sources */,
+				B801D2661ABEE87D00B29FB1 /* HPContactusVC.m in Sources */,
 				B8CAF8FA1AB34CD3002D1171 /* HPSplashVC.m in Sources */,
+				B801D2A91ABF495200B29FB1 /* HPAgentCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

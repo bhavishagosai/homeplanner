@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HPAgentSearchMainVC : UIViewController
+@interface HPAgentSearchMainVC : UIViewController<UITableViewDataSource,UITableViewDelegate>{
+    NSMutableArray *mutArrAgent;
+}
 
 @end
