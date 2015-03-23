@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HPProjectSearrchMainVC : UIViewController
+@interface HPProjectSearrchMainVC : UIViewController<UITableViewDataSource,UITableViewDelegate>{
+    NSMutableArray *mutArrProjectList;
+}
 
 @end

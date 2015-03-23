@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HPFavouriteMainVC : UIViewController
+@interface HPFavouriteMainVC : UIViewController{
+    NSMutableArray *mutArrProperty;
+    NSInteger *lastSelectedIndex;
+}
 
 @end

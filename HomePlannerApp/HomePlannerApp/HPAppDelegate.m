@@ -7,6 +7,7 @@
 //
 
 #import "HPAppDelegate.h"
+#import <Parse/Parse.h>
 
 @implementation HPAppDelegate
 @synthesize selectedTab;

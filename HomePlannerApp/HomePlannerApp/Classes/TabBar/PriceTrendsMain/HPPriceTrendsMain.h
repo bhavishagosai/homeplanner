@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HPPriceTrendsMain : UIViewController
+@interface HPPriceTrendsMain : UIViewController<UITableViewDataSource,UITableViewDelegate>{
+    NSMutableArray *mutArrTrendsList;
+}
 
 @end

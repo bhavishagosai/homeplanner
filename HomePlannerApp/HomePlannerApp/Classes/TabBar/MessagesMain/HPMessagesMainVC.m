@@ -18,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.btnSendMessage.layer.cornerRadius = 5.0;
+    self.btnSendMessage.layer.masksToBounds = YES;
+    
     NSMutableDictionary *dictMenu = [[NSMutableDictionary alloc]init];
     [dictMenu setObject:@"Hello Admin,I have one query regarding home loan." forKeyedSubscript:@"chat_message"];
     [dictMenu setObject:@"Dhanesh gosai" forKeyedSubscript:@"sender_name"];

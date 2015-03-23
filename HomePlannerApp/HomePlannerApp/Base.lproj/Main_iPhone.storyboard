@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fKC-PB-RS7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fKC-PB-RS7">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--Splash-->
@@ -154,6 +154,10 @@
                         <segue destination="BxJ-hL-f4p" kind="push" identifier="vaastuSegue" id="XUe-B5-qHc"/>
                         <segue destination="SP7-DH-GM8" kind="push" identifier="messagesSegue" id="a0s-w8-ImM"/>
                         <segue destination="nLC-jl-DjE" kind="push" identifier="agentMainSegue" id="hVa-5S-NRE"/>
+                        <segue destination="PaA-8Q-qyr" kind="push" identifier="trendsSegue" id="bkZ-IA-Eij"/>
+                        <segue destination="UxV-MG-bae" kind="push" identifier="favouriteSegue" id="ZkS-tc-Nli"/>
+                        <segue destination="GeR-gu-hJX" kind="push" identifier="projectSegue" id="mgD-W6-x5d"/>
+                        <segue destination="H5j-cd-IGx" kind="push" identifier="postReqSegue" id="1DP-G1-EXy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xUW-Qg-LWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -283,7 +287,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p9n-V4-cxC" customClass="iCarousel">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="dataSource" destination="COp-hb-vbc" id="4wD-yK-dmQ"/>
                                             <outlet property="delegate" destination="COp-hb-vbc" id="Ohh-GK-bLa"/>
@@ -448,6 +452,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="COp-hb-vbc" id="JYx-eZ-i9E"/>
                                 </connections>
@@ -702,10 +707,10 @@
             </objects>
             <point key="canvasLocation" x="3672" y="-1544"/>
         </scene>
-        <!--Post Requirement-->
+        <!--New Requirement-->
         <scene sceneID="eYG-Wf-Blp">
             <objects>
-                <viewController id="FRN-s2-umh" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HPNewReqVC" automaticallyAdjustsScrollViewInsets="NO" id="FRN-s2-umh" customClass="HPNewReqVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cEY-gf-wy4"/>
                         <viewControllerLayoutGuide type="bottom" id="3ox-lD-a4m"/>
@@ -713,13 +718,258 @@
                     <view key="view" contentMode="scaleToFill" id="Ql4-bJ-bsj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ecu-D0-3N3">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Expected Size" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Oj-gz-qE9">
+                                        <rect key="frame" x="93" y="188" width="219" height="30"/>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="QxM-My-Llt" id="e2u-yJ-YeZ"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RqM-An-Qkt">
+                                        <rect key="frame" x="55" y="457" width="210" height="32"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
+                                        <state key="normal" title="Post requirement">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnSignUpClick:" destination="QxM-My-Llt" eventType="touchUpInside" id="Kem-Kv-YWD"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Post For:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4S-qr-DmT">
+                                        <rect key="frame" x="8" y="16" width="84" height="21"/>
+                                        <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Property Type:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSX-CL-aoq">
+                                        <rect key="frame" x="8" y="54" width="84" height="34"/>
+                                        <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7EU-Po-J31">
+                                        <rect key="frame" x="93" y="9" width="84" height="36"/>
+                                        <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="15"/>
+                                        <state key="normal" title="Rent" image="check_icon.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3n-Be-pun">
+                                        <rect key="frame" x="191" y="9" width="84" height="36"/>
+                                        <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="15"/>
+                                        <state key="normal" title="Sale" image="uncheck_icon.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dropDown.png" translatesAutoresizingMaskIntoConstraints="NO" id="yXr-vN-6DM">
+                                        <rect key="frame" x="93" y="54" width="219" height="34"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select Your Property Type" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7eG-Mp-jnI">
+                                        <rect key="frame" x="95" y="56" width="191" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="City:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TbY-8D-OEU">
+                                        <rect key="frame" x="8" y="96" width="84" height="34"/>
+                                        <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dropDown.png" translatesAutoresizingMaskIntoConstraints="NO" id="kOF-FS-A2J">
+                                        <rect key="frame" x="93" y="96" width="219" height="34"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select City" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dgE-fR-xjt">
+                                        <rect key="frame" x="95" y="98" width="191" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bedrooms:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJl-V1-fUU">
+                                        <rect key="frame" x="8" y="138" width="84" height="34"/>
+                                        <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Size of Propery:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Apd-wp-j59">
+                                        <rect key="frame" x="8" y="188" width="84" height="32"/>
+                                        <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dropDown.png" translatesAutoresizingMaskIntoConstraints="NO" id="a3U-f6-K6p">
+                                        <rect key="frame" x="93" y="138" width="219" height="34"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select Number of Bedrooms" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sgt-kC-IbR">
+                                        <rect key="frame" x="95" y="140" width="191" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Minium budget" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a95-eL-ouo">
+                                        <rect key="frame" x="93" y="230" width="219" height="30"/>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="QxM-My-Llt" id="cpb-JE-kPu"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Max Budget:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75S-vc-tTz">
+                                        <rect key="frame" x="8" y="270" width="84" height="34"/>
+                                        <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter maximum budget" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ssY-lF-vwi">
+                                        <rect key="frame" x="93" y="272" width="219" height="30"/>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="QxM-My-Llt" id="lWx-0x-Tfg"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Min Budget:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efH-rm-NKy">
+                                        <rect key="frame" x="8" y="228" width="84" height="34"/>
+                                        <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Would you like get updates via notifications ?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="seN-aj-eBp">
+                                        <rect key="frame" x="13" y="323" width="256" height="34"/>
+                                        <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gal-8Q-1un">
+                                        <rect key="frame" x="277" y="325" width="30" height="30"/>
+                                        <state key="normal" backgroundImage="unchecked_checkbox.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Would you like get updates via mail ?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSX-xL-tZN">
+                                        <rect key="frame" x="13" y="379" width="256" height="34"/>
+                                        <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBA-Kf-vG6">
+                                        <rect key="frame" x="277" y="381" width="30" height="30"/>
+                                        <state key="normal" backgroundImage="checked_checkbox.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <connections>
+                                    <outlet property="delegate" destination="QxM-My-Llt" id="Gxi-gc-Fai"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Post Requirement" id="3F7-AN-qyE"/>
+                    <navigationItem key="navigationItem" title="New Requirement" id="3F7-AN-qyE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lOR-mZ-Sa0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3276" y="-912"/>
+            <point key="canvasLocation" x="3672" y="-905"/>
+        </scene>
+        <!--Requirements List-->
+        <scene sceneID="9eV-Bm-qTX">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="H5j-cd-IGx" customClass="HPPostReqMainVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eWa-GK-GCc"/>
+                        <viewControllerLayoutGuide type="bottom" id="L3I-YW-Mxf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mqR-98-cPz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3le-VI-udZ">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" red="1" green="0.54526333039999997" blue="0.57119573140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reqCell" id="IeT-mN-dtj">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IeT-mN-dtj" id="BAp-Eo-kkY">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ahmedabad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3a-hl-e6g">
+                                                    <rect key="frame" x="12" y="28" width="84" height="34"/>
+                                                    <fontDescription key="fontDescription" name="Courier-Oblique" family="Courier" pointSize="14"/>
+                                                    <color key="textColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="8000 to 12000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kqs-VZ-ZKh">
+                                                    <rect key="frame" x="96" y="27" width="119" height="34"/>
+                                                    <fontDescription key="fontDescription" name="Courier-Oblique" family="Courier" pointSize="14"/>
+                                                    <color key="textColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ta7-fP-1JU">
+                                                    <rect key="frame" x="278" y="15" width="30" height="30"/>
+                                                    <color key="backgroundColor" red="1" green="0.80000001192092896" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="15"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Need Property for Rent." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KiP-d4-h2M">
+                                                    <rect key="frame" x="12" y="8" width="300" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="16"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="0.54526333039999997" blue="0.57119573140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.54526333039999997" blue="0.57119573140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="H5j-cd-IGx" id="PbK-Tv-VSD"/>
+                                    <outlet property="delegate" destination="H5j-cd-IGx" id="o5q-A9-HAJ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Requirements List" id="e58-Fh-jMc">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="wzV-hT-3tt">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="ZWN-er-fzV">
+                                <rect key="frame" x="233" y="7" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="FRN-s2-umh" kind="push" id="Pvl-yp-vpt"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="FRN-s2-umh" kind="push" identifier="addReqSegue" id="Ci2-ad-TjT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QpJ-hA-XfU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3276" y="-909"/>
         </scene>
         <!--Agent Search-->
         <scene sceneID="R83-Eg-LBE">
@@ -783,7 +1033,7 @@
         <!--Project Search-->
         <scene sceneID="r37-wE-qFx">
             <objects>
-                <viewController id="GeR-gu-hJX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HPProjectSearrchMainVC" automaticallyAdjustsScrollViewInsets="NO" id="GeR-gu-hJX" customClass="HPProjectSearrchMainVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iJ9-rK-Iya"/>
                         <viewControllerLayoutGuide type="bottom" id="9pI-Lx-sDy"/>
@@ -791,18 +1041,59 @@
                     <view key="view" contentMode="scaleToFill" id="fnk-Al-pif">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="8b2-8f-Dd7">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" red="1" green="0.54526333039999997" blue="0.57119573140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="projectCell" id="Xln-Kh-jYb" customClass="HPProjectCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xln-Kh-jYb" id="OUB-rt-LwB">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qW7-Qk-SRs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="148"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2aD-7U-syA">
+                                                    <rect key="frame" x="10" y="118" width="289" height="25"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZ0-0S-fd4">
+                                                    <rect key="frame" x="10" y="120" width="289" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="18"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="0.54526333039999997" blue="0.57119573140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.54526333039999997" blue="0.57119573140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="imgProject" destination="qW7-Qk-SRs" id="4Gl-96-mzS"/>
+                                            <outlet property="imgTitleBack" destination="2aD-7U-syA" id="3x2-y7-VVa"/>
+                                            <outlet property="lblName" destination="GZ0-0S-fd4" id="Iob-vD-3ev"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="GeR-gu-hJX" id="NRK-ga-kBS"/>
+                                    <outlet property="delegate" destination="GeR-gu-hJX" id="FKh-yL-9oj"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Project Search" id="U8I-1s-Pth"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CdT-h3-ghB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3276" y="350"/>
+            <point key="canvasLocation" x="3276" y="348"/>
         </scene>
         <!--Price Trends-->
         <scene sceneID="QMI-Ml-Q3H">
             <objects>
-                <viewController id="PaA-8Q-qyr" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="PaA-8Q-qyr" customClass="HPPriceTrendsMain" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SDv-xr-f3Q"/>
                         <viewControllerLayoutGuide type="bottom" id="ebf-EB-ig5"/>
@@ -810,18 +1101,98 @@
                     <view key="view" contentMode="scaleToFill" id="F5c-DR-b5K">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgRateTrands.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bGL-qW-YwB">
+                                <rect key="frame" x="0.0" y="64" width="320" height="204"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mir-e2-8J3">
+                                <rect key="frame" x="0.0" y="64" width="320" height="204"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Rates &amp; Trends is a resource that provides Residential and Commercial property price trends for localities in 16 cities across India. These price trends can be viewed in the form of tables or graphs from the locality's Sale and Rent perspective.
+
+Use Rates &amp; Trends as a tool in making property decisions, as it contains locality-specific information on average price and quarterly price changes. You can also compare data for as many as 10 localities in a city, for up to 3 different timeframes. This detailed comparison lets you see the highest and lowest locality prices, apart from the average price.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ORW-q0-U2h">
+                                <rect key="frame" x="0.0" y="268" width="320" height="300"/>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="trendsCell" id="dCw-Ei-ueB" customClass="HPTrendsCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dCw-Ei-ueB" id="sZs-XQ-uaG">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9t-xF-8uB">
+                                                    <rect key="frame" x="16" y="12" width="256" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Courier-Oblique" family="Courier" pointSize="20"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="arrow-right.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hye-Fr-14s">
+                                                    <rect key="frame" x="282" y="7" width="30" height="30"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="lblName" destination="H9t-xF-8uB" id="AFU-Rx-aXH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="PaA-8Q-qyr" id="eJG-7x-ill"/>
+                                    <outlet property="delegate" destination="PaA-8Q-qyr" id="Gnc-4e-cgj"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Price Trends" id="9Vv-bh-xe9"/>
+                    <connections>
+                        <segue destination="mSu-91-czM" kind="push" id="hay-2n-5TY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAD-aE-HlI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3276" y="980"/>
+            <point key="canvasLocation" x="3276" y="977"/>
+        </scene>
+        <!--PricedetailVC-->
+        <scene sceneID="Paz-Gu-i9J">
+            <objects>
+                <viewController storyboardIdentifier="HPPricedetailVC" id="mSu-91-czM" customClass="HPPricedetailVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UYV-Yj-rgs"/>
+                        <viewControllerLayoutGuide type="bottom" id="yjw-1B-NIB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uYb-M4-0z4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="idN-d6-7If">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="mSu-91-czM" id="SJC-fP-huJ"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iFk-rs-WEg"/>
+                    <connections>
+                        <outlet property="webViewDetail" destination="idN-d6-7If" id="XVe-S1-2vs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cP4-A0-vIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3655" y="977"/>
         </scene>
         <!--Favourite-->
         <scene sceneID="DCn-qU-jiG">
             <objects>
-                <viewController id="UxV-MG-bae" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="UxV-MG-bae" customClass="HPFavouriteMainVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="umH-0b-vSK"/>
                         <viewControllerLayoutGuide type="bottom" id="60d-Np-crB"/>
@@ -829,6 +1200,77 @@
                     <view key="view" contentMode="scaleToFill" id="Naa-lR-7jr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="NDx-eG-OSZ">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" red="1" green="0.54526333039999997" blue="0.57119573140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="propertyCell" id="4q8-Tu-S4R" customClass="HPPropertySearchCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4q8-Tu-S4R" id="844-3u-5oQ">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BZ9-fD-ObG">
+                                                    <rect key="frame" x="10" y="5" width="80" height="80"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Lz-EK-WYC">
+                                                    <rect key="frame" x="98" y="4" width="180" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lv5-w3-7y9">
+                                                    <rect key="frame" x="98" y="30" width="190" height="16"/>
+                                                    <fontDescription key="fontDescription" name="Courier-Oblique" family="Courier" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Jh-BF-wej">
+                                                    <rect key="frame" x="98" y="50" width="214" height="16"/>
+                                                    <fontDescription key="fontDescription" name="Courier-Oblique" family="Courier" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzK-90-J8Q">
+                                                    <rect key="frame" x="98" y="70" width="214" height="16"/>
+                                                    <fontDescription key="fontDescription" name="Courier-Oblique" family="Courier" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUg-Ju-rBe">
+                                                    <rect key="frame" x="10" y="97" width="289" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5k-9V-Rum">
+                                                    <rect key="frame" x="280" y="1" width="40" height="40"/>
+                                                    <state key="normal" backgroundImage="btnFav.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="selected" backgroundImage="btnFav_Selected.png"/>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="0.54526333039999997" blue="0.57119573140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.54526333039999997" blue="0.57119573140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="btnFavourite" destination="J5k-9V-Rum" id="yg6-SD-bgA"/>
+                                            <outlet property="imgProperty" destination="BZ9-fD-ObG" id="Z8d-jL-hnm"/>
+                                            <outlet property="lblPropLocality" destination="lv5-w3-7y9" id="otT-ou-1ip"/>
+                                            <outlet property="lblPropertyName" destination="8Lz-EK-WYC" id="EcA-he-q1b"/>
+                                            <outlet property="lblSize" destination="4Jh-BF-wej" id="jfu-Qe-v7v"/>
+                                            <outlet property="lblStatus" destination="zzK-90-J8Q" id="bCQ-Oo-wDp"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="UxV-MG-bae" id="2Am-jn-7GE"/>
+                                    <outlet property="delegate" destination="UxV-MG-bae" id="O1B-Uo-MFU"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Favourite" id="w0N-g2-Pdh"/>
@@ -850,7 +1292,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="oJx-li-S2g">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                                 <color key="backgroundColor" red="1" green="0.54526333039999997" blue="0.57119573140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="messagesCell" id="82V-Eg-60R" customClass="HPMessagesCell">
@@ -893,10 +1335,35 @@
                                     <outlet property="delegate" destination="SP7-DH-GM8" id="Ugy-rD-ZgN"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vgr-Vy-8e5">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="navigationBar.png" translatesAutoresizingMaskIntoConstraints="NO" id="UIj-Ix-2bu">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type Your Message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gKe-um-E9u">
+                                        <rect key="frame" x="8" y="7" width="239" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsz-Mi-KBD">
+                                        <rect key="frame" x="258" y="7" width="51" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="SEND">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.54526333039999997" blue="0.57119573140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Messages" id="OGx-Zi-fYj"/>
+                    <connections>
+                        <outlet property="btnSendMessage" destination="gsz-Mi-KBD" id="k1u-3E-X76"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Xa-LY-vWM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1255,8 +1722,15 @@
         <image name="arrow-right.png" width="128" height="128"/>
         <image name="btnFav.png" width="80" height="80"/>
         <image name="btnFav_Selected.png" width="80" height="80"/>
+        <image name="check_icon.png" width="30" height="34"/>
+        <image name="checked_checkbox.png" width="50" height="50"/>
+        <image name="dropDown.png" width="227" height="44"/>
         <image name="facebook-icon.png" width="125" height="125"/>
+        <image name="imgRateTrands.jpg" width="227" height="145"/>
+        <image name="navigationBar.png" width="590" height="70"/>
         <image name="twitter-icon.png" width="125" height="125"/>
+        <image name="uncheck_icon.png" width="30" height="34"/>
+        <image name="unchecked_checkbox.png" width="50" height="50"/>
         <image name="whatsapp-icon.png" width="125" height="125"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -1264,4 +1738,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Pvl-yp-vpt"/>
+    </inferredMetricsTieBreakers>
 </document>

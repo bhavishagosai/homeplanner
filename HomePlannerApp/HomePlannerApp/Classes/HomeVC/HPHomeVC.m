@@ -35,7 +35,6 @@
     CHTumblrMenuView *menuView = [[CHTumblrMenuView alloc] init];
     [menuView addMenuItemWithTitle:@"Property Search" andIcon:[UIImage imageNamed:@"property_search_icon.png"] andSelectedBlock:^{
         NSLog(@"Property Search selected");
-        appDelegate.selectedTab=0;
         [self performSegueWithIdentifier:@"propertySegue" sender:nil];
     }];
     [menuView addMenuItemWithTitle:@"Near By Search" andIcon:[UIImage imageNamed:@"nearby_icon.png"] andSelectedBlock:^{
@@ -44,43 +43,36 @@
     }];
     [menuView addMenuItemWithTitle:@"Post Requirement" andIcon:[UIImage imageNamed:@"post_req_icon.png"] andSelectedBlock:^{
         NSLog(@"Post Requirement selected");
-        appDelegate.selectedTab=2;
         [self performSegueWithIdentifier:@"postReqSegue" sender:nil];
         
     }];
     [menuView addMenuItemWithTitle:@"Agent Search" andIcon:[UIImage imageNamed:@"agent_search_icon.png"] andSelectedBlock:^{
         NSLog(@"Agent Search selected");
-        appDelegate.selectedTab=3;
         [self performSegueWithIdentifier:@"agentMainSegue" sender:nil];
         
     }];
     [menuView addMenuItemWithTitle:@"Project Search" andIcon:[UIImage imageNamed:@"project_search_icon.png"] andSelectedBlock:^{
         NSLog(@"Project Search selected");
-        appDelegate.selectedTab=4;
         [self performSegueWithIdentifier:@"projectSegue" sender:nil];
         
     }];
     [menuView addMenuItemWithTitle:@"Price Trends" andIcon:[UIImage imageNamed:@"price_trends_icon.png"] andSelectedBlock:^{
         NSLog(@"Price Trends selected");
-        appDelegate.selectedTab=5;
-        [self performSegueWithIdentifier:@"trendSegue" sender:nil];
+        [self performSegueWithIdentifier:@"trendsSegue" sender:nil];
         
     }];
     [menuView addMenuItemWithTitle:@"Favourite" andIcon:[UIImage imageNamed:@"favourite_icon.png"] andSelectedBlock:^{
         NSLog(@"Favourite selected");
-        appDelegate.selectedTab=6;
         [self performSegueWithIdentifier:@"favouriteSegue" sender:nil];
         
     }];
     [menuView addMenuItemWithTitle:@"Messages" andIcon:[UIImage imageNamed:@"messages_icon.png"] andSelectedBlock:^{
         NSLog(@"Messages selected");
-        appDelegate.selectedTab=7;
         [self performSegueWithIdentifier:@"messagesSegue" sender:nil];
         
     }];
     [menuView addMenuItemWithTitle:@"Vaastu" andIcon:[UIImage imageNamed:@"vaastu_icon.png"] andSelectedBlock:^{
         NSLog(@"Vaastu selected");
-        appDelegate.selectedTab=8;
         [self performSegueWithIdentifier:@"vaastuSegue" sender:nil];
         
     }];
@@ -91,13 +83,11 @@
     }];
     [menuView addMenuItemWithTitle:@"Contact Us" andIcon:[UIImage imageNamed:@"ContactUs.png"] andSelectedBlock:^{
         NSLog(@"Vaastu selected");
-        appDelegate.selectedTab=8;
         [self performSegueWithIdentifier:@"contactusSegue" sender:nil];
         
     }];
     [menuView addMenuItemWithTitle:@"Settings" andIcon:[UIImage imageNamed:@"setting_icon.png"] andSelectedBlock:^{
         NSLog(@"Vaastu selected");
-        appDelegate.selectedTab=8;
         [self performSegueWithIdentifier:@"settingsSegue" sender:nil];
         
     }];

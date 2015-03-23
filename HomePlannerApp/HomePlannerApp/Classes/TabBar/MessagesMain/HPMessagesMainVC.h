@@ -11,5 +11,6 @@
 @interface HPMessagesMainVC : UIViewController<UITableViewDataSource,UITableViewDelegate>{
     NSMutableArray *mutArrMessages;
 }
+@property (weak, nonatomic) IBOutlet UIButton *btnSendMessage;
 
 @end

@@ -19,34 +19,34 @@
     [super viewDidLoad];
     
     NSMutableDictionary *dictMenu = [[NSMutableDictionary alloc]init];
-    [dictMenu setObject:@"Dhanesh gosai" forKeyedSubscript:@"agent_name"];
+    [dictMenu setObject:@"City Estate Management" forKeyedSubscript:@"agent_name"];
     [dictMenu setObject:@"sender" forKeyedSubscript:@"chat_type"];
-    [dictMenu setObject:@"dhanesh.png" forKeyedSubscript:@"agent_image"];
+    [dictMenu setObject:@"agent1.jpg" forKeyedSubscript:@"agent_image"];
     
     NSMutableDictionary *dictMenu1 = [[NSMutableDictionary alloc]init];
-    [dictMenu1 setObject:@"bhavisha" forKeyedSubscript:@"agent_name"];
+    [dictMenu1 setObject:@"Harshil Estate " forKeyedSubscript:@"agent_name"];
     [dictMenu1 setObject:@"sender" forKeyedSubscript:@"chat_type"];
-    [dictMenu1 setObject:@"bhavisha.png" forKeyedSubscript:@"agent_image"];
+    [dictMenu1 setObject:@"agent2.jpg" forKeyedSubscript:@"agent_image"];
     
     NSMutableDictionary *dictMenu2 = [[NSMutableDictionary alloc]init];
-    [dictMenu2 setObject:@"Dhanesh gosai" forKeyedSubscript:@"agent_name"];
+    [dictMenu2 setObject:@"Metro Real Estate" forKeyedSubscript:@"agent_name"];
     [dictMenu2 setObject:@"sender" forKeyedSubscript:@"chat_type"];
-    [dictMenu2 setObject:@"dhanesh.png" forKeyedSubscript:@"agent_image"];
+    [dictMenu2 setObject:@"agent3.jpg" forKeyedSubscript:@"agent_image"];
     
     NSMutableDictionary *dictMenu3 = [[NSMutableDictionary alloc]init];
-    [dictMenu3 setObject:@"bhavisha" forKeyedSubscript:@"agent_name"];
+    [dictMenu3 setObject:@"Perfect Consultant." forKeyedSubscript:@"agent_name"];
     [dictMenu3 setObject:@"sender" forKeyedSubscript:@"chat_type"];
-    [dictMenu3 setObject:@"bhavisha.png" forKeyedSubscript:@"agent_image"];
+    [dictMenu3 setObject:@"agent4.jpg" forKeyedSubscript:@"agent_image"];
     
     NSMutableDictionary *dictMenu4 = [[NSMutableDictionary alloc]init];
-    [dictMenu4 setObject:@"Dhanesh gosai" forKeyedSubscript:@"agent_name"];
+    [dictMenu4 setObject:@"Mission Realty." forKeyedSubscript:@"agent_name"];
     [dictMenu4 setObject:@"sender" forKeyedSubscript:@"chat_type"];
-    [dictMenu4 setObject:@"dhanesh.png" forKeyedSubscript:@"agent_image"];
+    [dictMenu4 setObject:@"agent5.jpg" forKeyedSubscript:@"agent_image"];
     
     NSMutableDictionary *dictMenu5 = [[NSMutableDictionary alloc]init];
-    [dictMenu5 setObject:@"bhavisha" forKeyedSubscript:@"agent_name"];
+    [dictMenu5 setObject:@"City Estate Management (Bopal)" forKeyedSubscript:@"agent_name"];
     [dictMenu5 setObject:@"sender" forKeyedSubscript:@"chat_type"];
-    [dictMenu5 setObject:@"bhavisha.png" forKeyedSubscript:@"agent_image"];
+    [dictMenu5 setObject:@"agent6.jpg" forKeyedSubscript:@"agent_image"];
     
     mutArrAgent     = [[NSMutableArray alloc]initWithObjects:dictMenu,dictMenu1,dictMenu2,dictMenu3,dictMenu4,dictMenu5, nil];
     // Do any additional setup after loading the view.
