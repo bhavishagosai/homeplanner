@@ -11,5 +11,6 @@
 @interface HPAgentSearchMainVC : UIViewController<UITableViewDataSource,UITableViewDelegate>{
     NSMutableArray *mutArrAgent;
 }
+@property (weak, nonatomic) IBOutlet UITableView *tblAgent;
 
 @end

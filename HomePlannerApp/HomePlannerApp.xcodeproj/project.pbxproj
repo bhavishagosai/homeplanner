@@ -117,6 +117,8 @@
 		B856ED661AB1F54800F533D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B856ED451AB1F54800F533D1 /* UIKit.framework */; };
 		B856ED6E1AB1F54800F533D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B856ED6C1AB1F54800F533D1 /* InfoPlist.strings */; };
 		B856ED701AB1F54800F533D1 /* HomePlannerAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B856ED6F1AB1F54800F533D1 /* HomePlannerAppTests.m */; };
+		B87F69791AD3097500662C2F /* agentCall.png in Resources */ = {isa = PBXBuildFile; fileRef = B87F69771AD3097500662C2F /* agentCall.png */; };
+		B87F697A1AD3097500662C2F /* agentWhatsapp.png in Resources */ = {isa = PBXBuildFile; fileRef = B87F69781AD3097500662C2F /* agentWhatsapp.png */; };
 		B89A581B1ABB3A52008B1E24 /* logout_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B89A581A1ABB3A52008B1E24 /* logout_icon.png */; };
 		B89A581E1ABB4169008B1E24 /* aboutus_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B89A581C1ABB4169008B1E24 /* aboutus_icon.png */; };
 		B89A581F1ABB4169008B1E24 /* ContactUs.png in Resources */ = {isa = PBXBuildFile; fileRef = B89A581D1ABB4169008B1E24 /* ContactUs.png */; };
@@ -313,6 +315,8 @@
 		B856ED6B1AB1F54800F533D1 /* HomePlannerAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HomePlannerAppTests-Info.plist"; sourceTree = "<group>"; };
 		B856ED6D1AB1F54800F533D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B856ED6F1AB1F54800F533D1 /* HomePlannerAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePlannerAppTests.m; sourceTree = "<group>"; };
+		B87F69771AD3097500662C2F /* agentCall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agentCall.png; sourceTree = "<group>"; };
+		B87F69781AD3097500662C2F /* agentWhatsapp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agentWhatsapp.png; sourceTree = "<group>"; };
 		B89A581A1ABB3A52008B1E24 /* logout_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout_icon.png; sourceTree = "<group>"; };
 		B89A581C1ABB4169008B1E24 /* aboutus_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aboutus_icon.png; sourceTree = "<group>"; };
 		B89A581D1ABB4169008B1E24 /* ContactUs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ContactUs.png; sourceTree = "<group>"; };
@@ -659,6 +663,8 @@
 		B817C72C1AB1FC69009A989E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B87F69771AD3097500662C2F /* agentCall.png */,
+				B87F69781AD3097500662C2F /* agentWhatsapp.png */,
 				A93831111AC03F93002CF93B /* project1.jpg */,
 				A93831121AC03F93002CF93B /* project2.jpg */,
 				A93831131AC03F93002CF93B /* project3.jpg */,
@@ -1086,6 +1092,7 @@
 				B817C7301AB1FC72009A989E /* sign up.png in Resources */,
 				A93830FA1AC03954002CF93B /* agent1.jpg in Resources */,
 				B8F5ABED1ABA0CE800AC966F /* btnFav_Selected.png in Resources */,
+				B87F697A1AD3097500662C2F /* agentWhatsapp.png in Resources */,
 				A93830E91AC02BE9002CF93B /* check_icon@2x.png in Resources */,
 				B801D2771ABEF83D00B29FB1 /* arrow-right.png in Resources */,
 				B8F5ABE81ABA083600AC966F /* home4.jpg in Resources */,
@@ -1095,6 +1102,7 @@
 				B801D2701ABEEADD00B29FB1 /* twitter-icon.png in Resources */,
 				B89E6FFF1AB89FBB00E218D8 /* bhavisha.png in Resources */,
 				B801D28A1ABF2EFA00B29FB1 /* Colour therapy in your home.jpg in Resources */,
+				B87F69791AD3097500662C2F /* agentCall.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

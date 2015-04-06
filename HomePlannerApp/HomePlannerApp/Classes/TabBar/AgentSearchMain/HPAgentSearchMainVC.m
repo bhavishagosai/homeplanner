@@ -8,6 +8,7 @@
 
 #import "HPAgentSearchMainVC.h"
 #import "HPAgentCell.h"
+#import <Parse/Parse.h>
 
 @interface HPAgentSearchMainVC ()
 
@@ -18,37 +19,47 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSMutableDictionary *dictMenu = [[NSMutableDictionary alloc]init];
-    [dictMenu setObject:@"City Estate Management" forKeyedSubscript:@"agent_name"];
-    [dictMenu setObject:@"sender" forKeyedSubscript:@"chat_type"];
-    [dictMenu setObject:@"agent1.jpg" forKeyedSubscript:@"agent_image"];
+//    NSMutableDictionary *dictMenu = [[NSMutableDictionary alloc]init];
+//    [dictMenu setObject:@"City Estate Management" forKeyedSubscript:@"agent_name"];
+//    [dictMenu setObject:@"sender" forKeyedSubscript:@"chat_type"];
+//    [dictMenu setObject:@"agent1.jpg" forKeyedSubscript:@"agent_image"];
+//    
+//    NSMutableDictionary *dictMenu1 = [[NSMutableDictionary alloc]init];
+//    [dictMenu1 setObject:@"Harshil Estate " forKeyedSubscript:@"agent_name"];
+//    [dictMenu1 setObject:@"sender" forKeyedSubscript:@"chat_type"];
+//    [dictMenu1 setObject:@"agent2.jpg" forKeyedSubscript:@"agent_image"];
+//    
+//    NSMutableDictionary *dictMenu2 = [[NSMutableDictionary alloc]init];
+//    [dictMenu2 setObject:@"Metro Real Estate" forKeyedSubscript:@"agent_name"];
+//    [dictMenu2 setObject:@"sender" forKeyedSubscript:@"chat_type"];
+//    [dictMenu2 setObject:@"agent3.jpg" forKeyedSubscript:@"agent_image"];
+//    
+//    NSMutableDictionary *dictMenu3 = [[NSMutableDictionary alloc]init];
+//    [dictMenu3 setObject:@"Perfect Consultant." forKeyedSubscript:@"agent_name"];
+//    [dictMenu3 setObject:@"sender" forKeyedSubscript:@"chat_type"];
+//    [dictMenu3 setObject:@"agent4.jpg" forKeyedSubscript:@"agent_image"];
+//    
+//    NSMutableDictionary *dictMenu4 = [[NSMutableDictionary alloc]init];
+//    [dictMenu4 setObject:@"Mission Realty." forKeyedSubscript:@"agent_name"];
+//    [dictMenu4 setObject:@"sender" forKeyedSubscript:@"chat_type"];
+//    [dictMenu4 setObject:@"agent5.jpg" forKeyedSubscript:@"agent_image"];
+//    
+//    NSMutableDictionary *dictMenu5 = [[NSMutableDictionary alloc]init];
+//    [dictMenu5 setObject:@"City Estate Management (Bopal)" forKeyedSubscript:@"agent_name"];
+//    [dictMenu5 setObject:@"sender" forKeyedSubscript:@"chat_type"];
+//    [dictMenu5 setObject:@"agent6.jpg" forKeyedSubscript:@"agent_image"];
+//    
+//    mutArrAgent     = [[NSMutableArray alloc]initWithObjects:dictMenu,dictMenu1,dictMenu2,dictMenu3,dictMenu4,dictMenu5, nil];
     
-    NSMutableDictionary *dictMenu1 = [[NSMutableDictionary alloc]init];
-    [dictMenu1 setObject:@"Harshil Estate " forKeyedSubscript:@"agent_name"];
-    [dictMenu1 setObject:@"sender" forKeyedSubscript:@"chat_type"];
-    [dictMenu1 setObject:@"agent2.jpg" forKeyedSubscript:@"agent_image"];
-    
-    NSMutableDictionary *dictMenu2 = [[NSMutableDictionary alloc]init];
-    [dictMenu2 setObject:@"Metro Real Estate" forKeyedSubscript:@"agent_name"];
-    [dictMenu2 setObject:@"sender" forKeyedSubscript:@"chat_type"];
-    [dictMenu2 setObject:@"agent3.jpg" forKeyedSubscript:@"agent_image"];
-    
-    NSMutableDictionary *dictMenu3 = [[NSMutableDictionary alloc]init];
-    [dictMenu3 setObject:@"Perfect Consultant." forKeyedSubscript:@"agent_name"];
-    [dictMenu3 setObject:@"sender" forKeyedSubscript:@"chat_type"];
-    [dictMenu3 setObject:@"agent4.jpg" forKeyedSubscript:@"agent_image"];
-    
-    NSMutableDictionary *dictMenu4 = [[NSMutableDictionary alloc]init];
-    [dictMenu4 setObject:@"Mission Realty." forKeyedSubscript:@"agent_name"];
-    [dictMenu4 setObject:@"sender" forKeyedSubscript:@"chat_type"];
-    [dictMenu4 setObject:@"agent5.jpg" forKeyedSubscript:@"agent_image"];
-    
-    NSMutableDictionary *dictMenu5 = [[NSMutableDictionary alloc]init];
-    [dictMenu5 setObject:@"City Estate Management (Bopal)" forKeyedSubscript:@"agent_name"];
-    [dictMenu5 setObject:@"sender" forKeyedSubscript:@"chat_type"];
-    [dictMenu5 setObject:@"agent6.jpg" forKeyedSubscript:@"agent_image"];
-    
-    mutArrAgent     = [[NSMutableArray alloc]initWithObjects:dictMenu,dictMenu1,dictMenu2,dictMenu3,dictMenu4,dictMenu5, nil];
+    PFQuery *query = [PFQuery queryWithClassName:@"Agent_Master" predicate:nil];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            NSLog(@"%@",objects);
+            mutArrAgent = [[NSMutableArray alloc]initWithArray:objects];
+            [self.tblAgent reloadData];
+        }
+    }];
+
     // Do any additional setup after loading the view.
 }
 
@@ -94,13 +105,17 @@
     HPAgentCell *aHPAgentCell= (HPAgentCell*)[tableView dequeueReusableCellWithIdentifier:@"agentCell"];
     
     if (aHPAgentCell) {
-        aHPAgentCell.lblName.text = [[mutArrAgent  objectAtIndex:indexPath.row]objectForKey:@"agent_name"];
-        aHPAgentCell.lblSubTitle.text = [[mutArrAgent objectAtIndex:indexPath.row]objectForKey:@"chat_message"];
+        aHPAgentCell.lblName.text = [[mutArrAgent  objectAtIndex:indexPath.row]objectForKey:@"A_Name"];
+        aHPAgentCell.lblSubTitle.text = [[mutArrAgent objectAtIndex:indexPath.row]objectForKey:@"A_Address"];
         aHPAgentCell.imgAgent.layer.cornerRadius = aHPAgentCell.imgAgent.frame.size.width/2;
         aHPAgentCell.imgAgent.layer.borderColor = [UIColor whiteColor].CGColor;
         aHPAgentCell.imgAgent.layer.borderWidth = 1;
         aHPAgentCell.imgAgent.layer.masksToBounds=YES;
-        aHPAgentCell.imgAgent.image = [UIImage imageNamed:[[mutArrAgent objectAtIndex:indexPath.row]objectForKey:@"agent_image"]];
+        
+        PFFile *file = [[mutArrAgent objectAtIndex:indexPath.row] objectForKey:@"A_Image"];
+        [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            aHPAgentCell.imgAgent.image = [UIImage imageWithData:data];
+        }];
     }
     
     return aHPAgentCell;
