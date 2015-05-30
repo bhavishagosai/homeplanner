@@ -384,7 +384,7 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IuD-fj-v5q">
                                         <rect key="frame" x="8" y="576" width="300" height="156"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <string key="text">Say hello to a nonstop life at DB Pride.Township spanning across 15 acres of land • Wide range of living options Well connected to main AB Road • Only high-rise apartments project in the area Situated on 100 ft. wide master plan road</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -1108,9 +1108,9 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mir-e2-8J3">
                                 <rect key="frame" x="0.0" y="64" width="320" height="204"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Rates &amp; Trends is a resource that provides Residential and Commercial property price trends for localities in 16 cities across India. These price trends can be viewed in the form of tables or graphs from the locality's Sale and Rent perspective.
+                                <string key="text">Rates &amp; Trends is a resource that provides Residential and Commercial property price trends for localities in 16 cities across India. These price trends can be viewed in the form of tables or graphs from the locality's Sale and Rent perspective.
 
-Use Rates &amp; Trends as a tool in making property decisions, as it contains locality-specific information on average price and quarterly price changes. You can also compare data for as many as 10 localities in a city, for up to 3 different timeframes. This detailed comparison lets you see the highest and lowest locality prices, apart from the average price.</mutableString>
+Use Rates &amp; Trends as a tool in making property decisions, as it contains locality-specific information on average price and quarterly price changes. You can also compare data for as many as 10 localities in a city, for up to 3 different timeframes. This detailed comparison lets you see the highest and lowest locality prices, apart from the average price.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
