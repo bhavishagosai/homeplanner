@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HPNewReqVC : UIViewController
+@interface HPNewReqVC : UIViewController<UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate>{
+    UIPickerView *myPickerView;
+    NSArray *arrayPeopertyType,*arrayBadrooms,*arrayCity;
+    UITextField *txtSelected;
+}
+@property (weak, nonatomic) IBOutlet UITextField *txtPropertyType;
+@property (weak, nonatomic) IBOutlet UITextField *txtCity;
+@property (weak, nonatomic) IBOutlet UITextField *txtBadrooms;
 
 @end

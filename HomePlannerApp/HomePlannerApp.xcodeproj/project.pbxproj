@@ -111,12 +111,12 @@
 		B856ED521AB1F54800F533D1 /* HPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B856ED511AB1F54800F533D1 /* HPAppDelegate.m */; };
 		B856ED551AB1F54800F533D1 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B856ED531AB1F54800F533D1 /* Main_iPhone.storyboard */; };
 		B856ED581AB1F54800F533D1 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B856ED561AB1F54800F533D1 /* Main_iPad.storyboard */; };
-		B856ED5B1AB1F54800F533D1 /* HPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B856ED5A1AB1F54800F533D1 /* HPViewController.m */; };
 		B856ED5D1AB1F54800F533D1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B856ED5C1AB1F54800F533D1 /* Images.xcassets */; };
 		B856ED651AB1F54800F533D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B856ED411AB1F54800F533D1 /* Foundation.framework */; };
 		B856ED661AB1F54800F533D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B856ED451AB1F54800F533D1 /* UIKit.framework */; };
 		B856ED6E1AB1F54800F533D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B856ED6C1AB1F54800F533D1 /* InfoPlist.strings */; };
 		B856ED701AB1F54800F533D1 /* HomePlannerAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B856ED6F1AB1F54800F533D1 /* HomePlannerAppTests.m */; };
+		B857B9581ADD90E2005A340A /* power-button-off-hi.png in Resources */ = {isa = PBXBuildFile; fileRef = B857B9571ADD90E2005A340A /* power-button-off-hi.png */; };
 		B87F69791AD3097500662C2F /* agentCall.png in Resources */ = {isa = PBXBuildFile; fileRef = B87F69771AD3097500662C2F /* agentCall.png */; };
 		B87F697A1AD3097500662C2F /* agentWhatsapp.png in Resources */ = {isa = PBXBuildFile; fileRef = B87F69781AD3097500662C2F /* agentWhatsapp.png */; };
 		B89A581B1ABB3A52008B1E24 /* logout_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B89A581A1ABB3A52008B1E24 /* logout_icon.png */; };
@@ -308,13 +308,12 @@
 		B856ED511AB1F54800F533D1 /* HPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPAppDelegate.m; sourceTree = "<group>"; };
 		B856ED541AB1F54800F533D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		B856ED571AB1F54800F533D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		B856ED591AB1F54800F533D1 /* HPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPViewController.h; sourceTree = "<group>"; };
-		B856ED5A1AB1F54800F533D1 /* HPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPViewController.m; sourceTree = "<group>"; };
 		B856ED5C1AB1F54800F533D1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B856ED621AB1F54800F533D1 /* HomePlannerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomePlannerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B856ED6B1AB1F54800F533D1 /* HomePlannerAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HomePlannerAppTests-Info.plist"; sourceTree = "<group>"; };
 		B856ED6D1AB1F54800F533D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B856ED6F1AB1F54800F533D1 /* HomePlannerAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePlannerAppTests.m; sourceTree = "<group>"; };
+		B857B9571ADD90E2005A340A /* power-button-off-hi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "power-button-off-hi.png"; sourceTree = "<group>"; };
 		B87F69771AD3097500662C2F /* agentCall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agentCall.png; sourceTree = "<group>"; };
 		B87F69781AD3097500662C2F /* agentWhatsapp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agentWhatsapp.png; sourceTree = "<group>"; };
 		B89A581A1ABB3A52008B1E24 /* logout_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout_icon.png; sourceTree = "<group>"; };
@@ -663,6 +662,7 @@
 		B817C72C1AB1FC69009A989E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B857B9571ADD90E2005A340A /* power-button-off-hi.png */,
 				B87F69771AD3097500662C2F /* agentCall.png */,
 				B87F69781AD3097500662C2F /* agentWhatsapp.png */,
 				A93831111AC03F93002CF93B /* project1.jpg */,
@@ -795,8 +795,6 @@
 				B856ED511AB1F54800F533D1 /* HPAppDelegate.m */,
 				B856ED531AB1F54800F533D1 /* Main_iPhone.storyboard */,
 				B856ED561AB1F54800F533D1 /* Main_iPad.storyboard */,
-				B856ED591AB1F54800F533D1 /* HPViewController.h */,
-				B856ED5A1AB1F54800F533D1 /* HPViewController.m */,
 				B856ED5C1AB1F54800F533D1 /* Images.xcassets */,
 				B856ED481AB1F54800F533D1 /* Supporting Files */,
 			);
@@ -1098,6 +1096,7 @@
 				B8F5ABE81ABA083600AC966F /* home4.jpg in Resources */,
 				B801D2A61ABF433F00B29FB1 /* dhanesh.png in Resources */,
 				B81621E81AB4BF3400161525 /* post_req_tab_icon.png in Resources */,
+				B857B9581ADD90E2005A340A /* power-button-off-hi.png in Resources */,
 				B8F5ABE51ABA083600AC966F /* home1.jpg in Resources */,
 				B801D2701ABEEADD00B29FB1 /* twitter-icon.png in Resources */,
 				B89E6FFF1AB89FBB00E218D8 /* bhavisha.png in Resources */,
@@ -1122,7 +1121,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B801D2911ABF33B100B29FB1 /* HPVaastuDetailVC.m in Sources */,
-				B856ED5B1AB1F54800F533D1 /* HPViewController.m in Sources */,
 				B801D2821ABF108600B29FB1 /* HPVaastuCell.m in Sources */,
 				A93830D91ABFF5F1002CF93B /* HPTrendsCell.m in Sources */,
 				A93831101AC03F1E002CF93B /* HPProjectCell.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import "HPSettingsVC.h"
 #import "HPSettingCell.h"
+#import <Parse/Parse.h>
 
 @interface HPSettingsVC ()
 
@@ -157,5 +158,9 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+- (IBAction)btnLogoutClick:(id)sender {
+    
+    [PFUser logOut];
+    [self.navigationController popToViewController:[[self.navigationController viewControllers] objectAtIndex:self.navigationController.viewControllers.count-3] animated:YES];
+}
 @end
