@@ -8,6 +8,7 @@
 
 #import "HPProjectSearrchMainVC.h"
 #import "HPProjectCell.h"
+#import <Parse/Parse.h>
 
 @interface HPProjectSearrchMainVC ()
 
@@ -50,6 +51,10 @@
     [dictMenu5 setObject:@"project6.jpg" forKeyedSubscript:@"project_image"];
     
     mutArrProjectList     = [[NSMutableArray alloc]initWithObjects:dictMenu,dictMenu1,dictMenu2,dictMenu3,dictMenu4,dictMenu5, nil];
+    
+    
+    
+    
     
     // Do any additional setup after loading the view.
 }

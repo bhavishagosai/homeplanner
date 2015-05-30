@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "CHTumblrMenuView.h"
 
-@interface HPHomeVC : UIViewController
-
+@interface HPHomeVC : UIViewController{
+    CHTumblrMenuView *menuView;
+}
+- (IBAction)btnLogoutClick:(id)sender;
 @end

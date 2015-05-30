@@ -7,6 +7,7 @@
 //
 
 #import "HPHomeVC.h"
+#import <Parse/Parse.h>
 
 @interface HPHomeVC ()
 
@@ -32,63 +33,65 @@
 
 - (void)showMenu
 {
-    CHTumblrMenuView *menuView = [[CHTumblrMenuView alloc] init];
+    menuView = [[CHTumblrMenuView alloc] init];
+    
+    __weak HPHomeVC *weakSelf = self;
     [menuView addMenuItemWithTitle:@"Property Search" andIcon:[UIImage imageNamed:@"property_search_icon.png"] andSelectedBlock:^{
         NSLog(@"Property Search selected");
-        [self performSegueWithIdentifier:@"propertySegue" sender:nil];
+        [weakSelf performSegueWithIdentifier:@"propertySegue" sender:nil];
     }];
     [menuView addMenuItemWithTitle:@"Near By Search" andIcon:[UIImage imageNamed:@"nearby_icon.png"] andSelectedBlock:^{
         NSLog(@"Near By Search selected");
-        [self performSegueWithIdentifier:@"nearBySegue" sender:nil];
+        [weakSelf performSegueWithIdentifier:@"nearBySegue" sender:nil];
     }];
     [menuView addMenuItemWithTitle:@"Post Requirement" andIcon:[UIImage imageNamed:@"post_req_icon.png"] andSelectedBlock:^{
         NSLog(@"Post Requirement selected");
-        [self performSegueWithIdentifier:@"postReqSegue" sender:nil];
+        [weakSelf performSegueWithIdentifier:@"postReqSegue" sender:nil];
         
     }];
     [menuView addMenuItemWithTitle:@"Agent Search" andIcon:[UIImage imageNamed:@"agent_search_icon.png"] andSelectedBlock:^{
         NSLog(@"Agent Search selected");
-        [self performSegueWithIdentifier:@"agentMainSegue" sender:nil];
+        [weakSelf performSegueWithIdentifier:@"agentMainSegue" sender:nil];
         
     }];
     [menuView addMenuItemWithTitle:@"Project Search" andIcon:[UIImage imageNamed:@"project_search_icon.png"] andSelectedBlock:^{
         NSLog(@"Project Search selected");
-        [self performSegueWithIdentifier:@"projectSegue" sender:nil];
+        [weakSelf performSegueWithIdentifier:@"projectSegue" sender:nil];
         
     }];
     [menuView addMenuItemWithTitle:@"Price Trends" andIcon:[UIImage imageNamed:@"price_trends_icon.png"] andSelectedBlock:^{
         NSLog(@"Price Trends selected");
-        [self performSegueWithIdentifier:@"trendsSegue" sender:nil];
+        [weakSelf performSegueWithIdentifier:@"trendsSegue" sender:nil];
         
     }];
     [menuView addMenuItemWithTitle:@"Favourite" andIcon:[UIImage imageNamed:@"favourite_icon.png"] andSelectedBlock:^{
         NSLog(@"Favourite selected");
-        [self performSegueWithIdentifier:@"favouriteSegue" sender:nil];
+        [weakSelf performSegueWithIdentifier:@"favouriteSegue" sender:nil];
         
     }];
     [menuView addMenuItemWithTitle:@"Messages" andIcon:[UIImage imageNamed:@"messages_icon.png"] andSelectedBlock:^{
         NSLog(@"Messages selected");
-        [self performSegueWithIdentifier:@"messagesSegue" sender:nil];
+        [weakSelf performSegueWithIdentifier:@"messagesSegue" sender:nil];
         
     }];
     [menuView addMenuItemWithTitle:@"Vaastu" andIcon:[UIImage imageNamed:@"vaastu_icon.png"] andSelectedBlock:^{
         NSLog(@"Vaastu selected");
-        [self performSegueWithIdentifier:@"vaastuSegue" sender:nil];
+        [weakSelf performSegueWithIdentifier:@"vaastuSegue" sender:nil];
         
     }];
     [menuView addMenuItemWithTitle:@"About Us" andIcon:[UIImage imageNamed:@"aboutus_icon.png"] andSelectedBlock:^{
         NSLog(@"About Us selected");
-        [self performSegueWithIdentifier:@"aboutusSegue" sender:nil];
+        [weakSelf performSegueWithIdentifier:@"aboutusSegue" sender:nil];
         
     }];
     [menuView addMenuItemWithTitle:@"Contact Us" andIcon:[UIImage imageNamed:@"ContactUs.png"] andSelectedBlock:^{
         NSLog(@"Vaastu selected");
-        [self performSegueWithIdentifier:@"contactusSegue" sender:nil];
+        [weakSelf performSegueWithIdentifier:@"contactusSegue" sender:nil];
         
     }];
     [menuView addMenuItemWithTitle:@"Settings" andIcon:[UIImage imageNamed:@"setting_icon.png"] andSelectedBlock:^{
         NSLog(@"Vaastu selected");
-        [self performSegueWithIdentifier:@"settingsSegue" sender:nil];
+        [weakSelf performSegueWithIdentifier:@"settingsSegue" sender:nil];
         
     }];
     
@@ -107,4 +110,10 @@
 }
 */
 
+- (IBAction)btnLogoutClick:(id)sender {
+    
+    [PFUser logOut];
+    [menuView removeFromSuperview];
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end
