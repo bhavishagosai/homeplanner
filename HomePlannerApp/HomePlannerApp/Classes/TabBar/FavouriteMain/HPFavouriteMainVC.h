@@ -11,6 +11,8 @@
 @interface HPFavouriteMainVC : UIViewController{
     NSMutableArray *mutArrProperty;
     NSInteger *lastSelectedIndex;
+    MBProgressHUD *hudProgress;
 }
+@property (weak, nonatomic) IBOutlet UITableView *tblFavorite;
 
 @end

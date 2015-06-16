@@ -1322,6 +1322,9 @@ Use Rates &amp; Trends as a tool in making property decisions, as it contains lo
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Favourite" id="w0N-g2-Pdh"/>
+                    <connections>
+                        <outlet property="tblFavorite" destination="NDx-eG-OSZ" id="Zvw-pd-MRL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ddq-He-MCZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

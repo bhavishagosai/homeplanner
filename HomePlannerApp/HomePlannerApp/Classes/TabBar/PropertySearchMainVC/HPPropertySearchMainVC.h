@@ -13,6 +13,7 @@
 {
     NSMutableArray *mutArrProperty;
     NSInteger *lastSelectedIndex;
+    MBProgressHUD *hudProgress;
 }
 @property (weak, nonatomic) IBOutlet UITableView *tblPropertyList;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segFilter;

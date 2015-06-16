@@ -19,5 +19,6 @@
 #import <CoreLocation/CoreLocation.h>
 #import "MBProgressHUD.h"
 #import "iCarousel.h"
+#import <objc/runtime.h>
 #endif
 HPAppDelegate *appDelegate;

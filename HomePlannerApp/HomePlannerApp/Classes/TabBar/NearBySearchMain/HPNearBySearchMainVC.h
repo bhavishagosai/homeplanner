@@ -10,7 +10,10 @@
 #import "INTULocationManager.h"
 #import "HPPropSearchDetailVC.h"
 
-@interface HPNearBySearchMainVC : UIViewController
+@interface HPNearBySearchMainVC : UIViewController{
+    MBProgressHUD *hudProgress;
+    NSMutableArray *mutArrPins;
+}
 @property (weak, nonatomic) IBOutlet UISearchBar *searchbar;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segMapType;
 @property (weak, nonatomic) IBOutlet MKMapView *mapViewNearBy;

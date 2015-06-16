@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 
 @interface HPPropSearchDetailVC : UIViewController <UIScrollViewDelegate,iCarouselDataSource,iCarouselDelegate,MKMapViewDelegate>{
     NSMutableArray *mutArrPropertyImage;
+    MBProgressHUD *hudProgress;
 }
+@property (strong, nonatomic) PFObject *selectedHome;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrView;
 @property (weak, nonatomic) IBOutlet iCarousel *objCarosalView;
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;

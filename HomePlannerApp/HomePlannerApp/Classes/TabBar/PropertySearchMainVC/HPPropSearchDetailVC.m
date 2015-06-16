@@ -13,41 +13,52 @@
 @end
 
 @implementation HPPropSearchDetailVC
-
+@synthesize selectedHome;
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    mutArrPropertyImage = [[NSMutableArray alloc]init];
-    
-    NSMutableDictionary *dictData = [[NSMutableDictionary alloc]init];
-    [dictData setObject:@"prop1.jpg" forKey:@"property_image"];
-    [dictData setObject:@"Main Hall" forKey:@"property_title"];
-    [mutArrPropertyImage addObject:dictData];
-    
-    NSMutableDictionary *dictData1 = [[NSMutableDictionary alloc]init];
-    [dictData1 setObject:@"prop2.jpg" forKey:@"property_image"];
-    [dictData1 setObject:@"Main Hall" forKey:@"property_title"];
-    [mutArrPropertyImage addObject:dictData1];
-    
-    NSMutableDictionary *dictData2 = [[NSMutableDictionary alloc]init];
-    [dictData2 setObject:@"prop3.jpg" forKey:@"property_image"];
-    [dictData2 setObject:@"Main Hall" forKey:@"property_title"];
-    [mutArrPropertyImage addObject:dictData2];
-    
-    NSMutableDictionary *dictData3 = [[NSMutableDictionary alloc]init];
-    [dictData3 setObject:@"prop4.jpg" forKey:@"property_image"];
-    [dictData3 setObject:@"Main Hall" forKey:@"property_title"];
-    [mutArrPropertyImage addObject:dictData3];
-    
-    NSMutableDictionary *dictData4 = [[NSMutableDictionary alloc]init];
-    [dictData4 setObject:@"prop5.jpg" forKey:@"property_image"];
-    [dictData4 setObject:@"Main Hall" forKey:@"property_title"];
-    [mutArrPropertyImage addObject:dictData4];
+    NSLog(@"Selectedc Home =m %@",selectedHome);
+//    mutArrPropertyImage = [[NSMutableArray alloc]init];
+//    
+//    hudProgress = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+//    hudProgress.labelText = @"Loading Data";
+//    [self.navigationController.view addSubview:hudProgress];
+//    [hudProgress show:YES];
+//    
+//
+//    PFQuery *query = [PFQuery queryWithClassName:@"Galary_Master"];
+//    [query whereKey:@"H_ID" equalTo:@"101"];
+//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//        if (!error) {
+//            mutArrPropertyImage = [[NSMutableArray alloc]initWithArray:objects];
+//            [self.objCarosalView reloadData];
+//        }
+//        [hudProgress hide:YES];
+//        [hudProgress removeFromSuperview];
+//    }];
     
     
-    self.title = @"My Sweet Home";
+    self.title = [selectedHome objectForKey:@"H_Name"];
+    self.lblTitle.text = [selectedHome objectForKey:@"H_Name"];
+    self.lblBHK.text = [selectedHome objectForKey:@"H_BHK"];
+    self.lblSqrf.text = [selectedHome objectForKey:@"H_Area"];
+    self.txtPropDesc.text = [selectedHome objectForKey:@"H_Desc"];
+    self.lblPossession.text = [selectedHome objectForKey:@"H_Possession"];
+    self.lblFurnished.text = [selectedHome objectForKey:@"H_Furnish"];
+    
+    
+    MKPointAnnotation *myAnnotation = [[MKPointAnnotation alloc]init];
+    CLLocationCoordinate2D pinCoordinate;
+    PFGeoPoint *geoPinPoint = [selectedHome objectForKey:@"H_Location"];
+    pinCoordinate.latitude = geoPinPoint.latitude;
+    pinCoordinate.longitude = geoPinPoint.longitude;
+    myAnnotation.coordinate = pinCoordinate;
+    myAnnotation.title = [selectedHome objectForKey:@"H_Name"];
+    myAnnotation.subtitle = [selectedHome objectForKey:@"H_Desc"];
+//    objc_setAssociatedObject(myAnnotation, @"tag", [NSString stringWithFormat:@"%d",i],OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    [self.mapView addAnnotation:myAnnotation];
+    
     self.objCarosalView.type = iCarouselTypeInvertedWheel;
-    [self.objCarosalView reloadData];
+    
     self.scrView.contentSize = CGSizeMake(self.scrView.frame.size.width, 1300);
     self.lblTitle.layer.cornerRadius = 5.0;
     self.lblTitle.layer.masksToBounds =YES;
@@ -107,7 +118,11 @@
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view{
     
     UIImageView *imgProperty = [[UIImageView alloc]initWithFrame:carousel.frame];
-    imgProperty.image = [UIImage imageNamed:[[mutArrPropertyImage objectAtIndex:index] objectForKey:@"property_image"]];
+    imgProperty.image = [UIImage imageNamed:@"photo_default.png"];
+    
+    [[[mutArrPropertyImage objectAtIndex:index] objectForKey:@"Image"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        imgProperty.image = [UIImage imageWithData:data];
+    }];
     return imgProperty;
     
 }
