@@ -7,6 +7,7 @@
 //
 
 #import "HPPropSearchDetailVC.h"
+#import "HPGalleryViewController.h"
 
 @interface HPPropSearchDetailVC ()
 
@@ -16,25 +17,7 @@
 @synthesize selectedHome;
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"Selectedc Home =m %@",selectedHome);
-//    mutArrPropertyImage = [[NSMutableArray alloc]init];
-//    
-//    hudProgress = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
-//    hudProgress.labelText = @"Loading Data";
-//    [self.navigationController.view addSubview:hudProgress];
-//    [hudProgress show:YES];
-//    
-//
-//    PFQuery *query = [PFQuery queryWithClassName:@"Galary_Master"];
-//    [query whereKey:@"H_ID" equalTo:@"101"];
-//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//        if (!error) {
-//            mutArrPropertyImage = [[NSMutableArray alloc]initWithArray:objects];
-//            [self.objCarosalView reloadData];
-//        }
-//        [hudProgress hide:YES];
-//        [hudProgress removeFromSuperview];
-//    }];
+
     
     
     self.title = [selectedHome objectForKey:@"H_Name"];
@@ -57,9 +40,17 @@
 //    objc_setAssociatedObject(myAnnotation, @"tag", [NSString stringWithFormat:@"%d",i],OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     [self.mapView addAnnotation:myAnnotation];
     
-    self.objCarosalView.type = iCarouselTypeInvertedWheel;
+    //get Full Image
+    PFFile *file = [selectedHome objectForKey:@"H_FullImage"];
+    [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        self.imgFullHome.image = [UIImage imageWithData:data];
+        [self.actImsgeLoad stopAnimating];
+    }];
     
-    self.scrView.contentSize = CGSizeMake(self.scrView.frame.size.width, 1300);
+    
+    
+    
+    self.scrView.contentSize = CGSizeMake(self.scrView.frame.size.width, 1200);
     self.lblTitle.layer.cornerRadius = 5.0;
     self.lblTitle.layer.masksToBounds =YES;
     self.lblSqrf.layer.cornerRadius = 5.0;
@@ -109,30 +100,55 @@
 - (IBAction)btnGetAgentDetailClick:(id)sender {
 }
 
+- (IBAction)btnViewGalleryClick:(UIButton *)sender {
+    HPGalleryViewController *objHPGalleryViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"HPGalleryViewController"];
+    objHPGalleryViewController.selectedHome = selectedHome;
+    [self.navigationController pushViewController:objHPGalleryViewController animated:YES];
+}
 
-#pragma mark iAc
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    // If it's the user location, just return nil.
+    if ([annotation isKindOfClass:[MKUserLocation class]])
+        return nil;
+    
+    // Handle any custom annotations.
+    if ([annotation isKindOfClass:[MKPointAnnotation class]])
+    {
+        // Try to dequeue an existing pin view first.
+        MKAnnotationView *pinView = (MKAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:@"CustomPinAnnotationView"];
+        if (!pinView)
+        {
+            // If an existing pin view was not available, create one.
+            pinView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"CustomPinAnnotationView"];
+            //pinView.animatesDrop = YES;
+            pinView.canShowCallout = YES;
+            pinView.image = [UIImage imageNamed:@"home_pin.png"];
+            pinView.calloutOffset = CGPointMake(0, 0);
+//            // Add a detail disclosure button to the callout.
+//            UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+//            [rightButton addTarget:self action:@selector(btnInfoClick:) forControlEvents:UIControlEventTouchUpInside];
+//            pinView.rightCalloutAccessoryView = rightButton;
+            
+            // Add an image to the left callout.
+            UIImageView *iconView = [[UIImageView alloc] init];
+            iconView.frame = CGRectMake(5, 0, 50, 50);
+            pinView.leftCalloutAccessoryView = iconView;
+            
+            PFFile *file = [selectedHome objectForKey:@"H_ThumbImage"];
+            [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                iconView.image = [UIImage imageWithData:data];
+            }];
+            
+            
+        } else {
+            pinView.annotation = annotation;
+        }
+        return pinView;
+    }
+    return nil;
+}
 
-- (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel{
-    return mutArrPropertyImage.count;
-}
-- (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view{
-    
-    UIImageView *imgProperty = [[UIImageView alloc]initWithFrame:carousel.frame];
-    imgProperty.image = [UIImage imageNamed:@"photo_default.png"];
-    
-    [[[mutArrPropertyImage objectAtIndex:index] objectForKey:@"Image"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-        imgProperty.image = [UIImage imageWithData:data];
-    }];
-    return imgProperty;
-    
-}
-//- (NSInteger)numberOfPlaceholdersInCarousel:(iCarousel *)carousel{
-//    
-//}
-//- (UIView *)carousel:(iCarousel *)carousel placeholderViewAtIndex:(NSInteger)index reusingView:(UIView *)view{
-//    
-//}
-- (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index{
-    
-}
+
+
 @end

@@ -111,6 +111,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     HPPropSearchDetailVC *objHPPropSearchDetailVC = [self.storyboard instantiateViewControllerWithIdentifier:@"HPPropSearchDetailVC"];
+    objHPPropSearchDetailVC.selectedHome = [mutArrProperty objectAtIndex:indexPath.row];
     [self.navigationController pushViewController:objHPPropSearchDetailVC animated:YES];
 }
 

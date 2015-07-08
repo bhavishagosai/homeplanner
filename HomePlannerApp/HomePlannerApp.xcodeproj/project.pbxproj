@@ -99,6 +99,7 @@
 		B817C7301AB1FC72009A989E /* sign up.png in Resources */ = {isa = PBXBuildFile; fileRef = B817C72D1AB1FC72009A989E /* sign up.png */; };
 		B817C7311AB1FC72009A989E /* sign in.png in Resources */ = {isa = PBXBuildFile; fileRef = B817C72E1AB1FC72009A989E /* sign in.png */; };
 		B817C7321AB1FC72009A989E /* Home1.PNG in Resources */ = {isa = PBXBuildFile; fileRef = B817C72F1AB1FC72009A989E /* Home1.PNG */; };
+		B845E1751B33432A002AC221 /* RevMobAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B845E1741B33432A002AC221 /* RevMobAds.framework */; };
 		B849F1A41ABC9D4A00E81461 /* INTULocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B849F1A01ABC9D4A00E81461 /* INTULocationManager.m */; };
 		B849F1A51ABC9D4A00E81461 /* INTULocationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B849F1A21ABC9D4A00E81461 /* INTULocationRequest.m */; };
 		B849F1A71ABCAC7000E81461 /* home_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = B849F1A61ABCAC7000E81461 /* home_pin.png */; };
@@ -117,6 +118,7 @@
 		B856ED6E1AB1F54800F533D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B856ED6C1AB1F54800F533D1 /* InfoPlist.strings */; };
 		B856ED701AB1F54800F533D1 /* HomePlannerAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B856ED6F1AB1F54800F533D1 /* HomePlannerAppTests.m */; };
 		B857B9581ADD90E2005A340A /* power-button-off-hi.png in Resources */ = {isa = PBXBuildFile; fileRef = B857B9571ADD90E2005A340A /* power-button-off-hi.png */; };
+		B86341231B349B4C00DC6109 /* HPGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B86341221B349B4C00DC6109 /* HPGalleryViewController.m */; };
 		B87F69791AD3097500662C2F /* agentCall.png in Resources */ = {isa = PBXBuildFile; fileRef = B87F69771AD3097500662C2F /* agentCall.png */; };
 		B87F697A1AD3097500662C2F /* agentWhatsapp.png in Resources */ = {isa = PBXBuildFile; fileRef = B87F69781AD3097500662C2F /* agentWhatsapp.png */; };
 		B89A581B1ABB3A52008B1E24 /* logout_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B89A581A1ABB3A52008B1E24 /* logout_icon.png */; };
@@ -291,6 +293,7 @@
 		B817C72D1AB1FC72009A989E /* sign up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sign up.png"; sourceTree = "<group>"; };
 		B817C72E1AB1FC72009A989E /* sign in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sign in.png"; sourceTree = "<group>"; };
 		B817C72F1AB1FC72009A989E /* Home1.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Home1.PNG; sourceTree = "<group>"; };
+		B845E1741B33432A002AC221 /* RevMobAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevMobAds.framework; sourceTree = "<group>"; };
 		B849F19E1ABC9D4A00E81461 /* INTULocationManager+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "INTULocationManager+Internal.h"; sourceTree = "<group>"; };
 		B849F19F1ABC9D4A00E81461 /* INTULocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INTULocationManager.h; sourceTree = "<group>"; };
 		B849F1A01ABC9D4A00E81461 /* INTULocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INTULocationManager.m; sourceTree = "<group>"; };
@@ -317,6 +320,8 @@
 		B856ED6D1AB1F54800F533D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B856ED6F1AB1F54800F533D1 /* HomePlannerAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePlannerAppTests.m; sourceTree = "<group>"; };
 		B857B9571ADD90E2005A340A /* power-button-off-hi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "power-button-off-hi.png"; sourceTree = "<group>"; };
+		B86341211B349B4C00DC6109 /* HPGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPGalleryViewController.h; sourceTree = "<group>"; };
+		B86341221B349B4C00DC6109 /* HPGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPGalleryViewController.m; sourceTree = "<group>"; };
 		B87F69771AD3097500662C2F /* agentCall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agentCall.png; sourceTree = "<group>"; };
 		B87F69781AD3097500662C2F /* agentWhatsapp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agentWhatsapp.png; sourceTree = "<group>"; };
 		B89A581A1ABB3A52008B1E24 /* logout_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout_icon.png; sourceTree = "<group>"; };
@@ -385,6 +390,7 @@
 				B8C88A811AB7523900E7558C /* AudioToolbox.framework in Frameworks */,
 				B8C88A7F1AB7522A00E7558C /* AdSupport.framework in Frameworks */,
 				B8C88A7D1AB7521700E7558C /* Security.framework in Frameworks */,
+				B845E1751B33432A002AC221 /* RevMobAds.framework in Frameworks */,
 				B8C88A7B1AB7520800E7558C /* SystemConfiguration.framework in Frameworks */,
 				B8C88A791AB751EF00E7558C /* libsqlite3.0.dylib in Frameworks */,
 				B8C88A771AB751DF00E7558C /* CoreLocation.framework in Frameworks */,
@@ -544,6 +550,8 @@
 				B81621D71AB4BBD600161525 /* HPPropertySearchMainVC.m */,
 				B89A58221ABB4415008B1E24 /* HPPropSearchDetailVC.h */,
 				B89A58231ABB4415008B1E24 /* HPPropSearchDetailVC.m */,
+				B86341211B349B4C00DC6109 /* HPGalleryViewController.h */,
+				B86341221B349B4C00DC6109 /* HPGalleryViewController.m */,
 			);
 			path = PropertySearchMainVC;
 			sourceTree = "<group>";
@@ -735,6 +743,14 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		B845E1731B334314002AC221 /* RevmobSDK */ = {
+			isa = PBXGroup;
+			children = (
+				B845E1741B33432A002AC221 /* RevMobAds.framework */,
+			);
+			path = RevmobSDK;
+			sourceTree = "<group>";
+		};
 		B849F19D1ABC9D4A00E81461 /* LocatioManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -880,6 +896,7 @@
 		B8CAF8F31AB34C84002D1171 /* Other Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B845E1731B334314002AC221 /* RevmobSDK */,
 				B849F19D1ABC9D4A00E81461 /* LocatioManager */,
 				B89A58251ABB4572008B1E24 /* iCarousel */,
 				B89E70001AB8AA8700E218D8 /* ActHudView */,
@@ -1145,6 +1162,7 @@
 				B81622031AB4C12E00161525 /* HPFavouriteMainVC.m in Sources */,
 				B81621F31AB4C09100161525 /* HPPostReqMainVC.m in Sources */,
 				B801D2751ABEF6C100B29FB1 /* HPSettingCell.m in Sources */,
+				B86341231B349B4C00DC6109 /* HPGalleryViewController.m in Sources */,
 				B81621FB1AB4C0EA00161525 /* HPProjectSearrchMainVC.m in Sources */,
 				B849F1A41ABC9D4A00E81461 /* INTULocationManager.m in Sources */,
 				B8CAF8FD1AB34CE5002D1171 /* HPHomeVC.m in Sources */,
@@ -1305,6 +1323,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/HomePlannerApp/Other\\ Classes/RevmobSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HomePlannerApp/HomePlannerApp-Prefix.pch";
@@ -1322,6 +1341,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/HomePlannerApp/Other\\ Classes/RevmobSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HomePlannerApp/HomePlannerApp-Prefix.pch";
