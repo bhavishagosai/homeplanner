@@ -14,4 +14,5 @@
 }
 @property (strong, nonatomic) PFObject *selectedHome;
 @property (weak, nonatomic) IBOutlet iCarousel *objCarosalView;
+- (IBAction)segValueChanged:(UISegmentedControl *)sender;
 @end

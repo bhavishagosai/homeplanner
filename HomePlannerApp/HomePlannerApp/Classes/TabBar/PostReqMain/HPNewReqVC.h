@@ -16,5 +16,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtPropertyType;
 @property (weak, nonatomic) IBOutlet UITextField *txtCity;
 @property (weak, nonatomic) IBOutlet UITextField *txtBadrooms;
+@property (weak, nonatomic) IBOutlet UIButton *btnRent;
+@property (weak, nonatomic) IBOutlet UIButton *btnBuy;
 
+- (IBAction)btnPropTypeClick:(UIButton *)sender;
 @end

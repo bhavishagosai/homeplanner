@@ -21,7 +21,7 @@
 //        [self performSegueWithIdentifier:@"LoginSegue" sender:nil];
 //    });
     // Do any additional setup after loading the view.
-    [self performSelector:@selector(gotoLoginScreen) withObject:nil afterDelay:1.0];
+    [self performSelector:@selector(gotoLoginScreen) withObject:nil afterDelay:3.0];
 }
 
 -(void)gotoLoginScreen{

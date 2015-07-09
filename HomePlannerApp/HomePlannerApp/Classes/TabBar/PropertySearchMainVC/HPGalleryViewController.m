@@ -22,7 +22,7 @@
     hudProgress.labelText = @"Gallery Images Loading.";
     [self.navigationController.view addSubview:hudProgress];
     [hudProgress show:YES];
-
+    self.title = [NSString stringWithFormat:@"%@'s Gallery",[self.selectedHome objectForKey:@"H_Name"]];
 
     PFQuery *query = [PFQuery queryWithClassName:@"Galary_Master"];
     [query whereKey:@"H_ID" equalTo:[self.selectedHome objectForKey:@"H_ID"]];
@@ -34,7 +34,7 @@
         [hudProgress hide:YES];
         [hudProgress removeFromSuperview];
     }];
-    self.objCarosalView.type = iCarouselTypeInvertedWheel;
+    self.objCarosalView.type = iCarouselTypeLinear;
     // Do any additional setup after loading the view.
 }
 
@@ -59,14 +59,15 @@
     return mutArrPropertyImage.count;
 }
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view{
-    
-    UIImageView *imgProperty = [[UIImageView alloc]initWithFrame:carousel.frame];
-    imgProperty.image = [UIImage imageNamed:@"photo_default.png"];
+    if (!view) {
+        view = [[UIImageView alloc]initWithFrame:carousel.frame];
+    }
+    ((UIImageView *)view).image = [UIImage imageNamed:@"photo_default.png"];
     
     [[[mutArrPropertyImage objectAtIndex:index] objectForKey:@"Image"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-        imgProperty.image = [UIImage imageWithData:data];
+        ((UIImageView *)view).image = [UIImage imageWithData:data];
     }];
-    return imgProperty;
+    return view;
     
 }
 //- (NSInteger)numberOfPlaceholdersInCarousel:(iCarousel *)carousel{
@@ -80,4 +81,13 @@
 }
 
 
+- (IBAction)segValueChanged:(UISegmentedControl *)sender {
+    
+    iCarouselType type = sender.selectedSegmentIndex;
+    //carousel can smoothly animate between types
+    [UIView beginAnimations:nil context:nil];
+    self.objCarosalView.type = type;
+    [UIView commitAnimations];
+
+}
 @end

@@ -116,4 +116,13 @@
 }
 */
 
+- (IBAction)btnPropTypeClick:(UIButton *)sender {
+    if (sender.tag==0) {
+        self.btnRent.selected=YES;
+        self.btnBuy.selected=NO;
+    }else{
+        self.btnRent.selected=NO;
+        self.btnBuy.selected=YES;
+    }
+}
 @end

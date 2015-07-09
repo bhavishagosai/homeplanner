@@ -233,7 +233,7 @@
                   symbolName = "-[HPNearBySearchMainVC mapView:viewForAnnotation:]"
                   moduleName = "HomePlannerApp"
                   urlString = "file:///Volumes/DATA/STUDY/MCA/Final%20Project/My%20Project/git/HomePlannerApp/HomePlannerApp/Classes/TabBar/NearBySearchMain/HPNearBySearchMainVC.m"
-                  timestampString = "455957662.07623"
+                  timestampString = "458070530.596684"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "293"
@@ -247,7 +247,7 @@
                   symbolName = "__50-[HPNearBySearchMainVC mapView:viewForAnnotation:]_block_invoke"
                   moduleName = "HomePlannerApp"
                   urlString = "file:///Volumes/DATA/STUDY/MCA/Final%20Project/My%20Project/git/HomePlannerApp/HomePlannerApp/Classes/TabBar/NearBySearchMain/HPNearBySearchMainVC.m"
-                  timestampString = "455957662.076392"
+                  timestampString = "458070530.59684"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "293"
@@ -286,6 +286,38 @@
             startingLineNumber = "269"
             endingLineNumber = "269"
             landmarkName = "-mapView:viewForAnnotation:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomePlannerApp/Classes/TabBar/PropertySearchMainVC/HPGalleryViewController.m"
+            timestampString = "458069662.965345"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "-carousel:viewForItemAtIndex:reusingView:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomePlannerApp/Classes/TabBar/PropertySearchMainVC/HPGalleryViewController.m"
+            timestampString = "458072248.101701"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "-carousel:didSelectItemAtIndex:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
