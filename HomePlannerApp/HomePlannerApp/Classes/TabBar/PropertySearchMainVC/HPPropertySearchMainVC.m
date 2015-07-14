@@ -203,7 +203,10 @@
         NSPredicate *pradicatre = [NSPredicate predicateWithFormat:@"H_IsRent = true"];
         PFQuery *query = [PFQuery queryWithClassName:@"Home_Master" predicate:pradicatre];
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            
+            
             if (!error) {
+                [[RevMobAds session] showPopup];
                 mutArrProperty = [[NSMutableArray alloc]initWithArray:objects];
                 [self.tblPropertyList reloadData];
             }
@@ -215,6 +218,7 @@
         PFQuery *query = [PFQuery queryWithClassName:@"Home_Master" predicate:pradicatre];
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (!error) {
+                [[RevMobAds session] showPopup];
                 mutArrProperty = [[NSMutableArray alloc]initWithArray:objects];
                 [self.tblPropertyList reloadData];
             }
@@ -224,6 +228,7 @@
         PFQuery *query = [PFQuery queryWithClassName:@"Home_Master" predicate:nil];
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (!error) {
+                [[RevMobAds session] showPopup];
                 mutArrProperty = [[NSMutableArray alloc]initWithArray:objects];
                 [self.tblPropertyList reloadData];
             }

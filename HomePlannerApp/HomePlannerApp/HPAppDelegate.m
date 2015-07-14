@@ -17,6 +17,9 @@
     // Override point for customization after application launch.
     appDelegate = self;
     
+    //Ad Integration
+    [RevMobAds startSessionWithAppID:REVMOB_ID andDelegate:self];
+    
     
     // ****************************************************************************
     // Fill in with your Parse and Twitter credentials. Don't forget to add your
@@ -72,6 +75,20 @@
 - (void)locationManager:(CLLocationManager *)manager
        didFailWithError:(NSError *)error{
     
+}
+
+
+#pragma mark --- RevMob Ads Delegate ---
+
+-(void)revmobSessionIsStarted {
+    NSLog(@"[RevMob Sample App] Session is started.");
+}
+
+- (void)revmobSessionNotStartedWithError:(NSError *)error {
+    NSLog(@"[RevMob Sample App] Session failed to start: %@", error);
+}
+
+- (void)revmobAdDidFailWithError:(NSError *)error {
 }
 
 @end

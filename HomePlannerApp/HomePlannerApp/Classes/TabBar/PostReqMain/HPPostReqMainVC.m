@@ -16,7 +16,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    hudProgress = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    hudProgress.labelText = @"Loading Requiremnts List...";
+    [self.navigationController.view addSubview:hudProgress];
+    [hudProgress show:YES];
+    mutArrPropertyReq = [[NSMutableArray alloc]init];
+    PFQuery *query = [PFQuery queryWithClassName:@"Property_req"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            mutArrPropertyReq = [[NSMutableArray alloc]initWithArray:objects];
+            [self.tblReqList reloadData];
+        }
+        [hudProgress hide:YES];
+        [hudProgress removeFromSuperview];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,7 +57,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
+    return mutArrPropertyReq.count;
 }
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -56,8 +74,25 @@
     }
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *aHPTrendsCell= [tableView dequeueReusableCellWithIdentifier:@"reqCell"];
-    return aHPTrendsCell;
+    UITableViewCell *aHPReqCell= [tableView dequeueReusableCellWithIdentifier:@"reqCell"];
+    UILabel *lblTitle = (UILabel*)[aHPReqCell.contentView viewWithTag:1];
+    lblTitle.text = [NSString stringWithFormat:@"Need Property for %@.",mutArrPropertyReq[indexPath.row][@"Post_Type"]];
+    if([mutArrPropertyReq[indexPath.row][@"Post_Type"] isEqualToString:@"Buy"]){
+        lblTitle.textColor = [UIColor yellowColor];
+    }else{
+        lblTitle.textColor = [UIColor whiteColor];
+    }
+    
+    UILabel *lblCity = (UILabel*)[aHPReqCell.contentView viewWithTag:3];
+    lblCity.text = mutArrPropertyReq[indexPath.row][@"Req_City"];
+    
+    UILabel *lblSize = (UILabel*)[aHPReqCell.contentView viewWithTag:5];
+    lblSize.text = [NSString stringWithFormat:@"%@sqft.",mutArrPropertyReq[indexPath.row][@"Req_Size"]];
+    
+    UILabel *lblBed = (UILabel*)[aHPReqCell.contentView viewWithTag:6];
+    lblBed.text = [NSString stringWithFormat:@"%@\nBHK",mutArrPropertyReq[indexPath.row][@"Req_Bed"]];
+
+    return aHPReqCell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 }

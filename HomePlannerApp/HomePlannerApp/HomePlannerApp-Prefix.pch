@@ -20,5 +20,15 @@
 #import "iCarousel.h"
 #import <objc/runtime.h>
 #import <Parse/Parse.h>
+#import <RevMobAds/RevMobAds.h>
+
+#define REVMOB_ID @"55695c2c75bd9bb90a8e61c1"
+
+#define PLACEMENT_ID_BANNER @"55695c2c75bd9bb90a8e61b7"
+#define PLACEMENT_ID_FULLSCREEN @"55695c2c75bd9bb90a8e61b9"
+#define PLACEMENT_ID_LINK @"55695c2c75bd9bb90a8e61bb"
+#define PLACEMENT_ID_POPUP @"55695c2c75bd9bb90a8e61bd"
+#define PLACEMENT_ID_NOTIFICATION @"55695c2c75bd9bb90a8e61c1"
+
 #endif
 HPAppDelegate *appDelegate;

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HPPostReqMainVC : UIViewController
-
+@interface HPPostReqMainVC : UIViewController{
+    MBProgressHUD *hudProgress;
+    NSMutableArray *mutArrPropertyReq;
+}
+@property (weak, nonatomic) IBOutlet UITableView *tblReqList;
 @end
