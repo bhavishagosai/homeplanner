@@ -324,6 +324,8 @@
 		B857B9571ADD90E2005A340A /* power-button-off-hi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "power-button-off-hi.png"; sourceTree = "<group>"; };
 		B86341211B349B4C00DC6109 /* HPGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPGalleryViewController.h; sourceTree = "<group>"; };
 		B86341221B349B4C00DC6109 /* HPGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPGalleryViewController.m; sourceTree = "<group>"; };
+		B871A5BB1B598B5800FC414B /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		B871A5BC1B598B5800FC414B /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
 		B87F69771AD3097500662C2F /* agentCall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agentCall.png; sourceTree = "<group>"; };
 		B87F69781AD3097500662C2F /* agentWhatsapp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agentWhatsapp.png; sourceTree = "<group>"; };
 		B89A581A1ABB3A52008B1E24 /* logout_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout_icon.png; sourceTree = "<group>"; };
@@ -742,6 +744,8 @@
 				B817C72D1AB1FC72009A989E /* sign up.png */,
 				B817C72E1AB1FC72009A989E /* sign in.png */,
 				B817C72F1AB1FC72009A989E /* Home1.PNG */,
+				B871A5BB1B598B5800FC414B /* iTunesArtwork */,
+				B871A5BC1B598B5800FC414B /* iTunesArtwork@2x */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -1324,6 +1328,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1333,6 +1338,7 @@
 				GCC_PREFIX_HEADER = "HomePlannerApp/HomePlannerApp-Prefix.pch";
 				INFOPLIST_FILE = "HomePlannerApp/HomePlannerApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1342,6 +1348,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1351,6 +1358,7 @@
 				GCC_PREFIX_HEADER = "HomePlannerApp/HomePlannerApp-Prefix.pch";
 				INFOPLIST_FILE = "HomePlannerApp/HomePlannerApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

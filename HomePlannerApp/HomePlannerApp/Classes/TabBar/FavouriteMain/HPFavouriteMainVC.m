@@ -138,7 +138,7 @@
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (!error) {
                 // The find succeeded.
-                NSLog(@"Successfully retrieved %d scores.", objects.count);
+                NSLog(@"Successfully retrieved %lu scores.", (unsigned long)objects.count);
                 if ([objects count] > 0) {
                     // student already has data saved...
                     PFObject *firstObj = [objects firstObject];
@@ -176,7 +176,7 @@
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (!error) {
                 // The find succeeded.
-                NSLog(@"Successfully retrieved %d scores.", objects.count);
+                NSLog(@"Successfully retrieved %lu scores.", (unsigned long)objects.count);
                 if ([objects count] > 0) {
                     // student already has data saved...
                     PFObject *firstObj = [objects firstObject];

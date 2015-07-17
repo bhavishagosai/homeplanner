@@ -39,6 +39,7 @@
     myAnnotation.subtitle = [selectedHome objectForKey:@"H_Desc"];
 //    objc_setAssociatedObject(myAnnotation, @"tag", [NSString stringWithFormat:@"%d",i],OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     [self.mapView addAnnotation:myAnnotation];
+    [self.mapView setRegion:MKCoordinateRegionMake(myAnnotation.coordinate, MKCoordinateSpanMake(0.05, 0.05)) animated:YES];
     
     //get Full Image
     PFFile *file = [selectedHome objectForKey:@"H_FullImage"];
