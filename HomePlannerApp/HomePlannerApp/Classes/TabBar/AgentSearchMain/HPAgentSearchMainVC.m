@@ -115,6 +115,12 @@
         aHPAgentCell.imgAgent.layer.borderWidth = 1;
         aHPAgentCell.imgAgent.layer.masksToBounds=YES;
         
+        [aHPAgentCell.btnContact addTarget:self action:@selector(btnContactClick:) forControlEvents:UIControlEventTouchUpInside];
+        aHPAgentCell.btnContact.tag = indexPath.row;
+        
+        [aHPAgentCell.btnWhatsApp addTarget:self action:@selector(btnWhatsaAppClick:) forControlEvents:UIControlEventTouchUpInside];
+        aHPAgentCell.btnWhatsApp.tag = indexPath.row;
+        
         PFFile *file = [[mutArrAgent objectAtIndex:indexPath.row] objectForKey:@"A_Image"];
         [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
             aHPAgentCell.imgAgent.image = [UIImage imageWithData:data];
@@ -127,5 +133,59 @@
     
 }
 
+-(IBAction)btnContactClick:(id)sender{
+    UIActionSheet *actionSheet = [[UIActionSheet alloc]initWithTitle:@"Select option" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Call" otherButtonTitles:@"SMS", nil];
+    actionSheet.tag = [sender tag];
+    [actionSheet showInView:self.view];
+}
+
+-(IBAction)btnWhatsaAppClick:(id)sender{
+    NSURL *whatsappURL = [NSURL URLWithString:@"whatsapp://send?text=Hello Agent!"];
+    if ([[UIApplication sharedApplication] canOpenURL: whatsappURL]) {
+        [[UIApplication sharedApplication] openURL: whatsappURL];
+    }else{
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Home Planner" message:@"Whatsapp app is not installed on your device." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
+}
+
+#pragma mark UIActionSheetDelegate methods
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    switch (buttonIndex) {
+        case 0:{
+//            NSString *cleanedString = [[[[mutArrAgent objectAtIndex:actionSheet.tag] objectForKey:@"A_Contact_no"] componentsSeparatedByCharactersInSet:[[NSCharacterSet characterSetWithCharactersInString:@"0123456789-+()"] invertedSet]] componentsJoinedByString:@""];
+            NSURL *telURL = [NSURL URLWithString:[NSString stringWithFormat:@"tel:%@", [[mutArrAgent objectAtIndex:actionSheet.tag] objectForKey:@"A_Contact_no"]]];
+            if ([[UIApplication sharedApplication] canOpenURL: telURL]) {
+                [[UIApplication sharedApplication] openURL:telURL];
+            }else{
+                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Home Planner" message:@"Your device can not have Phone Call feature!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
+            }
+            
+            break;
+        }
+        case 1:{
+            MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init] ;
+            if([MFMessageComposeViewController canSendText])
+            {
+                controller.body = @"SMS message here";
+                controller.recipients = [NSArray arrayWithObjects:[[mutArrAgent objectAtIndex:actionSheet.tag] objectForKey:@"A_Contact_no"], nil];
+                controller.messageComposeDelegate = self;
+                [self presentViewController:controller animated:YES completion:^{
+                    
+                }];
+            }
+            break;
+        }
+
+        default:
+            break;
+    }
+}
+
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end

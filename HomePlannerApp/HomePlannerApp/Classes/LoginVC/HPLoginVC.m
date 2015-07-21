@@ -18,7 +18,6 @@
     [super viewDidLoad];
     self.navigationController.navigationBarHidden=NO;
     self.navigationItem.hidesBackButton=YES;
-    self.navigationController.navigationBar.barTintColor=[UIColor colorWithRed:237/255.0 green:71/255.0 blue:99/255.0 alpha:1.0];
     
     UINavigationBar *navBar = self.navigationController.navigationBar;
     UIImage *image = [UIImage imageNamed:@"navigationBar.png"];
@@ -29,6 +28,13 @@
     
     self.btnSignUp.layer.cornerRadius = 5;
     self.btnSignUp.layer.masksToBounds=YES;
+    
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapClick:)];
+    [self.view addGestureRecognizer:tapGesture];
+    
+    if ([PFUser currentUser]) {
+        [self performSegueWithIdentifier:@"homeSegue" sender:nil];
+    }
     // Do any additional setup after loading the view.
 }
 
@@ -48,26 +54,104 @@
 */
 
 - (IBAction)btnSignInClick:(id)sender {
-//    actLoadingSimple = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
-//    [self.navigationController.view addSubview:actLoadingSimple];
-//    
-//    actLoadingSimple.delegate = self;
-//    actLoadingSimple.labelText = @"Login...";
-//    [actLoadingSimple show:YES];
-//    [PFUser logInWithUsernameInBackground:self.txtUserName.text password:self.txtPassword.text block:^(PFUser *user, NSError *error) {
-//        [actLoadingSimple hide:YES];
-//        if (!error) {
-//            [self performSegueWithIdentifier:@"homeSegue" sender:nil];
-//        }else{
-//            UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"Home Planner" message:@"Username or password may be wrong. Please try again." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-//            [alert show];
-//        }
-//    }];
-    [self performSegueWithIdentifier:@"homeSegue" sender:nil];
+    [self.view endEditing:YES];
+    
+    if ([self.txtUserName.text length]==0 && [self.txtPassword.text length]==0) {
+        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"Home Planner" message:@"Please enter username & password for login." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }else if ([self.txtUserName.text length]==0){
+        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"Home Planner" message:@"Username should not be blank.Please enter Username." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }else if (![self NSStringIsValidEmail:self.txtUserName.text]){
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Home Planner" message:@"Please enter valid email address." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alert show];
+    }else if ([self.txtPassword.text length]==0){
+        UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"Home Planner" message:@"Password should not be blank.Please enter Password." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }else{
+        actLoadingSimple = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+        [self.navigationController.view addSubview:actLoadingSimple];
+        
+        actLoadingSimple.delegate = self;
+        actLoadingSimple.labelText = @"Login...";
+        [actLoadingSimple show:YES];
+        [PFUser logInWithUsernameInBackground:[[self.txtUserName.text componentsSeparatedByString:@"@"] firstObject] password:self.txtPassword.text block:^(PFUser *user, NSError *error) {
+            [actLoadingSimple hide:YES];
+            
+            if (!error) {
+                if ([[user objectForKey:@"emailVerified"] boolValue]) {
+                    [self performSegueWithIdentifier:@"homeSegue" sender:nil];
+                }else{
+                    UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"Home Planner" message:@"Registered email is not verified. Please verify email." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                    [alert show];
+                }
+                
+            }else{
+                UIAlertView *alert =[[UIAlertView alloc]initWithTitle:@"Home Planner" message:@"Username or password may be wrong. Please try again." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
+            }
+        }];
+        //    [self performSegueWithIdentifier:@"homeSegue" sender:nil]; 
+    }
+}
+
+-(BOOL) NSStringIsValidEmail:(NSString *)checkString
+{
+    BOOL stricterFilter = NO;
+    NSString *stricterFilterString = @"^[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}$";
+    NSString *laxString = @"^.+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*$";
+    NSString *emailRegex = stricterFilter ? stricterFilterString : laxString;
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:checkString];
 }
 
 - (IBAction)btnSignUpClick:(id)sender {
     [self performSegueWithIdentifier:@"registerSegue" sender:nil];
+}
+
+- (IBAction)btnForgetPasswordClick:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Forget Password" message:@"Please enter register email to reset password." delegate:self cancelButtonTitle:@"Send" otherButtonTitles:@"Cancel", nil];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    alert.tag = 101;
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (alertView.tag==101) {
+        if (buttonIndex==0) {
+            UITextField *txtEmail = [alertView textFieldAtIndex:0];
+            if([txtEmail.text length]>0){
+                actLoadingSimple = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+                [self.navigationController.view addSubview:actLoadingSimple];
+                
+                actLoadingSimple.delegate = self;
+                actLoadingSimple.labelText = @"Resetting Password...";
+                [actLoadingSimple show:YES];
+                [PFUser requestPasswordResetForEmailInBackground:txtEmail.text block:^(BOOL succeeded, NSError *error) {
+                    [actLoadingSimple hide:YES];
+                    if (!error) {
+                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Home Planner" message:@"Reset Password Link will be sent on email. Please check your email." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+                        [alert show];
+                    }else{
+                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Home Planner" message:[NSString stringWithFormat:@"%@",[[error userInfo] objectForKey:@"error"]] delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+                        alert.tag=102;
+                        [alert show];
+                    }
+                }];
+            }
+        }
+    }else if(alertView.tag==102){
+        if (buttonIndex==0) {
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self btnForgetPasswordClick:nil];
+            });
+        }
+    }
+    
+}
+
+-(void)tapClick:(UITapGestureRecognizer*)tapGesture{
+    [self.view endEditing:YES];
 }
 
 #pragma mark - MBProgressHUDDelegate

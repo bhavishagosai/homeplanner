@@ -11,12 +11,12 @@
 @interface HPLoginVC : UIViewController<MBProgressHUDDelegate>{
     MBProgressHUD *actLoadingSimple;
 }
-
-
 @property (weak, nonatomic) IBOutlet UITextField *txtUserName;
 @property (weak, nonatomic) IBOutlet UITextField *txtPassword;
 @property (weak, nonatomic) IBOutlet UIButton *btnSignUp;
 @property (weak, nonatomic) IBOutlet UIButton *btnSignIn;
+@property (weak, nonatomic) IBOutlet UIButton *btnForgetPassword;
 - (IBAction)btnSignInClick:(id)sender;
 - (IBAction)btnSignUpClick:(id)sender;
+- (IBAction)btnForgetPasswordClick:(id)sender;
 @end

@@ -190,6 +190,7 @@
     objNewProperty_req[@"Req_Size"] = self.txtPropertySize.text;
     objNewProperty_req[@"Notification"] = (self.btnNoti.selected ? [NSNumber numberWithBool:YES] : [NSNumber numberWithBool:NO]);
     objNewProperty_req[@"Email"] = (self.btnEmail.selected ? [NSNumber numberWithBool:YES] : [NSNumber numberWithBool:NO]);
+    objNewProperty_req[@"reqUser"] = [PFUser currentUser];
     [objNewProperty_req saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             // The object has been saved.

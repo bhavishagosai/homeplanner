@@ -27,6 +27,7 @@
     [hudProgress show:YES];
     mutArrPropertyReq = [[NSMutableArray alloc]init];
     PFQuery *query = [PFQuery queryWithClassName:@"Property_req"];
+    [query whereKey:@"reqUser" containedIn:[NSArray arrayWithObject:[PFUser currentUser]]];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             mutArrPropertyReq = [[NSMutableArray alloc]initWithArray:objects];

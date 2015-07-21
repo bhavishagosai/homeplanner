@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [UIApplication sharedApplication].statusBarHidden = YES;
     self.navigationController.navigationBarHidden=YES;
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(50.0)), dispatch_get_main_queue(), ^{
 //        [self performSegueWithIdentifier:@"LoginSegue" sender:nil];
@@ -31,6 +32,9 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(BOOL)prefersStatusBarHidden{
+    return YES;
 }
 
 /*

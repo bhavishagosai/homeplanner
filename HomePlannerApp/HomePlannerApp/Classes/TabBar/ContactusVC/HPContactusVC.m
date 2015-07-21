@@ -38,4 +38,31 @@
 
 - (IBAction)btnSendClick:(id)sender {
 }
+
+- (IBAction)btnWhatsAppClick:(id)sender {
+    NSURL *whatsappURL = [NSURL URLWithString:@"whatsapp://send?text=Need a Contact Detail Please share me your contact."];
+    if ([[UIApplication sharedApplication] canOpenURL: whatsappURL]) {
+        [[UIApplication sharedApplication] openURL: whatsappURL];
+    }else{
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Home Planner" message:@"Whatsapp app is not installed on your device." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
+}
+
+- (IBAction)btnFaceBookClick:(id)sender {
+    NSURL *whatsappURL = [NSURL URLWithString:@"https://www.facebook.com/plannMyHome"];
+    if ([[UIApplication sharedApplication] canOpenURL: whatsappURL]) {
+        [[UIApplication sharedApplication] openURL: whatsappURL];
+    }
+}
+
+- (IBAction)btnTwitterClick:(id)sender {
+    NSURL *whatsappURL = [NSURL URLWithString:@"https://twitter.com/plannMyHome"];
+    if ([[UIApplication sharedApplication] canOpenURL: whatsappURL]) {
+        [[UIApplication sharedApplication] openURL: whatsappURL];
+    }
+}
+
+
+
 @end

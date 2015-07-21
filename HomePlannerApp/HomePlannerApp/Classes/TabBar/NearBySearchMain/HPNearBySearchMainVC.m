@@ -111,6 +111,7 @@
                                        NSLog(@"%@",[NSString stringWithFormat:@"Location request successful! Current Location:\n%@", currentLocation]);
                                       //            MKMapCamera *camera =[MKMapCamera cameraLookingAtCenterCoordinate:currentLocation.coordinate fromEyeCoordinate:currentLocation.coordinate eyeAltitude:0.0];
                                       //            [self.mapViewNearBy setCamera:camera animated:YES];
+                                      [self.mapViewNearBy setRegion:MKCoordinateRegionMake(currentLocation.coordinate, MKCoordinateSpanMake(0.5, 0.5)) animated:YES];
                                       [self dropPinsonMap:currentLocation];
                                   }
                                   else if (status == INTULocationStatusTimedOut) {
@@ -267,6 +268,7 @@
         if (!pinView)
         {
             // If an existing pin view was not available, create one.
+            NSString *strTag =objc_getAssociatedObject(annotation, @"tag");
             pinView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"CustomPinAnnotationView"];
             //pinView.animatesDrop = YES;
             pinView.canShowCallout = YES;
@@ -274,6 +276,7 @@
             pinView.calloutOffset = CGPointMake(0, 0);
             // Add a detail disclosure button to the callout.
             UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+            rightButton.tag = [strTag integerValue];
             [rightButton addTarget:self action:@selector(btnInfoClick:) forControlEvents:UIControlEventTouchUpInside];
             pinView.rightCalloutAccessoryView = rightButton;
             
@@ -287,7 +290,7 @@
 //                    //Run UI Updates
 //                });
 //            });
-            NSString *strTag =objc_getAssociatedObject(annotation, @"tag");
+            
             
             PFFile *file = [[mutArrPins objectAtIndex:[strTag integerValue]] objectForKey:@"H_ThumbImage"];
             [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
@@ -306,6 +309,7 @@
 
 -(IBAction)btnInfoClick:(id)sender{
     HPPropSearchDetailVC *objHPPropSearchDetailVC = [self.storyboard instantiateViewControllerWithIdentifier:@"HPPropSearchDetailVC"];
+    objHPPropSearchDetailVC.selectedHome = [mutArrPins objectAtIndex:[sender tag]];
     [self.navigationController pushViewController:objHPPropSearchDetailVC animated:YES];
 }
 @end

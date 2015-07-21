@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
-@interface HPAgentSearchMainVC : UIViewController<UITableViewDataSource,UITableViewDelegate>{
+@interface HPAgentSearchMainVC : UIViewController<UITableViewDataSource,UITableViewDelegate,MFMessageComposeViewControllerDelegate,UIActionSheetDelegate>{
     NSMutableArray *mutArrAgent;
     
 }

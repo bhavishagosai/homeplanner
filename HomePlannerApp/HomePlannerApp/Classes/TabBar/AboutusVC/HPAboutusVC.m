@@ -34,4 +34,18 @@
 }
 */
 
+- (IBAction)btnFaceBookClick:(id)sender {
+    NSURL *whatsappURL = [NSURL URLWithString:@"https://www.facebook.com/plannMyHome"];
+    if ([[UIApplication sharedApplication] canOpenURL: whatsappURL]) {
+        [[UIApplication sharedApplication] openURL: whatsappURL];
+    }
+}
+
+- (IBAction)btnTwitterClick:(id)sender {
+    NSURL *whatsappURL = [NSURL URLWithString:@"https://twitter.com/plannMyHome"];
+    if ([[UIApplication sharedApplication] canOpenURL: whatsappURL]) {
+        [[UIApplication sharedApplication] openURL: whatsappURL];
+    }
+}
+
 @end

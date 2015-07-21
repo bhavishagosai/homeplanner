@@ -12,4 +12,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblName;
 @property (weak, nonatomic) IBOutlet UILabel *lblSubTitle;
 @property (weak, nonatomic) IBOutlet UIImageView *imgAgent;
+@property (weak, nonatomic) IBOutlet UIButton *btnWhatsApp;
+@property (weak, nonatomic) IBOutlet UIButton *btnContact;
 @end
