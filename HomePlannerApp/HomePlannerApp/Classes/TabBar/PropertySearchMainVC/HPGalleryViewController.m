@@ -22,10 +22,14 @@
     hudProgress.labelText = @"Gallery Images Loading.";
     [self.navigationController.view addSubview:hudProgress];
     [hudProgress show:YES];
-    self.title = [NSString stringWithFormat:@"%@'s Gallery",[self.selectedHome objectForKey:@"H_Name"]];
-
     PFQuery *query = [PFQuery queryWithClassName:@"Galary_Master"];
-    [query whereKey:@"H_ID" equalTo:[self.selectedHome objectForKey:@"H_ID"]];
+    if ([self.strNavigateFrom isEqualToString:@"PropertyDetail"]) {
+        self.title = [NSString stringWithFormat:@"%@'s Gallery",[self.selectedHome objectForKey:@"H_Name"]];
+        [query whereKey:@"H_ID" equalTo:[self.selectedHome objectForKey:@"H_ID"]];
+    }else{
+        self.title = [NSString stringWithFormat:@"%@'s Gallery",[self.selectedHome objectForKey:@"P_Name"]];
+        [query whereKey:@"H_ID" equalTo:[self.selectedHome objectForKey:@"P_ID"]];
+    }
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             mutArrPropertyImage = [[NSMutableArray alloc]initWithArray:objects];

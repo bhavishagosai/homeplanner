@@ -1,79 +1,51 @@
 //
-//  HPPropSearchDetailVC.m
+//  HPProjectDetailVC.m
 //  HomePlannerApp
 //
-//  Created by Dhanesh Gosai on 19/03/15.
+//  Created by Dhanesh Gosai on 22/07/15.
 //  Copyright (c) 2015 BDPartners. All rights reserved.
 //
 
-#import "HPPropSearchDetailVC.h"
+#import "HPProjectDetailVC.h"
 #import "HPGalleryViewController.h"
 
-@interface HPPropSearchDetailVC ()
+@interface HPProjectDetailVC ()
 
 @end
 
-@implementation HPPropSearchDetailVC
-@synthesize selectedHome;
+@implementation HPProjectDetailVC
+@synthesize selectedProject;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    
-    
-    self.title = [selectedHome objectForKey:@"H_Name"];
-    self.lblTitle.text = [selectedHome objectForKey:@"H_Name"];
-    self.lblBHK.text = [selectedHome objectForKey:@"H_BHK"];
-    self.lblSqrf.text = [selectedHome objectForKey:@"H_Area"];
-    self.txtPropDesc.text = [selectedHome objectForKey:@"H_Desc"];
-    self.lblPossession.text = [selectedHome objectForKey:@"H_Possession"];
-    self.lblFurnished.text = [selectedHome objectForKey:@"H_Furnish"];
-    
-    
+    self.title = [selectedProject objectForKey:@"P_Name"];
+    self.lblTitle.text = [selectedProject objectForKey:@"P_Name"];
+    self.txtPropDesc.text = [selectedProject objectForKey:@"P_Desc"];
     MKPointAnnotation *myAnnotation = [[MKPointAnnotation alloc]init];
     CLLocationCoordinate2D pinCoordinate;
-    PFGeoPoint *geoPinPoint = [selectedHome objectForKey:@"H_Location"];
+    PFGeoPoint *geoPinPoint = [selectedProject objectForKey:@"P_Location"];
     pinCoordinate.latitude = geoPinPoint.latitude;
     pinCoordinate.longitude = geoPinPoint.longitude;
     myAnnotation.coordinate = pinCoordinate;
-    myAnnotation.title = [selectedHome objectForKey:@"H_Name"];
-    myAnnotation.subtitle = [selectedHome objectForKey:@"H_Desc"];
-//    objc_setAssociatedObject(myAnnotation, @"tag", [NSString stringWithFormat:@"%d",i],OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    myAnnotation.title = [selectedProject objectForKey:@"P_Name"];
+    myAnnotation.subtitle = [selectedProject objectForKey:@"P_Desc"];
     [self.mapView addAnnotation:myAnnotation];
     [self.mapView setRegion:MKCoordinateRegionMake(myAnnotation.coordinate, MKCoordinateSpanMake(0.05, 0.05)) animated:YES];
-    
     //get Full Image
-    PFFile *file = [selectedHome objectForKey:@"H_FullImage"];
+    PFFile *file = [selectedProject objectForKey:@"P_Main_Photo"];
     [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         self.imgFullHome.image = [UIImage imageWithData:data];
         [self.actImsgeLoad stopAnimating];
     }];
-    
-    
-    
-    
-    self.scrView.contentSize = CGSizeMake(self.scrView.frame.size.width, 1100);
+    self.scrView.contentSize = CGSizeMake(self.scrView.frame.size.width, 800);
     self.lblTitle.layer.cornerRadius = 5.0;
     self.lblTitle.layer.masksToBounds =YES;
-    self.lblSqrf.layer.cornerRadius = 5.0;
-    self.lblSqrf.layer.masksToBounds =YES;
-    self.lblPropertyType.layer.cornerRadius = 10.0;
-    self.lblPropertyType.layer.masksToBounds =YES;
-    self.lblPossession.layer.cornerRadius = 10.0;
-    self.lblPossession.layer.masksToBounds =YES;
-    self.lblFurnished.layer.cornerRadius = 10.0;
-    self.lblFurnished.layer.masksToBounds =YES;
-    self.lblBHK.layer.cornerRadius = 5.0;
-    self.lblBHK.layer.masksToBounds =YES;
-    self.lblBalconies.layer.cornerRadius = 10.0;
-    self.lblBalconies.layer.masksToBounds =YES;
     self.btnGetAgentDetail.layer.cornerRadius = 5.0;
     self.btnGetAgentDetail.layer.masksToBounds =YES;
     self.btnGetDirections.layer.cornerRadius = 5.0;
     self.btnGetDirections.layer.masksToBounds =YES;
     self.btnGetOwnerDetail.layer.cornerRadius = 5.0;
     self.btnGetOwnerDetail.layer.masksToBounds =YES;
-    
-    
     // Do any additional setup after loading the view.
 }
 
@@ -92,14 +64,16 @@
 }
 */
 
-- (IBAction)btnGetQwnerDetailClick:(id)sender {
+- (IBAction)btnGetDirectionsClick:(id)sender{
     
+}
+- (IBAction)btnGetQwnerDetailClick:(id)sender{
     hudProgress = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
     hudProgress.labelText = @"Getting Owner Detail.";
     [self.navigationController.view addSubview:hudProgress];
     [hudProgress show:YES];
     PFQuery *query = [PFQuery queryWithClassName:@"Owner_Master"];
-    [query whereKey:@"H_ID" equalTo:[self.selectedHome objectForKey:@"H_ID"]];
+    [query whereKey:@"H_ID" equalTo:[self.selectedProject objectForKey:@"P_ID"]];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             if (objects.count>0) {
@@ -108,7 +82,7 @@
                 }
                 objHPPopUpDetailVC = [self.storyboard instantiateViewControllerWithIdentifier:@"HPPopUpDetailVC"];
                 
-//                [objHPPopUpDetailVC.btnClose addTarget:self action:@selector(btnCloseDetailClick:) forControlEvents:UIControlEventTouchUpInside];
+                //                [objHPPopUpDetailVC.btnClose addTarget:self action:@selector(btnCloseDetailClick:) forControlEvents:UIControlEventTouchUpInside];
                 
                 [[[objects firstObject] objectForKey:@"O_Image"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
                     objHPPopUpDetailVC.imgUser.image = [UIImage imageWithData:data];
@@ -141,7 +115,7 @@
                             UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Home Planner" message:@"Your device can not have Phone Call feature!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                             [alert show];
                         }
-
+                        
                     }];
                     
                     [objHPPopUpDetailVC setBtnWhatsappBlockClick:^(UIButton *aCloseBtn){
@@ -160,24 +134,17 @@
         [hudProgress hide:YES];
         [hudProgress removeFromSuperview];
     }];
-    
-    
 }
 
 - (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)btnGetDirectionsClick:(id)sender {
-    
-}
-
-
 
 - (IBAction)btnViewGalleryClick:(UIButton *)sender {
     HPGalleryViewController *objHPGalleryViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"HPGalleryViewController"];
-    objHPGalleryViewController.selectedHome = selectedHome;
-    objHPGalleryViewController.strNavigateFrom = @"PropertyDetail";
+    objHPGalleryViewController.selectedHome = selectedProject;
+    objHPGalleryViewController.strNavigateFrom = @"ProjectDetail";
     [self.navigationController pushViewController:objHPGalleryViewController animated:YES];
 }
 
@@ -200,17 +167,17 @@
             pinView.canShowCallout = YES;
             pinView.image = [UIImage imageNamed:@"home_pin.png"];
             pinView.calloutOffset = CGPointMake(0, 0);
-//            // Add a detail disclosure button to the callout.
-//            UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-//            [rightButton addTarget:self action:@selector(btnInfoClick:) forControlEvents:UIControlEventTouchUpInside];
-//            pinView.rightCalloutAccessoryView = rightButton;
+            //            // Add a detail disclosure button to the callout.
+            //            UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+            //            [rightButton addTarget:self action:@selector(btnInfoClick:) forControlEvents:UIControlEventTouchUpInside];
+            //            pinView.rightCalloutAccessoryView = rightButton;
             
             // Add an image to the left callout.
             UIImageView *iconView = [[UIImageView alloc] init];
             iconView.frame = CGRectMake(5, 0, 50, 50);
             pinView.leftCalloutAccessoryView = iconView;
             
-            PFFile *file = [selectedHome objectForKey:@"H_ThumbImage"];
+            PFFile *file = [selectedProject objectForKey:@"P_Main_Photo"];
             [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
                 iconView.image = [UIImage imageWithData:data];
             }];
@@ -223,5 +190,6 @@
     }
     return nil;
 }
+
 
 @end

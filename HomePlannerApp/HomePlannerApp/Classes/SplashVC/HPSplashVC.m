@@ -7,6 +7,7 @@
 //
 
 #import "HPSplashVC.h"
+#import "HPLoginVC.h"
 
 @interface HPSplashVC ()
 
@@ -26,7 +27,14 @@
 }
 
 -(void)gotoLoginScreen{
-    [self performSegueWithIdentifier:@"LoginSegue" sender:nil];
+    if ([PFUser currentUser]) {
+        //        [self performSegueWithIdentifier:@"homeSegue" sender:nil];
+        HPLoginVC *objHPLoginVC = [self.storyboard instantiateViewControllerWithIdentifier:@"HPLoginVC"];
+        [self.navigationController pushViewController:objHPLoginVC animated:NO];
+    }else{
+        [self performSegueWithIdentifier:@"LoginSegue" sender:nil];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,6 +7,7 @@
 //
 
 #import "HPLoginVC.h"
+#import "HPHomeVC.h"
 
 @interface HPLoginVC ()
 
@@ -33,7 +34,9 @@
     [self.view addGestureRecognizer:tapGesture];
     
     if ([PFUser currentUser]) {
-        [self performSegueWithIdentifier:@"homeSegue" sender:nil];
+//        [self performSegueWithIdentifier:@"homeSegue" sender:nil];
+        HPHomeVC *objHPHomeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"HPHomeVC"];
+        [self.navigationController pushViewController:objHPHomeVC animated:NO];
     }
     // Do any additional setup after loading the view.
 }

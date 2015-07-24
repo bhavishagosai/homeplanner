@@ -52,58 +52,58 @@
 
 - (void)keyboardDidShowWithNotification:(NSNotification *)aNotification
 {
-    [UIView animateWithDuration:0.3
-                          delay:0
-                        options:UIViewAnimationCurveEaseOut|UIViewAnimationOptionBeginFromCurrentState
-                     animations:^{
-                         CGPoint adjust;
-                         switch (self.interfaceOrientation) {
-                             case UIInterfaceOrientationLandscapeLeft:
-                                 adjust = CGPointMake(-110, 0);
-                                 break;
-                             case UIInterfaceOrientationLandscapeRight:
-                                 adjust = CGPointMake(110, 0);
-                                 break;
-                             default:
-                                 adjust = CGPointMake(0, -60);
-                                 break;
-                         }
-                         CGPoint newCenter = CGPointMake(self.view.center.x+adjust.x, self.view.center.y+adjust.y);
-                         [self.view setCenter:newCenter];
-//                         [self.author setAlpha:0];
-//                         [self.demoTitle setAlpha:0];
-//                         [self.typeSwitch setAlpha:0];
-                         
-                     }
-                     completion:nil];
+//    [UIView animateWithDuration:0.3
+//                          delay:0
+//                        options:UIViewAnimationCurveEaseOut|UIViewAnimationOptionBeginFromCurrentState
+//                     animations:^{
+//                         CGPoint adjust;
+//                         switch (self.interfaceOrientation) {
+//                             case UIInterfaceOrientationLandscapeLeft:
+//                                 adjust = CGPointMake(-110, 0);
+//                                 break;
+//                             case UIInterfaceOrientationLandscapeRight:
+//                                 adjust = CGPointMake(110, 0);
+//                                 break;
+//                             default:
+//                                 adjust = CGPointMake(0, -60);
+//                                 break;
+//                         }
+//                         CGPoint newCenter = CGPointMake(self.view.center.x+adjust.x, self.view.center.y+adjust.y);
+//                         [self.view setCenter:newCenter];
+////                         [self.author setAlpha:0];
+////                         [self.demoTitle setAlpha:0];
+////                         [self.typeSwitch setAlpha:0];
+//                         
+//                     }
+//                     completion:nil];
 }
 
 
 - (void)keyboardDidHideWithNotification:(NSNotification *)aNotification
 {
-    [UIView animateWithDuration:0.3
-                          delay:0
-                        options:UIViewAnimationCurveEaseOut|UIViewAnimationOptionBeginFromCurrentState
-                     animations:^{
-                         CGPoint adjust;
-                         switch (self.interfaceOrientation) {
-                             case UIInterfaceOrientationLandscapeLeft:
-                                 adjust = CGPointMake(110, 0);
-                                 break;
-                             case UIInterfaceOrientationLandscapeRight:
-                                 adjust = CGPointMake(-110, 0);
-                                 break;
-                             default:
-                                 adjust = CGPointMake(0, 60);
-                                 break;
-                         }
-                         CGPoint newCenter = CGPointMake(self.view.center.x+adjust.x, self.view.center.y+adjust.y);
-                         [self.view setCenter:newCenter];
-//                         [self.author setAlpha:1];
-//                         [self.demoTitle setAlpha:1];
-//                         [self.typeSwitch setAlpha:1];
-                     }
-                     completion:nil];
+//    [UIView animateWithDuration:0.3
+//                          delay:0
+//                        options:UIViewAnimationCurveEaseOut|UIViewAnimationOptionBeginFromCurrentState
+//                     animations:^{
+//                         CGPoint adjust;
+//                         switch (self.interfaceOrientation) {
+//                             case UIInterfaceOrientationLandscapeLeft:
+//                                 adjust = CGPointMake(110, 0);
+//                                 break;
+//                             case UIInterfaceOrientationLandscapeRight:
+//                                 adjust = CGPointMake(-110, 0);
+//                                 break;
+//                             default:
+//                                 adjust = CGPointMake(0, 60);
+//                                 break;
+//                         }
+//                         CGPoint newCenter = CGPointMake(self.view.center.x+adjust.x, self.view.center.y+adjust.y);
+//                         [self.view setCenter:newCenter];
+////                         [self.author setAlpha:1];
+////                         [self.demoTitle setAlpha:1];
+////                         [self.typeSwitch setAlpha:1];
+//                     }
+//                     completion:nil];
     
     if (selectedTextFiled == self.txtCountry) {
         [self.txtCountry setAutoCompleteTableViewHidden:NO];
@@ -279,8 +279,10 @@
 {
     if(selectedObject){
         NSLog(@"selected object from autocomplete menu %@ with string %@", selectedObject, [selectedObject autocompleteString]);
+        [selectedTextFiled resignFirstResponder];
     } else {
         NSLog(@"selected string '%@' from autocomplete menu", selectedString);
+        [selectedTextFiled resignFirstResponder];
     }
 }
 @end

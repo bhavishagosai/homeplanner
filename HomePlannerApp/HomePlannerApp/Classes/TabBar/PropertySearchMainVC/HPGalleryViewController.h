@@ -13,6 +13,7 @@
     MBProgressHUD *hudProgress;
 }
 @property (strong, nonatomic) PFObject *selectedHome;
+@property (strong, nonatomic) NSString *strNavigateFrom;
 @property (weak, nonatomic) IBOutlet iCarousel *objCarosalView;
 - (IBAction)segValueChanged:(UISegmentedControl *)sender;
 @end

@@ -122,9 +122,15 @@
         aHPAgentCell.btnWhatsApp.tag = indexPath.row;
         
         PFFile *file = [[mutArrAgent objectAtIndex:indexPath.row] objectForKey:@"A_Image"];
-        [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-            aHPAgentCell.imgAgent.image = [UIImage imageWithData:data];
-        }];
+        if (file) {
+            [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                aHPAgentCell.imgAgent.image = [UIImage imageWithData:data];
+            }];
+        
+        }else{
+            aHPAgentCell.imgAgent.image = [UIImage imageNamed:@"persondefault.png"];
+        }
+        
     }
     
     return aHPAgentCell;

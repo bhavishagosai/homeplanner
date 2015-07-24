@@ -10,6 +10,8 @@
 
 @interface HPProjectSearrchMainVC : UIViewController<UITableViewDataSource,UITableViewDelegate>{
     NSMutableArray *mutArrProjectList;
+    MBProgressHUD *hudProgress;
 }
 
+@property (weak, nonatomic) IBOutlet UITableView *tblProjectList;
 @end

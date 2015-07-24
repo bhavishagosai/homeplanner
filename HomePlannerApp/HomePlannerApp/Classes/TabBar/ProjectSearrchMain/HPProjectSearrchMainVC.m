@@ -8,6 +8,7 @@
 
 #import "HPProjectSearrchMainVC.h"
 #import "HPProjectCell.h"
+#import "HPProjectDetailVC.h"
 #import <Parse/Parse.h>
 
 @interface HPProjectSearrchMainVC ()
@@ -18,43 +19,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//
     
-    NSMutableDictionary *dictMenu = [[NSMutableDictionary alloc]init];
-    [dictMenu setObject:@"DB PRIDE" forKeyedSubscript:@"project_name"];
-    [dictMenu setObject:@"sender" forKeyedSubscript:@"chat_type"];
-    [dictMenu setObject:@"project1.jpg" forKeyedSubscript:@"project_image"];
-    
-    NSMutableDictionary *dictMenu1 = [[NSMutableDictionary alloc]init];
-    [dictMenu1 setObject:@"East Crest" forKeyedSubscript:@"project_name"];
-    [dictMenu1 setObject:@"sender" forKeyedSubscript:@"chat_type"];
-    [dictMenu1 setObject:@"project2.jpg" forKeyedSubscript:@"project_image"];
-    
-    NSMutableDictionary *dictMenu2 = [[NSMutableDictionary alloc]init];
-    [dictMenu2 setObject:@"DS MAX SIGMANEST PROJECT" forKeyedSubscript:@"project_name"];
-    [dictMenu2 setObject:@"sender" forKeyedSubscript:@"chat_type"];
-    [dictMenu2 setObject:@"project3.jpg" forKeyedSubscript:@"project_image"];
-    
-    NSMutableDictionary *dictMenu3 = [[NSMutableDictionary alloc]init];
-    [dictMenu3 setObject:@"Amrapali La Residentia project" forKeyedSubscript:@"project_name"];
-    [dictMenu3 setObject:@"sender" forKeyedSubscript:@"chat_type"];
-    [dictMenu3 setObject:@"project4.jpg" forKeyedSubscript:@"project_image"];
-    
-    NSMutableDictionary *dictMenu4 = [[NSMutableDictionary alloc]init];
-    [dictMenu4 setObject:@"Liviano by Darode Jog Properties" forKeyedSubscript:@"project_name"];
-    [dictMenu4 setObject:@"sender" forKeyedSubscript:@"chat_type"];
-    [dictMenu4 setObject:@"project5.jpg" forKeyedSubscript:@"project_image"];
-    
-    NSMutableDictionary *dictMenu5 = [[NSMutableDictionary alloc]init];
-    [dictMenu5 setObject:@"DB infrastructure Pvt. Ltd." forKeyedSubscript:@"project_name"];
-    [dictMenu5 setObject:@"sender" forKeyedSubscript:@"chat_type"];
-    [dictMenu5 setObject:@"project6.jpg" forKeyedSubscript:@"project_image"];
-    
-    mutArrProjectList     = [[NSMutableArray alloc]initWithObjects:dictMenu,dictMenu1,dictMenu2,dictMenu3,dictMenu4,dictMenu5, nil];
-    
-    
-    
-    
+    hudProgress = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    hudProgress.labelText = @"Loading Project Data";
+    [self.navigationController.view addSubview:hudProgress];
+    [hudProgress show:YES];
+    PFQuery *query = [PFQuery queryWithClassName:@"Project_Master"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        
+        
+        if (!error) {
+            mutArrProjectList = [[NSMutableArray alloc]initWithArray:objects];
+            [self.tblProjectList reloadData];
+        }
+        [hudProgress hide:YES];
+        [hudProgress removeFromSuperview];
+    }];
     
     // Do any additional setup after loading the view.
 }
@@ -101,8 +81,11 @@
     HPProjectCell *aHPProjectCell= (HPProjectCell*)[tableView dequeueReusableCellWithIdentifier:@"projectCell"];
     
     if (aHPProjectCell) {
-        aHPProjectCell.lblName.text = [[mutArrProjectList  objectAtIndex:indexPath.row]objectForKey:@"project_name"];
-        aHPProjectCell.imgProject.image = [UIImage imageNamed:[[mutArrProjectList objectAtIndex:indexPath.row]objectForKey:@"project_image"]];
+        aHPProjectCell.lblName.text = [[mutArrProjectList  objectAtIndex:indexPath.row]objectForKey:@"P_Name"];
+        PFFile *file = [[mutArrProjectList objectAtIndex:indexPath.row] objectForKey:@"P_Main_Photo"];
+        [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            aHPProjectCell.imgProject.image = [UIImage imageWithData:data];
+        }];
         aHPProjectCell.imgTitleBack.layer.cornerRadius = 11.0;
         aHPProjectCell.imgTitleBack.layer.masksToBounds = YES;
     }
@@ -110,7 +93,9 @@
     return aHPProjectCell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    HPProjectDetailVC *objHPProjectDetailVC = [self.storyboard instantiateViewControllerWithIdentifier:@"HPProjectDetailVC"];
+    objHPProjectDetailVC.selectedProject = [mutArrProjectList objectAtIndex:indexPath.row];
+    [self.navigationController pushViewController:objHPProjectDetailVC animated:YES];
 }
 
 @end
