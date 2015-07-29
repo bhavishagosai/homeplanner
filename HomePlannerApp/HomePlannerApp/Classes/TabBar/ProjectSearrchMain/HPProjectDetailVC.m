@@ -8,6 +8,7 @@
 
 #import "HPProjectDetailVC.h"
 #import "HPGalleryViewController.h"
+#import "HPDirectionVC.h"
 
 @interface HPProjectDetailVC ()
 
@@ -65,7 +66,9 @@
 */
 
 - (IBAction)btnGetDirectionsClick:(id)sender{
-    
+    HPDirectionVC *objHPDirectionVC = [self.storyboard instantiateViewControllerWithIdentifier:@"HPDirectionVC"];
+    objHPDirectionVC.selectedProject = selectedProject;
+    [self.navigationController pushViewController:objHPDirectionVC animated:YES];
 }
 - (IBAction)btnGetQwnerDetailClick:(id)sender{
     hudProgress = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
@@ -82,51 +85,53 @@
                 }
                 objHPPopUpDetailVC = [self.storyboard instantiateViewControllerWithIdentifier:@"HPPopUpDetailVC"];
                 
-                //                [objHPPopUpDetailVC.btnClose addTarget:self action:@selector(btnCloseDetailClick:) forControlEvents:UIControlEventTouchUpInside];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    objHPPopUpDetailVC.lblName.text = [[objects firstObject] objectForKey:@"O_Name"];
+                    objHPPopUpDetailVC.lblArea.text = [[objects firstObject] objectForKey:@"O_Address"];
+                });
+                
+                __weak __typeof__(HPPopUpDetailVC) *weakPopUP = objHPPopUpDetailVC;
+                __weak __typeof__(self) weakSelf = self;
+                [objHPPopUpDetailVC setBtnClocseBlockClick:^(UIButton *aCloseBtn){
+                    [weakPopUP.view removeFromSuperview];
+                }];
+                
+                [objHPPopUpDetailVC setBtnSmsBlockClick:^(UIButton *aCloseBtn){
+                    MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init] ;
+                    if([MFMessageComposeViewController canSendText])
+                    {
+                        controller.body = @"SMS message here";
+                        controller.recipients = [NSArray arrayWithObjects:[[objects firstObject] objectForKey:@"O_Contact_no"], nil];
+                        controller.messageComposeDelegate = weakSelf;
+                        [weakSelf presentViewController:controller animated:YES completion:^{
+                            
+                        }];
+                    }
+                }];
+                
+                [objHPPopUpDetailVC setBtnCallBlockClick:^(UIButton *aCloseBtn){
+                    NSURL *telURL = [NSURL URLWithString:[NSString stringWithFormat:@"tel:%@", [[objects firstObject] objectForKey:@"O_Contact_no"]]];
+                    if ([[UIApplication sharedApplication] canOpenURL: telURL]) {
+                        [[UIApplication sharedApplication] openURL:telURL];
+                    }else{
+                        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Home Planner" message:@"Your device can not have Phone Call feature!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                        [alert show];
+                    }
+                    
+                }];
+                
+                [objHPPopUpDetailVC setBtnWhatsappBlockClick:^(UIButton *aCloseBtn){
+                    NSURL *whatsappURL = [NSURL URLWithString:@"whatsapp://send?text=Hello Agent!"];
+                    if ([[UIApplication sharedApplication] canOpenURL: whatsappURL]) {
+                        [[UIApplication sharedApplication] openURL: whatsappURL];
+                    }else{
+                        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Home Planner" message:@"Whatsapp app is not installed on your device." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                        [alert show];
+                    }
+                }];
                 
                 [[[objects firstObject] objectForKey:@"O_Image"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
                     objHPPopUpDetailVC.imgUser.image = [UIImage imageWithData:data];
-                    objHPPopUpDetailVC.lblName.text = [[objects firstObject] objectForKey:@"O_Name"];
-                    objHPPopUpDetailVC.lblArea.text = [[objects firstObject] objectForKey:@"O_Address"];
-                    __weak __typeof__(HPPopUpDetailVC) *weakPopUP = objHPPopUpDetailVC;
-                    __weak __typeof__(self) weakSelf = self;
-                    [objHPPopUpDetailVC setBtnClocseBlockClick:^(UIButton *aCloseBtn){
-                        [weakPopUP.view removeFromSuperview];
-                    }];
-                    
-                    [objHPPopUpDetailVC setBtnSmsBlockClick:^(UIButton *aCloseBtn){
-                        MFMessageComposeViewController *controller = [[MFMessageComposeViewController alloc] init] ;
-                        if([MFMessageComposeViewController canSendText])
-                        {
-                            controller.body = @"SMS message here";
-                            controller.recipients = [NSArray arrayWithObjects:[[objects firstObject] objectForKey:@"O_Contact_no"], nil];
-                            controller.messageComposeDelegate = weakSelf;
-                            [weakSelf presentViewController:controller animated:YES completion:^{
-                                
-                            }];
-                        }
-                    }];
-                    
-                    [objHPPopUpDetailVC setBtnCallBlockClick:^(UIButton *aCloseBtn){
-                        NSURL *telURL = [NSURL URLWithString:[NSString stringWithFormat:@"tel:%@", [[objects firstObject] objectForKey:@"O_Contact_no"]]];
-                        if ([[UIApplication sharedApplication] canOpenURL: telURL]) {
-                            [[UIApplication sharedApplication] openURL:telURL];
-                        }else{
-                            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Home Planner" message:@"Your device can not have Phone Call feature!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-                            [alert show];
-                        }
-                        
-                    }];
-                    
-                    [objHPPopUpDetailVC setBtnWhatsappBlockClick:^(UIButton *aCloseBtn){
-                        NSURL *whatsappURL = [NSURL URLWithString:@"whatsapp://send?text=Hello Agent!"];
-                        if ([[UIApplication sharedApplication] canOpenURL: whatsappURL]) {
-                            [[UIApplication sharedApplication] openURL: whatsappURL];
-                        }else{
-                            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Home Planner" message:@"Whatsapp app is not installed on your device." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-                            [alert show];
-                        }
-                    }];
                 }];
                 [appDelegate.window addSubview:objHPPopUpDetailVC.view];
             }

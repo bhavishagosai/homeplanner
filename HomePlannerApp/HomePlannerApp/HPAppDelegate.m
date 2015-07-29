@@ -8,6 +8,7 @@
 
 #import "HPAppDelegate.h"
 #import <Parse/Parse.h>
+#import <GoogleMaps/GoogleMaps.h>
 
 @implementation HPAppDelegate
 @synthesize selectedTab;
@@ -15,11 +16,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
     appDelegate = self;
     
     //Ad Integration
     [RevMobAds startSessionWithAppID:REVMOB_ID andDelegate:self];
     
+    
+    //Add Google Key
+    [GMSServices provideAPIKey:@"AIzaSyDLChi5_BD8R9tTT51gWNWwaxy5kXBQ68o"];
     
     // ****************************************************************************
     // Fill in with your Parse and Twitter credentials. Don't forget to add your

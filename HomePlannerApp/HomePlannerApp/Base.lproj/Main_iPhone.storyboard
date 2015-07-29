@@ -1525,11 +1525,40 @@
                         <outlet property="mapView" destination="gzH-ox-EUb" id="7GW-DV-tB8"/>
                         <outlet property="scrView" destination="z6r-qv-zqQ" id="xgT-y5-NEH"/>
                         <outlet property="txtPropDesc" destination="3gN-UX-VSj" id="BND-Pi-7Lh"/>
+                        <segue destination="du8-2s-STj" kind="push" id="5nr-ol-JGP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8JW-5q-XjK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3667" y="343"/>
+        </scene>
+        <!--DirectionVC-->
+        <scene sceneID="G9C-6D-9yS">
+            <objects>
+                <viewController storyboardIdentifier="HPDirectionVC" id="du8-2s-STj" customClass="HPDirectionVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="54j-ja-Kll">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="Zh1-6K-MZd" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="du8-2s-STj" id="iQr-eS-LQw"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vIO-t7-23Z"/>
+                    <connections>
+                        <outlet property="mapView" destination="Zh1-6K-MZd" id="wlD-Rp-qKF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5BL-jn-Bsq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4055" y="343"/>
         </scene>
         <!--Price Trends-->
         <scene sceneID="QMI-Ml-Q3H">

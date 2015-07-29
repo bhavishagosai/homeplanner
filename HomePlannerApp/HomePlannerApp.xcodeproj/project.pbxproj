@@ -89,7 +89,6 @@
 		B83763851B6166F0005ECC76 /* Conversation_speech_bubbles__128.png in Resources */ = {isa = PBXBuildFile; fileRef = B83763831B6166F0005ECC76 /* Conversation_speech_bubbles__128.png */; };
 		B83763871B61670A005ECC76 /* Whatsapp_Logo_128.png in Resources */ = {isa = PBXBuildFile; fileRef = B83763861B61670A005ECC76 /* Whatsapp_Logo_128.png */; };
 		B837638A1B6167E2005ECC76 /* HPPopUpDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B83763891B6167E2005ECC76 /* HPPopUpDetailVC.m */; };
-		B845E1751B33432A002AC221 /* RevMobAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B845E1741B33432A002AC221 /* RevMobAds.framework */; };
 		B849F1A41ABC9D4A00E81461 /* INTULocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B849F1A01ABC9D4A00E81461 /* INTULocationManager.m */; };
 		B849F1A51ABC9D4A00E81461 /* INTULocationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B849F1A21ABC9D4A00E81461 /* INTULocationRequest.m */; };
 		B849F1A71ABCAC7000E81461 /* home_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = B849F1A61ABCAC7000E81461 /* home_pin.png */; };
@@ -397,7 +396,22 @@
 		B8F5ABDE1ABA02D600AC966F /* HPPropertySearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F5ABDD1ABA02D600AC966F /* HPPropertySearchCell.m */; };
 		B8F5ABED1ABA0CE800AC966F /* btnFav_Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F5ABEB1ABA0CE800AC966F /* btnFav_Selected.png */; };
 		B8F5ABEE1ABA0CE900AC966F /* btnFav.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F5ABEC1ABA0CE800AC966F /* btnFav.png */; };
+		B8FA7CA81B640B9A0055B662 /* HPDirectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FA7CA71B640B9A0055B662 /* HPDirectionVC.m */; };
+		B8FA7CAA1B640FC40055B662 /* RevMobAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA7CA91B640FC40055B662 /* RevMobAds.framework */; };
+		B8FA7CBB1B6414D10055B662 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA7CB01B6414D10055B662 /* Accelerate.framework */; };
+		B8FA7CBC1B6414D10055B662 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA7CB11B6414D10055B662 /* AVFoundation.framework */; };
+		B8FA7CBD1B6414D10055B662 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA7CB21B6414D10055B662 /* CoreBluetooth.framework */; };
+		B8FA7CBE1B6414D10055B662 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA7CB31B6414D10055B662 /* CoreData.framework */; };
+		B8FA7CBF1B6414D10055B662 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA7CB41B6414D10055B662 /* CoreImage.framework */; };
+		B8FA7CC01B6414D10055B662 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA7CB51B6414D10055B662 /* CoreText.framework */; };
+		B8FA7CC11B6414D10055B662 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA7CB61B6414D10055B662 /* GLKit.framework */; };
+		B8FA7CC21B6414D10055B662 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA7CB71B6414D10055B662 /* ImageIO.framework */; };
+		B8FA7CC31B6414D10055B662 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA7CB81B6414D10055B662 /* libc++.dylib */; };
+		B8FA7CC41B6414D10055B662 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA7CB91B6414D10055B662 /* libicucore.dylib */; };
+		B8FA7CC51B6414D10055B662 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA7CBA1B6414D10055B662 /* libz.dylib */; };
 		B8FC02DF1B1A38E100AE863E /* photo_default.png in Resources */ = {isa = PBXBuildFile; fileRef = B8FC02DE1B1A38E100AE863E /* photo_default.png */; };
+		B8FF934D1B69533700A802FD /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B8FF934B1B69533700A802FD /* GoogleMaps.bundle */; };
+		B8FF934E1B69533700A802FD /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FF934C1B69533700A802FD /* GoogleMaps.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -519,7 +533,6 @@
 		B83763861B61670A005ECC76 /* Whatsapp_Logo_128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Whatsapp_Logo_128.png; sourceTree = "<group>"; };
 		B83763881B6167E2005ECC76 /* HPPopUpDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPPopUpDetailVC.h; sourceTree = "<group>"; };
 		B83763891B6167E2005ECC76 /* HPPopUpDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPPopUpDetailVC.m; sourceTree = "<group>"; };
-		B845E1741B33432A002AC221 /* RevMobAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevMobAds.framework; sourceTree = "<group>"; };
 		B849F19E1ABC9D4A00E81461 /* INTULocationManager+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "INTULocationManager+Internal.h"; sourceTree = "<group>"; };
 		B849F19F1ABC9D4A00E81461 /* INTULocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INTULocationManager.h; sourceTree = "<group>"; };
 		B849F1A01ABC9D4A00E81461 /* INTULocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INTULocationManager.m; sourceTree = "<group>"; };
@@ -854,7 +867,23 @@
 		B8F5ABDD1ABA02D600AC966F /* HPPropertySearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPPropertySearchCell.m; sourceTree = "<group>"; };
 		B8F5ABEB1ABA0CE800AC966F /* btnFav_Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnFav_Selected.png; sourceTree = "<group>"; };
 		B8F5ABEC1ABA0CE800AC966F /* btnFav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnFav.png; sourceTree = "<group>"; };
+		B8FA7CA61B640B9A0055B662 /* HPDirectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPDirectionVC.h; sourceTree = "<group>"; };
+		B8FA7CA71B640B9A0055B662 /* HPDirectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPDirectionVC.m; sourceTree = "<group>"; };
+		B8FA7CA91B640FC40055B662 /* RevMobAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevMobAds.framework; sourceTree = "<group>"; };
+		B8FA7CB01B6414D10055B662 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		B8FA7CB11B6414D10055B662 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B8FA7CB21B6414D10055B662 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		B8FA7CB31B6414D10055B662 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B8FA7CB41B6414D10055B662 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		B8FA7CB51B6414D10055B662 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		B8FA7CB61B6414D10055B662 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		B8FA7CB71B6414D10055B662 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		B8FA7CB81B6414D10055B662 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		B8FA7CB91B6414D10055B662 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		B8FA7CBA1B6414D10055B662 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		B8FC02DE1B1A38E100AE863E /* photo_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_default.png; sourceTree = "<group>"; };
+		B8FF934B1B69533700A802FD /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
+		B8FF934C1B69533700A802FD /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -862,19 +891,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8FA7CBB1B6414D10055B662 /* Accelerate.framework in Frameworks */,
+				B8FA7CBC1B6414D10055B662 /* AVFoundation.framework in Frameworks */,
+				B8FA7CBD1B6414D10055B662 /* CoreBluetooth.framework in Frameworks */,
+				B8FA7CBE1B6414D10055B662 /* CoreData.framework in Frameworks */,
+				B8FA7CBF1B6414D10055B662 /* CoreImage.framework in Frameworks */,
+				B8FA7CC01B6414D10055B662 /* CoreText.framework in Frameworks */,
+				B8FA7CC11B6414D10055B662 /* GLKit.framework in Frameworks */,
+				B8FA7CC21B6414D10055B662 /* ImageIO.framework in Frameworks */,
+				B8FA7CC31B6414D10055B662 /* libc++.dylib in Frameworks */,
+				B8FA7CC41B6414D10055B662 /* libicucore.dylib in Frameworks */,
+				B8FA7CC51B6414D10055B662 /* libz.dylib in Frameworks */,
+				B8C88A771AB751DF00E7558C /* CoreLocation.framework in Frameworks */,
+				A93831071AC03BC8002CF93B /* QuartzCore.framework in Frameworks */,
+				B8C88A7D1AB7521700E7558C /* Security.framework in Frameworks */,
+				B8FF934E1B69533700A802FD /* GoogleMaps.framework in Frameworks */,
+				B8C88A7B1AB7520800E7558C /* SystemConfiguration.framework in Frameworks */,
 				B8112D931B5588F30030BC27 /* MediaPlayer.framework in Frameworks */,
 				A93831091AC03BEB002CF93B /* StoreKit.framework in Frameworks */,
-				A93831071AC03BC8002CF93B /* QuartzCore.framework in Frameworks */,
 				B89A582A1ABB527E008B1E24 /* MapKit.framework in Frameworks */,
 				B8C88A851AB7525A00E7558C /* MobileCoreServices.framework in Frameworks */,
 				B8C88A831AB7524C00E7558C /* libz.1.1.3.dylib in Frameworks */,
 				B8C88A811AB7523900E7558C /* AudioToolbox.framework in Frameworks */,
 				B8C88A7F1AB7522A00E7558C /* AdSupport.framework in Frameworks */,
-				B8C88A7D1AB7521700E7558C /* Security.framework in Frameworks */,
-				B845E1751B33432A002AC221 /* RevMobAds.framework in Frameworks */,
-				B8C88A7B1AB7520800E7558C /* SystemConfiguration.framework in Frameworks */,
 				B8C88A791AB751EF00E7558C /* libsqlite3.0.dylib in Frameworks */,
-				B8C88A771AB751DF00E7558C /* CoreLocation.framework in Frameworks */,
 				B8C88A751AB751C900E7558C /* Social.framework in Frameworks */,
 				B8C88A731AB751C100E7558C /* Accounts.framework in Frameworks */,
 				B8C88A711AB751A100E7558C /* CFNetwork.framework in Frameworks */,
@@ -883,6 +923,7 @@
 				B856ED441AB1F54800F533D1 /* CoreGraphics.framework in Frameworks */,
 				B8C88A6E1AB74B3F00E7558C /* FacebookSDK.framework in Frameworks */,
 				B856ED461AB1F54800F533D1 /* UIKit.framework in Frameworks */,
+				B8FA7CAA1B640FC40055B662 /* RevMobAds.framework in Frameworks */,
 				B856ED421AB1F54800F533D1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1083,6 +1124,8 @@
 				B81BCCCA1B600786003F986D /* HPProjectDetailVC.m */,
 				B83763881B6167E2005ECC76 /* HPPopUpDetailVC.h */,
 				B83763891B6167E2005ECC76 /* HPPopUpDetailVC.m */,
+				B8FA7CA61B640B9A0055B662 /* HPDirectionVC.h */,
+				B8FA7CA71B640B9A0055B662 /* HPDirectionVC.m */,
 			);
 			path = ProjectSearrchMain;
 			sourceTree = "<group>";
@@ -1201,7 +1244,7 @@
 		B845E1731B334314002AC221 /* RevmobSDK */ = {
 			isa = PBXGroup;
 			children = (
-				B845E1741B33432A002AC221 /* RevMobAds.framework */,
+				B8FA7CA91B640FC40055B662 /* RevMobAds.framework */,
 			);
 			path = RevmobSDK;
 			sourceTree = "<group>";
@@ -1241,6 +1284,17 @@
 		B856ED401AB1F54800F533D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B8FA7CB01B6414D10055B662 /* Accelerate.framework */,
+				B8FA7CB11B6414D10055B662 /* AVFoundation.framework */,
+				B8FA7CB21B6414D10055B662 /* CoreBluetooth.framework */,
+				B8FA7CB31B6414D10055B662 /* CoreData.framework */,
+				B8FA7CB41B6414D10055B662 /* CoreImage.framework */,
+				B8FA7CB51B6414D10055B662 /* CoreText.framework */,
+				B8FA7CB61B6414D10055B662 /* GLKit.framework */,
+				B8FA7CB71B6414D10055B662 /* ImageIO.framework */,
+				B8FA7CB81B6414D10055B662 /* libc++.dylib */,
+				B8FA7CB91B6414D10055B662 /* libicucore.dylib */,
+				B8FA7CBA1B6414D10055B662 /* libz.dylib */,
 				B8112D921B5588F30030BC27 /* MediaPlayer.framework */,
 				A938310C1AC03C1F002CF93B /* Parse.framework */,
 				A938310A1AC03BF9002CF93B /* Bolts.framework */,
@@ -1638,6 +1692,7 @@
 		B8CAF8F31AB34C84002D1171 /* Other Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B8FA7CAD1B6412A10055B662 /* GoogleMap */,
 				B86D63D31B5D6FE6007288EE /* MLPAutoCompleteTextField */,
 				B845E1731B334314002AC221 /* RevmobSDK */,
 				B849F19D1ABC9D4A00E81461 /* LocatioManager */,
@@ -1700,6 +1755,15 @@
 				B8F5ABDD1ABA02D600AC966F /* HPPropertySearchCell.m */,
 			);
 			name = propertySearch;
+			sourceTree = "<group>";
+		};
+		B8FA7CAD1B6412A10055B662 /* GoogleMap */ = {
+			isa = PBXGroup;
+			children = (
+				B8FF934B1B69533700A802FD /* GoogleMaps.bundle */,
+				B8FF934C1B69533700A802FD /* GoogleMaps.framework */,
+			);
+			path = GoogleMap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1988,6 +2052,7 @@
 				B86D64F11B5D7946007288EE /* Austria@2x.png in Resources */,
 				B86D65801B5D7946007288EE /* Nicaragua@2x.png in Resources */,
 				B801D29C1ABF351000B29FB1 /* The Midas Touch - Lakshmi and Kuber.html in Resources */,
+				B8FF934D1B69533700A802FD /* GoogleMaps.bundle in Resources */,
 				B86D64FB1B5D7946007288EE /* Bermuda@2x.png in Resources */,
 				A938311C1AC03F93002CF93B /* project6.jpg in Resources */,
 				B86D65781B5D7946007288EE /* Namibia@2x.png in Resources */,
@@ -2124,6 +2189,7 @@
 				B86D63E61B5D6FE6007288EE /* NSString+Levenshtein.m in Sources */,
 				A93831101AC03F1E002CF93B /* HPProjectCell.m in Sources */,
 				B816220B1AB4C17600161525 /* HPVaastuMainVC.m in Sources */,
+				B8FA7CA81B640B9A0055B662 /* HPDirectionVC.m in Sources */,
 				B86D63E21B5D6FE6007288EE /* DEMOCustomAutoCompleteCell.m in Sources */,
 				B81621D81AB4BBD600161525 /* HPPropertySearchMainVC.m in Sources */,
 				B81BCCCB1B600786003F986D /* HPProjectDetailVC.m in Sources */,
@@ -2301,10 +2367,15 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/HomePlannerApp/Other\\ Classes/RevmobSDK",
+					"$(PROJECT_DIR)/HomePlannerApp/Other\\ Classes/GoogleMap",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HomePlannerApp/HomePlannerApp-Prefix.pch";
 				INFOPLIST_FILE = "HomePlannerApp/HomePlannerApp-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -2321,10 +2392,16 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/HomePlannerApp/Other\\ Classes/RevmobSDK",
+					"$(PROJECT_DIR)/HomePlannerApp/Other\\ Classes/GoogleMap",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HomePlannerApp/HomePlannerApp-Prefix.pch";
 				INFOPLIST_FILE = "HomePlannerApp/HomePlannerApp-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

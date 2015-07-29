@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomePlannerApp/Classes/TabBar/PropertySearchMainVC/HPPropSearchDetailVC.m"
-            timestampString = "458677705.433791"
+            timestampString = "459545911.956196"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "@implementation HPPropSearchDetailVC"
             landmarkType = "3">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomePlannerApp/Classes/TabBar/NearBySearchMain/HPNearBySearchMainVC.m"
-            timestampString = "458938249.674206"
+            timestampString = "459543894.516109"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "257"
-            endingLineNumber = "257"
+            startingLineNumber = "202"
+            endingLineNumber = "202"
             landmarkName = "-mapView:viewForAnnotation:"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomePlannerApp/Classes/TabBar/NearBySearchMain/HPNearBySearchMainVC.m"
-            timestampString = "458938249.674206"
+            timestampString = "459543894.516109"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
             landmarkName = "-dropPinsonMap:"
             landmarkType = "5">
          </BreakpointContent>
@@ -248,11 +248,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomePlannerApp/Classes/TabBar/NearBySearchMain/HPNearBySearchMainVC.m"
-            timestampString = "458938249.674206"
+            timestampString = "459543894.516109"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "296"
-            endingLineNumber = "296"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
             landmarkName = "-mapView:viewForAnnotation:"
             landmarkType = "5">
             <Locations>
@@ -294,11 +294,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomePlannerApp/Classes/TabBar/NearBySearchMain/HPNearBySearchMainVC.m"
-            timestampString = "458938249.674206"
+            timestampString = "459543894.516109"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "231"
-            endingLineNumber = "231"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
             landmarkName = "-dropPinsonMap:"
             landmarkType = "5">
          </BreakpointContent>
@@ -310,11 +310,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomePlannerApp/Classes/TabBar/NearBySearchMain/HPNearBySearchMainVC.m"
-            timestampString = "458938249.674206"
+            timestampString = "459543894.516109"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "270"
-            endingLineNumber = "270"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
             landmarkName = "-mapView:viewForAnnotation:"
             landmarkType = "5">
          </BreakpointContent>
@@ -518,11 +518,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomePlannerApp/Classes/TabBar/ProjectSearrchMain/HPProjectDetailVC.m"
-            timestampString = "459368986.390946"
+            timestampString = "459543894.516109"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "-btnGetQwnerDetailClick:"
             landmarkType = "5">
          </BreakpointContent>
@@ -534,27 +534,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomePlannerApp/Classes/TabBar/PropertySearchMainVC/HPPropSearchDetailVC.m"
-            timestampString = "459456683.767061"
+            timestampString = "459545911.956196"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
-            landmarkName = "-btnGetQwnerDetailClick:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HomePlannerApp/Classes/TabBar/PropertySearchMainVC/HPPropSearchDetailVC.m"
-            timestampString = "459456683.767061"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "-btnGetQwnerDetailClick:"
             landmarkType = "5">
          </BreakpointContent>

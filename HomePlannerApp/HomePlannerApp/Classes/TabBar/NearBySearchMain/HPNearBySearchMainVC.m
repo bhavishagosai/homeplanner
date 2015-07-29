@@ -143,67 +143,12 @@
 - (void)setLocationRequestID:(INTULocationRequestID)locationRequestID
 {
     _locationRequestID = locationRequestID;
-    
-//    BOOL isProcessingLocationRequest = (locationRequestID != NSNotFound);
-//    
-//    self.subscriptionSwitch.enabled = !isProcessingLocationRequest;
-//    self.desiredAccuracyControl.enabled = !isProcessingLocationRequest;
-//    self.timeoutSlider.enabled = !isProcessingLocationRequest;
-//    self.requestCurrentLocationButton.enabled = !isProcessingLocationRequest;
-//    self.forceCompleteRequestButton.enabled = isProcessingLocationRequest && !self.subscriptionSwitch.on;
-//    self.cancelRequestButton.enabled = isProcessingLocationRequest;
-//    
-//    if (isProcessingLocationRequest) {
-//        [self.activityIndicator startAnimating];
-////        self.statusLabel.text = @"Location request in progress...";
-//    } else {
-//        [self.activityIndicator stopAnimating];
-//    }
 }
 
 
 -(void)dropPinsonMap:(CLLocation*)currentLocation
 {
-    
-    
-//    NSMutableArray  *mutArrPins = [[NSMutableArray alloc]init];
-//    
-//    NSMutableDictionary *dictLocation = [[NSMutableDictionary alloc]init];
-//    [dictLocation setObject:@"23.027182" forKey:@"latitude"];
-//    [dictLocation setObject:@"72.508462" forKey:@"longitude"];
-//    [dictLocation setObject:@"Iscon Circle" forKey:@"title"];
-//    [dictLocation setObject:@"132 sqyrd Flat" forKey:@"sub_title"];
-//    [mutArrPins addObject:dictLocation];
-//    
-//    NSMutableDictionary *dictLocation1 = [[NSMutableDictionary alloc]init];
-//    [dictLocation1 setObject:@"23.993411" forKey:@"latitude"];
-//    [dictLocation1 setObject:@"72.629161" forKey:@"longitude"];
-//    [dictLocation1 setObject:@"Naherunagar" forKey:@"title"];
-//    [dictLocation1 setObject:@"2000 sqrft Flat" forKey:@"sub_title"];
-//    [mutArrPins addObject:dictLocation1];
-//    
-//    NSMutableDictionary *dictLocation2 = [[NSMutableDictionary alloc]init];
-//    [dictLocation2 setObject:@"23.0143369" forKey:@"latitude"];
-//    [dictLocation2 setObject:@"72.531327" forKey:@"longitude"];
-//    [dictLocation2 setObject:@"Shivranjani Cross Road" forKey:@"title"];
-//    [dictLocation2 setObject:@"150 sqyrd row house" forKey:@"sub_title"];
-//    [mutArrPins addObject:dictLocation2];
-//    
-//    NSMutableDictionary *dictLocation3 = [[NSMutableDictionary alloc]init];
-//    [dictLocation3 setObject:@"23.0206198" forKey:@"latitude"];
-//    [dictLocation3 setObject:@"72.4687152" forKey:@"longitude"];
-//    [dictLocation3 setObject:@"South Bopal" forKey:@"title"];
-//    [dictLocation3 setObject:@"140 sqyrd Flat" forKey:@"sub_title"];
-//    [mutArrPins addObject:dictLocation3];
-//    
-//    NSMutableDictionary *dictLocation4 = [[NSMutableDictionary alloc]init];
-//    [dictLocation4 setObject:@"23.0359472" forKey:@"latitude"];
-//    [dictLocation4 setObject:@"72.452845" forKey:@"longitude"];
-//    [dictLocation4 setObject:@"Vibhusha Bunglow" forKey:@"title"];
-//    [dictLocation4 setObject:@"250 sqyrd Bunglow" forKey:@"sub_title"];
-//    [mutArrPins addObject:dictLocation4];
-    
-    
+
     PFQuery *query = [PFQuery queryWithClassName:@"Home_Master"];
     PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLocation:currentLocation];
     [query whereKey:@"H_Location" nearGeoPoint:geoPoint withinKilometers:50.0];
