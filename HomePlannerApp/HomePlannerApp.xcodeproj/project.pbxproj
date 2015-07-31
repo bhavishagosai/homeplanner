@@ -89,6 +89,12 @@
 		B83763851B6166F0005ECC76 /* Conversation_speech_bubbles__128.png in Resources */ = {isa = PBXBuildFile; fileRef = B83763831B6166F0005ECC76 /* Conversation_speech_bubbles__128.png */; };
 		B83763871B61670A005ECC76 /* Whatsapp_Logo_128.png in Resources */ = {isa = PBXBuildFile; fileRef = B83763861B61670A005ECC76 /* Whatsapp_Logo_128.png */; };
 		B837638A1B6167E2005ECC76 /* HPPopUpDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B83763891B6167E2005ECC76 /* HPPopUpDetailVC.m */; };
+		B84749C61B6A97EC005C1B66 /* carat-open.png in Resources */ = {isa = PBXBuildFile; fileRef = B84749BD1B6A97EC005C1B66 /* carat-open.png */; };
+		B84749C71B6A97EC005C1B66 /* carat.png in Resources */ = {isa = PBXBuildFile; fileRef = B84749BE1B6A97EC005C1B66 /* carat.png */; };
+		B84749C81B6A97EC005C1B66 /* HPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B84749C01B6A97EC005C1B66 /* HPCategory.m */; };
+		B84749C91B6A97EC005C1B66 /* CategoryList.plist in Resources */ = {isa = PBXBuildFile; fileRef = B84749C11B6A97EC005C1B66 /* CategoryList.plist */; };
+		B84749CA1B6A97EC005C1B66 /* SectionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B84749C31B6A97EC005C1B66 /* SectionInfo.m */; };
+		B84749CB1B6A97EC005C1B66 /* SectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B84749C51B6A97EC005C1B66 /* SectionView.m */; };
 		B849F1A41ABC9D4A00E81461 /* INTULocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B849F1A01ABC9D4A00E81461 /* INTULocationManager.m */; };
 		B849F1A51ABC9D4A00E81461 /* INTULocationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B849F1A21ABC9D4A00E81461 /* INTULocationRequest.m */; };
 		B849F1A71ABCAC7000E81461 /* home_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = B849F1A61ABCAC7000E81461 /* home_pin.png */; };
@@ -533,6 +539,15 @@
 		B83763861B61670A005ECC76 /* Whatsapp_Logo_128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Whatsapp_Logo_128.png; sourceTree = "<group>"; };
 		B83763881B6167E2005ECC76 /* HPPopUpDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPPopUpDetailVC.h; sourceTree = "<group>"; };
 		B83763891B6167E2005ECC76 /* HPPopUpDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPPopUpDetailVC.m; sourceTree = "<group>"; };
+		B84749BD1B6A97EC005C1B66 /* carat-open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "carat-open.png"; sourceTree = "<group>"; };
+		B84749BE1B6A97EC005C1B66 /* carat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carat.png; sourceTree = "<group>"; };
+		B84749BF1B6A97EC005C1B66 /* HPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPCategory.h; sourceTree = "<group>"; };
+		B84749C01B6A97EC005C1B66 /* HPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPCategory.m; sourceTree = "<group>"; };
+		B84749C11B6A97EC005C1B66 /* CategoryList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CategoryList.plist; sourceTree = "<group>"; };
+		B84749C21B6A97EC005C1B66 /* SectionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionInfo.h; sourceTree = "<group>"; };
+		B84749C31B6A97EC005C1B66 /* SectionInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionInfo.m; sourceTree = "<group>"; };
+		B84749C41B6A97EC005C1B66 /* SectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionView.h; sourceTree = "<group>"; };
+		B84749C51B6A97EC005C1B66 /* SectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionView.m; sourceTree = "<group>"; };
 		B849F19E1ABC9D4A00E81461 /* INTULocationManager+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "INTULocationManager+Internal.h"; sourceTree = "<group>"; };
 		B849F19F1ABC9D4A00E81461 /* INTULocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INTULocationManager.h; sourceTree = "<group>"; };
 		B849F1A01ABC9D4A00E81461 /* INTULocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INTULocationManager.m; sourceTree = "<group>"; };
@@ -983,6 +998,7 @@
 		B801D2781ABEFD0300B29FB1 /* FAQVC */ = {
 			isa = PBXGroup;
 			children = (
+				B84749BC1B6A97EC005C1B66 /* CatList */,
 				B801D27A1ABEFD3B00B29FB1 /* HPFAQVC.h */,
 				B801D27B1ABEFD3B00B29FB1 /* HPFAQVC.m */,
 			);
@@ -1247,6 +1263,22 @@
 				B8FA7CA91B640FC40055B662 /* RevMobAds.framework */,
 			);
 			path = RevmobSDK;
+			sourceTree = "<group>";
+		};
+		B84749BC1B6A97EC005C1B66 /* CatList */ = {
+			isa = PBXGroup;
+			children = (
+				B84749BD1B6A97EC005C1B66 /* carat-open.png */,
+				B84749BE1B6A97EC005C1B66 /* carat.png */,
+				B84749BF1B6A97EC005C1B66 /* HPCategory.h */,
+				B84749C01B6A97EC005C1B66 /* HPCategory.m */,
+				B84749C11B6A97EC005C1B66 /* CategoryList.plist */,
+				B84749C21B6A97EC005C1B66 /* SectionInfo.h */,
+				B84749C31B6A97EC005C1B66 /* SectionInfo.m */,
+				B84749C41B6A97EC005C1B66 /* SectionView.h */,
+				B84749C51B6A97EC005C1B66 /* SectionView.m */,
+			);
+			path = CatList;
 			sourceTree = "<group>";
 		};
 		B849F19D1ABC9D4A00E81461 /* LocatioManager */ = {
@@ -1874,6 +1906,7 @@
 				B81621CA1AB4A85C00161525 /* post_req_icon.png in Resources */,
 				B86D65221B5D7946007288EE /* Ecuador@2x.png in Resources */,
 				B86D65001B5D7946007288EE /* Brazil@2x.png in Resources */,
+				B84749C61B6A97EC005C1B66 /* carat-open.png in Resources */,
 				B86D65BD1B5D7946007288EE /* Syria@2x.png in Resources */,
 				B86D65CC1B5D7946007288EE /* United-Arab-Emirates@2x.png in Resources */,
 				B86D64E51B5D7946007288EE /* Albania@2x.png in Resources */,
@@ -1994,6 +2027,7 @@
 				B86D65B71B5D7946007288EE /* Sri-Lanka@2x.png in Resources */,
 				B86D65D21B5D7946007288EE /* Uzbekistan@2x.png in Resources */,
 				B86D65191B5D7946007288EE /* Cuba@2x.png in Resources */,
+				B84749C91B6A97EC005C1B66 /* CategoryList.plist in Resources */,
 				B86D65AE1B5D7946007288EE /* Solomon-Islands@2x.png in Resources */,
 				B86D65121B5D7946007288EE /* Colombia@2x.png in Resources */,
 				B86D654B1B5D7946007288EE /* Israel@2x.png in Resources */,
@@ -2029,6 +2063,7 @@
 				B86D657D1B5D7946007288EE /* Netherlands@2x.png in Resources */,
 				A938311A1AC03F93002CF93B /* project4.jpg in Resources */,
 				B86D65391B5D7946007288EE /* Grenada@2x.png in Resources */,
+				B84749C71B6A97EC005C1B66 /* carat.png in Resources */,
 				B86D65061B5D7946007288EE /* Burundi@2x.png in Resources */,
 				B86D653A1B5D7946007288EE /* Guam@2x.png in Resources */,
 				B86D65581B5D7946007288EE /* Latvia@2x.png in Resources */,
@@ -2194,6 +2229,7 @@
 				B81621D81AB4BBD600161525 /* HPPropertySearchMainVC.m in Sources */,
 				B81BCCCB1B600786003F986D /* HPProjectDetailVC.m in Sources */,
 				A938311F1AC0449E002CF93B /* HPPricedetailVC.m in Sources */,
+				B84749CA1B6A97EC005C1B66 /* SectionInfo.m in Sources */,
 				B8CAF9001AB34CF7002D1171 /* HPREgisterVC.m in Sources */,
 				B801D2621ABEE86000B29FB1 /* HPAboutusVC.m in Sources */,
 				B8CAF9031AB34D0A002D1171 /* HPLoginVC.m in Sources */,
@@ -2206,6 +2242,7 @@
 				B86341231B349B4C00DC6109 /* HPGalleryViewController.m in Sources */,
 				B81621FB1AB4C0EA00161525 /* HPProjectSearrchMainVC.m in Sources */,
 				B849F1A41ABC9D4A00E81461 /* INTULocationManager.m in Sources */,
+				B84749CB1B6A97EC005C1B66 /* SectionView.m in Sources */,
 				B8CAF8FD1AB34CE5002D1171 /* HPHomeVC.m in Sources */,
 				B856ED521AB1F54800F533D1 /* HPAppDelegate.m in Sources */,
 				A93831221AC04D02002CF93B /* HPNewReqVC.m in Sources */,
@@ -2214,6 +2251,7 @@
 				B856ED4E1AB1F54800F533D1 /* main.m in Sources */,
 				B801D27F1ABEFD4C00B29FB1 /* HPHelpVC.m in Sources */,
 				B89A58281ABB4572008B1E24 /* iCarousel.m in Sources */,
+				B84749C81B6A97EC005C1B66 /* HPCategory.m in Sources */,
 				B801D27C1ABEFD3B00B29FB1 /* HPFAQVC.m in Sources */,
 				B8F5ABDE1ABA02D600AC966F /* HPPropertySearchCell.m in Sources */,
 				B81622071AB4C15900161525 /* HPMessagesMainVC.m in Sources */,

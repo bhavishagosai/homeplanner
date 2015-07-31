@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "SectionView.h"
 
-@interface HPFAQVC : UIViewController
+@interface HPFAQVC : UIViewController<SectionView>{
+    
+}
 @property (weak, nonatomic) IBOutlet UIWebView *webViewFAQ;
-
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end

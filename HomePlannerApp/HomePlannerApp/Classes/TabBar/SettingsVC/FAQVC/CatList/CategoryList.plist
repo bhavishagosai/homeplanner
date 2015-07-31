@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string> » How does Home Planner work?</string>
+		<key>list</key>
+		<array>
+			<string>Home Planner is a real estate App that offers an online platform to buy, sell or rent properties across India. Builders, land owners and landlords list their properties on Home Planner for sale or rent. Buyers choose a suitable property from the numerous listings on the site.</string>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string> » Does Home Planner take any chanrges for find properties?</string>
+		<key>list</key>
+		<array>
+			<string>Home Planner is free app for search your dream homes.</string>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string> » Can I buy Home via this app?</string>
+		<key>list</key>
+		<array>
+			<string>Sorry, you can not buy any home directly via this application.</string>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string> » How do I change or reset my password ?</string>
+		<key>list</key>
+		<array>
+			<string>You can easily change password via forget password screen with your register email id.</string>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string> » Can I change my registered Mail Id?</string>
+		<key>list</key>
+		<array>
+			<string>Sorry, You can not change your register mail id.</string>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string> » How do I remember or save my search homes?</string>
+		<key>list</key>
+		<array>
+			<string>Great, There is one feature for add your Homes in favourite by clicking *(star).</string>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string> » How i contact the home owner ?</string>
+		<key>list</key>
+		<array>
+			<string>You can get home owner number from home detail page &quot;Get Owner Detail&quot;.</string>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string> » I need to search agent detail in my area.</string>
+		<key>list</key>
+		<array>
+			<string>You can easily get agent list in agent search where you find all detail related agent.</string>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string> » How do I share my favorite property with my friends?</string>
+		<key>list</key>
+		<array>
+			<string>You can share any property detail with your friends in app home detail page.</string>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string> » Can i get home list &amp; details without internet?</string>
+		<key>list</key>
+		<array>
+			<string>Sorry , you can not access property list &amp; detail without internet.as we are planning  to add this feature in our next version.</string>
+		</array>
+	</dict>
+</array>
+</plist>
