@@ -33,6 +33,12 @@
 		A938311C1AC03F93002CF93B /* project6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A93831161AC03F93002CF93B /* project6.jpg */; };
 		A938311F1AC0449E002CF93B /* HPPricedetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A938311E1AC0449E002CF93B /* HPPricedetailVC.m */; };
 		A93831221AC04D02002CF93B /* HPNewReqVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A93831211AC04D02002CF93B /* HPNewReqVC.m */; };
+		A9916A101B6CCA27000CFB7D /* RevMobAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9916A0F1B6CCA27000CFB7D /* RevMobAds.framework */; };
+		A9916A141B6CE342000CFB7D /* LPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9916A131B6CE342000CFB7D /* LPlaceholderTextView.m */; };
+		A9916A2A1B6CEB07000CFB7D /* logo-lite-small.png in Resources */ = {isa = PBXBuildFile; fileRef = A9916A261B6CEB07000CFB7D /* logo-lite-small.png */; };
+		A9916A2B1B6CEB07000CFB7D /* logo-small(1).png in Resources */ = {isa = PBXBuildFile; fileRef = A9916A271B6CEB07000CFB7D /* logo-small(1).png */; };
+		A9916A2C1B6CEB07000CFB7D /* logo-small.png in Resources */ = {isa = PBXBuildFile; fileRef = A9916A281B6CEB07000CFB7D /* logo-small.png */; };
+		A9916A2D1B6CEB07000CFB7D /* Index.html in Resources */ = {isa = PBXBuildFile; fileRef = A9916A291B6CEB07000CFB7D /* Index.html */; };
 		B801D2621ABEE86000B29FB1 /* HPAboutusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B801D2611ABEE86000B29FB1 /* HPAboutusVC.m */; };
 		B801D2661ABEE87D00B29FB1 /* HPContactusVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B801D2651ABEE87D00B29FB1 /* HPContactusVC.m */; };
 		B801D26A1ABEE8A400B29FB1 /* HPSettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B801D2691ABEE8A400B29FB1 /* HPSettingsVC.m */; };
@@ -108,10 +114,6 @@
 		B856ED551AB1F54800F533D1 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B856ED531AB1F54800F533D1 /* Main_iPhone.storyboard */; };
 		B856ED581AB1F54800F533D1 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B856ED561AB1F54800F533D1 /* Main_iPad.storyboard */; };
 		B856ED5D1AB1F54800F533D1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B856ED5C1AB1F54800F533D1 /* Images.xcassets */; };
-		B856ED651AB1F54800F533D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B856ED411AB1F54800F533D1 /* Foundation.framework */; };
-		B856ED661AB1F54800F533D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B856ED451AB1F54800F533D1 /* UIKit.framework */; };
-		B856ED6E1AB1F54800F533D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B856ED6C1AB1F54800F533D1 /* InfoPlist.strings */; };
-		B856ED701AB1F54800F533D1 /* HomePlannerAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B856ED6F1AB1F54800F533D1 /* HomePlannerAppTests.m */; };
 		B857B9581ADD90E2005A340A /* power-button-off-hi.png in Resources */ = {isa = PBXBuildFile; fileRef = B857B9571ADD90E2005A340A /* power-button-off-hi.png */; };
 		B86341231B349B4C00DC6109 /* HPGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B86341221B349B4C00DC6109 /* HPGalleryViewController.m */; };
 		B86D63E21B5D6FE6007288EE /* DEMOCustomAutoCompleteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B86D63D61B5D6FE6007288EE /* DEMOCustomAutoCompleteCell.m */; };
@@ -403,7 +405,6 @@
 		B8F5ABED1ABA0CE800AC966F /* btnFav_Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F5ABEB1ABA0CE800AC966F /* btnFav_Selected.png */; };
 		B8F5ABEE1ABA0CE900AC966F /* btnFav.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F5ABEC1ABA0CE800AC966F /* btnFav.png */; };
 		B8FA7CA81B640B9A0055B662 /* HPDirectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FA7CA71B640B9A0055B662 /* HPDirectionVC.m */; };
-		B8FA7CAA1B640FC40055B662 /* RevMobAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA7CA91B640FC40055B662 /* RevMobAds.framework */; };
 		B8FA7CBB1B6414D10055B662 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA7CB01B6414D10055B662 /* Accelerate.framework */; };
 		B8FA7CBC1B6414D10055B662 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA7CB11B6414D10055B662 /* AVFoundation.framework */; };
 		B8FA7CBD1B6414D10055B662 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA7CB21B6414D10055B662 /* CoreBluetooth.framework */; };
@@ -419,16 +420,6 @@
 		B8FF934D1B69533700A802FD /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B8FF934B1B69533700A802FD /* GoogleMaps.bundle */; };
 		B8FF934E1B69533700A802FD /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FF934C1B69533700A802FD /* GoogleMaps.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		B856ED671AB1F54800F533D1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B856ED361AB1F54800F533D1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B856ED3D1AB1F54800F533D1;
-			remoteInfo = HomePlannerApp;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A93830D31ABFF5C6002CF93B /* Ahmedabad_trends.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Ahmedabad_trends.html; sourceTree = "<group>"; };
@@ -461,6 +452,13 @@
 		A938311E1AC0449E002CF93B /* HPPricedetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPPricedetailVC.m; sourceTree = "<group>"; };
 		A93831201AC04D02002CF93B /* HPNewReqVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPNewReqVC.h; sourceTree = "<group>"; };
 		A93831211AC04D02002CF93B /* HPNewReqVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPNewReqVC.m; sourceTree = "<group>"; };
+		A9916A0F1B6CCA27000CFB7D /* RevMobAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevMobAds.framework; sourceTree = "<group>"; };
+		A9916A121B6CE342000CFB7D /* LPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPlaceholderTextView.h; sourceTree = "<group>"; };
+		A9916A131B6CE342000CFB7D /* LPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPlaceholderTextView.m; sourceTree = "<group>"; };
+		A9916A261B6CEB07000CFB7D /* logo-lite-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-lite-small.png"; sourceTree = "<group>"; };
+		A9916A271B6CEB07000CFB7D /* logo-small(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-small(1).png"; sourceTree = "<group>"; };
+		A9916A281B6CEB07000CFB7D /* logo-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-small.png"; sourceTree = "<group>"; };
+		A9916A291B6CEB07000CFB7D /* Index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Index.html; sourceTree = "<group>"; };
 		B801D2601ABEE86000B29FB1 /* HPAboutusVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPAboutusVC.h; sourceTree = "<group>"; };
 		B801D2611ABEE86000B29FB1 /* HPAboutusVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPAboutusVC.m; sourceTree = "<group>"; };
 		B801D2641ABEE87D00B29FB1 /* HPContactusVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPContactusVC.h; sourceTree = "<group>"; };
@@ -569,7 +567,6 @@
 		B856ED541AB1F54800F533D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		B856ED571AB1F54800F533D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		B856ED5C1AB1F54800F533D1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B856ED621AB1F54800F533D1 /* HomePlannerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomePlannerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B856ED6B1AB1F54800F533D1 /* HomePlannerAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HomePlannerAppTests-Info.plist"; sourceTree = "<group>"; };
 		B856ED6D1AB1F54800F533D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B856ED6F1AB1F54800F533D1 /* HomePlannerAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePlannerAppTests.m; sourceTree = "<group>"; };
@@ -884,7 +881,6 @@
 		B8F5ABEC1ABA0CE800AC966F /* btnFav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnFav.png; sourceTree = "<group>"; };
 		B8FA7CA61B640B9A0055B662 /* HPDirectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPDirectionVC.h; sourceTree = "<group>"; };
 		B8FA7CA71B640B9A0055B662 /* HPDirectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPDirectionVC.m; sourceTree = "<group>"; };
-		B8FA7CA91B640FC40055B662 /* RevMobAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevMobAds.framework; sourceTree = "<group>"; };
 		B8FA7CB01B6414D10055B662 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		B8FA7CB11B6414D10055B662 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B8FA7CB21B6414D10055B662 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
@@ -914,6 +910,7 @@
 				B8FA7CC01B6414D10055B662 /* CoreText.framework in Frameworks */,
 				B8FA7CC11B6414D10055B662 /* GLKit.framework in Frameworks */,
 				B8FA7CC21B6414D10055B662 /* ImageIO.framework in Frameworks */,
+				A9916A101B6CCA27000CFB7D /* RevMobAds.framework in Frameworks */,
 				B8FA7CC31B6414D10055B662 /* libc++.dylib in Frameworks */,
 				B8FA7CC41B6414D10055B662 /* libicucore.dylib in Frameworks */,
 				B8FA7CC51B6414D10055B662 /* libz.dylib in Frameworks */,
@@ -938,17 +935,7 @@
 				B856ED441AB1F54800F533D1 /* CoreGraphics.framework in Frameworks */,
 				B8C88A6E1AB74B3F00E7558C /* FacebookSDK.framework in Frameworks */,
 				B856ED461AB1F54800F533D1 /* UIKit.framework in Frameworks */,
-				B8FA7CAA1B640FC40055B662 /* RevMobAds.framework in Frameworks */,
 				B856ED421AB1F54800F533D1 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B856ED5F1AB1F54800F533D1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B856ED661AB1F54800F533D1 /* UIKit.framework in Frameworks */,
-				B856ED651AB1F54800F533D1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -964,6 +951,25 @@
 			path = Trends;
 			sourceTree = "<group>";
 		};
+		A9916A111B6CE342000CFB7D /* LPlaceholderTextView */ = {
+			isa = PBXGroup;
+			children = (
+				A9916A121B6CE342000CFB7D /* LPlaceholderTextView.h */,
+				A9916A131B6CE342000CFB7D /* LPlaceholderTextView.m */,
+			);
+			path = LPlaceholderTextView;
+			sourceTree = "<group>";
+		};
+		A9916A251B6CEB07000CFB7D /* index */ = {
+			isa = PBXGroup;
+			children = (
+				A9916A261B6CEB07000CFB7D /* logo-lite-small.png */,
+				A9916A271B6CEB07000CFB7D /* logo-small(1).png */,
+				A9916A281B6CEB07000CFB7D /* logo-small.png */,
+			);
+			path = index;
+			sourceTree = "<group>";
+		};
 		B801D25F1ABEE85400B29FB1 /* AboutusVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -976,6 +982,7 @@
 		B801D2631ABEE87200B29FB1 /* ContactusVC */ = {
 			isa = PBXGroup;
 			children = (
+				A9916A111B6CE342000CFB7D /* LPlaceholderTextView */,
 				B801D2641ABEE87D00B29FB1 /* HPContactusVC.h */,
 				B801D2651ABEE87D00B29FB1 /* HPContactusVC.m */,
 			);
@@ -1260,7 +1267,7 @@
 		B845E1731B334314002AC221 /* RevmobSDK */ = {
 			isa = PBXGroup;
 			children = (
-				B8FA7CA91B640FC40055B662 /* RevMobAds.framework */,
+				A9916A0F1B6CCA27000CFB7D /* RevMobAds.framework */,
 			);
 			path = RevmobSDK;
 			sourceTree = "<group>";
@@ -1308,7 +1315,6 @@
 			isa = PBXGroup;
 			children = (
 				B856ED3E1AB1F54800F533D1 /* HomePlannerApp.app */,
-				B856ED621AB1F54800F533D1 /* HomePlannerAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1355,6 +1361,8 @@
 		B856ED471AB1F54800F533D1 /* HomePlannerApp */ = {
 			isa = PBXGroup;
 			children = (
+				A9916A251B6CEB07000CFB7D /* index */,
+				A9916A291B6CEB07000CFB7D /* Index.html */,
 				B8CAF8F21AB34C84002D1171 /* Classes */,
 				B8CAF8F31AB34C84002D1171 /* Other Classes */,
 				B817C72B1AB1FC69009A989E /* Resourses */,
@@ -1818,24 +1826,6 @@
 			productReference = B856ED3E1AB1F54800F533D1 /* HomePlannerApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B856ED611AB1F54800F533D1 /* HomePlannerAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B856ED761AB1F54800F533D1 /* Build configuration list for PBXNativeTarget "HomePlannerAppTests" */;
-			buildPhases = (
-				B856ED5E1AB1F54800F533D1 /* Sources */,
-				B856ED5F1AB1F54800F533D1 /* Frameworks */,
-				B856ED601AB1F54800F533D1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B856ED681AB1F54800F533D1 /* PBXTargetDependency */,
-			);
-			name = HomePlannerAppTests;
-			productName = HomePlannerAppTests;
-			productReference = B856ED621AB1F54800F533D1 /* HomePlannerAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1845,11 +1835,6 @@
 				CLASSPREFIX = HP;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = BDPartners;
-				TargetAttributes = {
-					B856ED611AB1F54800F533D1 = {
-						TestTargetID = B856ED3D1AB1F54800F533D1;
-					};
-				};
 			};
 			buildConfigurationList = B856ED391AB1F54800F533D1 /* Build configuration list for PBXProject "HomePlannerApp" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1865,7 +1850,6 @@
 			projectRoot = "";
 			targets = (
 				B856ED3D1AB1F54800F533D1 /* HomePlannerApp */,
-				B856ED611AB1F54800F533D1 /* HomePlannerAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1947,6 +1931,7 @@
 				B86D65AA1B5D7946007288EE /* Sierra-Leone@2x.png in Resources */,
 				A93830F01AC03130002CF93B /* checked_checkbox.png in Resources */,
 				B86D65411B5D7946007288EE /* Honduras@2x.png in Resources */,
+				A9916A2C1B6CEB07000CFB7D /* logo-small.png in Resources */,
 				A93830F21AC03130002CF93B /* unchecked_checkbox.png in Resources */,
 				B86D65671B5D7946007288EE /* Malta@2x.png in Resources */,
 				B86D65271B5D7946007288EE /* Eritrea@2x.png in Resources */,
@@ -1993,6 +1978,7 @@
 				B86D65381B5D7946007288EE /* Greenland@2x.png in Resources */,
 				B86D65C71B5D7946007288EE /* Turkmenistan@2x.png in Resources */,
 				B81621CC1AB4A85C00161525 /* project_search_icon.png in Resources */,
+				A9916A2B1B6CEB07000CFB7D /* logo-small(1).png in Resources */,
 				B86D65031B5D7946007288EE /* Brunei@2x.png in Resources */,
 				B86D65B81B5D7946007288EE /* Sudan@2x.png in Resources */,
 				B86D65A41B5D7946007288EE /* Sao-Tome-and-Principe@2x.png in Resources */,
@@ -2025,6 +2011,7 @@
 				B86D655A1B5D7946007288EE /* Lesotho@2x.png in Resources */,
 				B86D65611B5D7946007288EE /* Macedonia@2x.png in Resources */,
 				B86D65B71B5D7946007288EE /* Sri-Lanka@2x.png in Resources */,
+				A9916A2A1B6CEB07000CFB7D /* logo-lite-small.png in Resources */,
 				B86D65D21B5D7946007288EE /* Uzbekistan@2x.png in Resources */,
 				B86D65191B5D7946007288EE /* Cuba@2x.png in Resources */,
 				B84749C91B6A97EC005C1B66 /* CategoryList.plist in Resources */,
@@ -2133,6 +2120,7 @@
 				B86D65DA1B5D7946007288EE /* Zambia@2x.png in Resources */,
 				B86D654A1B5D7946007288EE /* Isle-of-Man@2x.png in Resources */,
 				B86D65791B5D7946007288EE /* NATO@2x.png in Resources */,
+				A9916A2D1B6CEB07000CFB7D /* Index.html in Resources */,
 				B86D65361B5D7946007288EE /* GoSquared@2x.png in Resources */,
 				B86D650D1B5D7946007288EE /* Chad@2x.png in Resources */,
 				B86D64FE1B5D7946007288EE /* Bosnia-and-Herzegovina@2x.png in Resources */,
@@ -2203,14 +2191,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B856ED601AB1F54800F533D1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B856ED6E1AB1F54800F533D1 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -2227,6 +2207,7 @@
 				B8FA7CA81B640B9A0055B662 /* HPDirectionVC.m in Sources */,
 				B86D63E21B5D6FE6007288EE /* DEMOCustomAutoCompleteCell.m in Sources */,
 				B81621D81AB4BBD600161525 /* HPPropertySearchMainVC.m in Sources */,
+				A9916A141B6CE342000CFB7D /* LPlaceholderTextView.m in Sources */,
 				B81BCCCB1B600786003F986D /* HPProjectDetailVC.m in Sources */,
 				A938311F1AC0449E002CF93B /* HPPricedetailVC.m in Sources */,
 				B84749CA1B6A97EC005C1B66 /* SectionInfo.m in Sources */,
@@ -2269,23 +2250,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B856ED5E1AB1F54800F533D1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B856ED701AB1F54800F533D1 /* HomePlannerAppTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B856ED681AB1F54800F533D1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B856ED3D1AB1F54800F533D1 /* HomePlannerApp */;
-			targetProxy = B856ED671AB1F54800F533D1 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B856ED4A1AB1F54800F533D1 /* InfoPlist.strings */ = {
@@ -2404,8 +2369,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/HomePlannerApp/Other\\ Classes/RevmobSDK",
 					"$(PROJECT_DIR)/HomePlannerApp/Other\\ Classes/GoogleMap",
+					"$(PROJECT_DIR)/HomePlannerApp/Other\\ Classes/RevmobSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HomePlannerApp/HomePlannerApp-Prefix.pch";
@@ -2429,8 +2394,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/HomePlannerApp/Other\\ Classes/RevmobSDK",
 					"$(PROJECT_DIR)/HomePlannerApp/Other\\ Classes/GoogleMap",
+					"$(PROJECT_DIR)/HomePlannerApp/Other\\ Classes/RevmobSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HomePlannerApp/HomePlannerApp-Prefix.pch";
@@ -2443,46 +2408,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		B856ED771AB1F54800F533D1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HomePlannerApp.app/HomePlannerApp";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HomePlannerApp/HomePlannerApp-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "HomePlannerAppTests/HomePlannerAppTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		B856ED781AB1F54800F533D1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HomePlannerApp.app/HomePlannerApp";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HomePlannerApp/HomePlannerApp-Prefix.pch";
-				INFOPLIST_FILE = "HomePlannerAppTests/HomePlannerAppTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -2503,15 +2428,6 @@
 			buildConfigurations = (
 				B856ED741AB1F54800F533D1 /* Debug */,
 				B856ED751AB1F54800F533D1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B856ED761AB1F54800F533D1 /* Build configuration list for PBXNativeTarget "HomePlannerAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B856ED771AB1F54800F533D1 /* Debug */,
-				B856ED781AB1F54800F533D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -21,43 +21,13 @@
     self.btnSendMessage.layer.cornerRadius = 5.0;
     self.btnSendMessage.layer.masksToBounds = YES;
     
-    NSMutableDictionary *dictMenu = [[NSMutableDictionary alloc]init];
-    [dictMenu setObject:@"Hello Admin,I have one query regarding home loan." forKeyedSubscript:@"chat_message"];
-    [dictMenu setObject:@"Dhanesh gosai" forKeyedSubscript:@"sender_name"];
-    [dictMenu setObject:@"sender" forKeyedSubscript:@"chat_type"];
-    [dictMenu setObject:@"dhanesh.png" forKeyedSubscript:@"sender_image"];
-    
     NSMutableDictionary *dictMenu1 = [[NSMutableDictionary alloc]init];
-    [dictMenu1 setObject:@"Hello Dhanesh,\nyes which type help you in home loan section." forKeyedSubscript:@"chat_message"];
+    [dictMenu1 setObject:[NSString stringWithFormat:@"Hello %@,\nHow can i help you ?",[[PFUser currentUser] username]] forKeyedSubscript:@"chat_message"];
     [dictMenu1 setObject:@"bhavisha" forKeyedSubscript:@"sender_name"];
     [dictMenu1 setObject:@"sender" forKeyedSubscript:@"chat_type"];
     [dictMenu1 setObject:@"bhavisha.png" forKeyedSubscript:@"sender_image"];
     
-    NSMutableDictionary *dictMenu2 = [[NSMutableDictionary alloc]init];
-    [dictMenu2 setObject:@"I want to know that as per my salary how much amount loan bank will sanction for me." forKeyedSubscript:@"chat_message"];
-    [dictMenu2 setObject:@"Dhanesh gosai" forKeyedSubscript:@"sender_name"];
-    [dictMenu2 setObject:@"sender" forKeyedSubscript:@"chat_type"];
-    [dictMenu2 setObject:@"dhanesh.png" forKeyedSubscript:@"sender_image"];
-    
-    NSMutableDictionary *dictMenu3 = [[NSMutableDictionary alloc]init];
-    [dictMenu3 setObject:@"Hey Dhanesh,\nCan you provide me your salary detail , so i can calculate loan amount." forKeyedSubscript:@"chat_message"];
-    [dictMenu3 setObject:@"bhavisha" forKeyedSubscript:@"sender_name"];
-    [dictMenu3 setObject:@"sender" forKeyedSubscript:@"chat_type"];
-    [dictMenu3 setObject:@"bhavisha.png" forKeyedSubscript:@"sender_image"];
-    
-    NSMutableDictionary *dictMenu4 = [[NSMutableDictionary alloc]init];
-    [dictMenu4 setObject:@"Ya sure,\nMy salary is 30,000/month." forKeyedSubscript:@"chat_message"];
-    [dictMenu4 setObject:@"Dhanesh gosai" forKeyedSubscript:@"sender_name"];
-    [dictMenu4 setObject:@"sender" forKeyedSubscript:@"chat_type"];
-    [dictMenu4 setObject:@"dhanesh.png" forKeyedSubscript:@"sender_image"];
-    
-    NSMutableDictionary *dictMenu5 = [[NSMutableDictionary alloc]init];
-    [dictMenu5 setObject:@"Thanks Dhanesh,\nfor providing detail will reply you soon with loan amount." forKeyedSubscript:@"chat_message"];
-    [dictMenu5 setObject:@"bhavisha" forKeyedSubscript:@"sender_name"];
-    [dictMenu5 setObject:@"sender" forKeyedSubscript:@"chat_type"];
-    [dictMenu5 setObject:@"bhavisha.png" forKeyedSubscript:@"sender_image"];
-    
-    mutArrMessages = [[NSMutableArray alloc]initWithObjects:dictMenu,dictMenu1,dictMenu2,dictMenu3,dictMenu4,dictMenu5, nil];
+    mutArrMessages = [[NSMutableArray alloc]initWithObjects:dictMenu1, nil];
     // Do any additional setup after loading the view.
 }
 
@@ -135,7 +105,18 @@
         aHPMessagesCell.lblSubTitle.text = [[mutArrMessages objectAtIndex:indexPath.row]objectForKey:@"chat_message"];
         aHPMessagesCell.imgUser.layer.cornerRadius = aHPMessagesCell.imgUser.frame.size.width/2;
         aHPMessagesCell.imgUser.layer.masksToBounds=YES;
-        aHPMessagesCell.imgUser.image = [UIImage imageNamed:[[mutArrMessages objectAtIndex:indexPath.row]objectForKey:@"sender_image"]];
+        
+        if ([[[mutArrMessages objectAtIndex:indexPath.row] objectForKey:@"sender_image"] isKindOfClass:[PFFile class]   ]) {
+            PFFile *file = [[mutArrMessages objectAtIndex:indexPath.row] objectForKey:@"sender_image"];
+            [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                if (!error) {
+                    aHPMessagesCell.imgUser.image = [UIImage imageWithData:data];
+                }
+            }];
+        }else{
+            aHPMessagesCell.imgUser.image = [UIImage imageNamed:@"bhavisha"];
+        }
+        
         
         switch (indexPath.row) {
             case 0:
@@ -167,4 +148,49 @@
     
 }
 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.txtSendMessage resignFirstResponder];
+}
+#pragma mark - UITextView Method
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    [UIView animateWithDuration:0.3 animations:^{
+        self.viewButtom.frame = CGRectMake(0,self.view.frame.size.height-self.viewButtom.frame.size.height-214, self.viewButtom.frame.size.width,self.viewButtom.frame.size.height);
+    }];
+    return YES;
+}
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField{
+    [UIView animateWithDuration:0.3 animations:^{
+        self.viewButtom.frame = CGRectMake(0,self.view.frame.size.height-self.viewButtom.frame.size.height, self.viewButtom.frame.size.width,self.viewButtom.frame.size.height);
+    }];
+    return YES;
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [self.txtSendMessage resignFirstResponder];
+    return YES;
+}
+
+
+- (IBAction)btnSendMsgClick:(id)sender {
+    
+    if (self.txtSendMessage.text.length>0) {
+        NSMutableDictionary *dictMenu5 = [[NSMutableDictionary alloc]init];
+        [dictMenu5 setObject:self.txtSendMessage.text forKeyedSubscript:@"chat_message"];
+        [dictMenu5 setObject:[[PFUser currentUser] username] forKeyedSubscript:@"sender_name"];
+        [dictMenu5 setObject:@"sender" forKeyedSubscript:@"chat_type"];
+        [dictMenu5 setObject:[[PFUser currentUser] objectForKey:@"user_photo"] forKeyedSubscript:@"sender_image"];
+        
+        [mutArrMessages addObject:dictMenu5];
+        [self.tblMessages beginUpdates];
+        [self.tblMessages insertRowsAtIndexPaths:[NSArray arrayWithObjects:[NSIndexPath indexPathForRow:mutArrMessages.count-1 inSection:0],nil] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [self.tblMessages endUpdates];
+        
+    }
+    [self.txtSendMessage resignFirstResponder];
+    self.txtSendMessage.text = @"";
+    
+//    [UIView animateWithDuration:0.5 animations:^{
+//        self.viewButtom.frame = CGRectMake(0,self.view.frame.size.height-self.viewButtom.frame.size.height, self.viewButtom.frame.size.width,self.viewButtom.frame.size.height);
+//    }];
+}
 @end

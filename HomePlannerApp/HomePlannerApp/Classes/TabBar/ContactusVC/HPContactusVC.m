@@ -18,6 +18,7 @@
     [super viewDidLoad];
     self.txtViewMessage.layer.cornerRadius = 5.0;
     self.btnSend.layer.cornerRadius = 5.0;
+    self.txtViewMessage.placeholderText = @"Enter Your Message...";
     // Do any additional setup after loading the view.
 }
 
@@ -36,7 +37,16 @@
 }
 */
 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
+
 - (IBAction)btnSendClick:(id)sender {
+    self.txtCategory.text = @"";
+    self.txtViewMessage.text = @""; 
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Home Planner" message:@"Your Message send successfully. Admin will replay you soon for the same." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
 }
 
 - (IBAction)btnWhatsAppClick:(id)sender {

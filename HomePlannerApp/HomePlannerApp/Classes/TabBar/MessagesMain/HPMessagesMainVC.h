@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HPMessagesMainVC : UIViewController<UITableViewDataSource,UITableViewDelegate>{
+@interface HPMessagesMainVC : UIViewController<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>{
     NSMutableArray *mutArrMessages;
 }
+@property (weak, nonatomic) IBOutlet UITableView *tblMessages;
 @property (weak, nonatomic) IBOutlet UIButton *btnSendMessage;
+@property (weak, nonatomic) IBOutlet UITextField *txtSendMessage;
+@property (weak, nonatomic) IBOutlet UIView *viewButtom;
+- (IBAction)btnSendMsgClick:(id)sender;
 
 @end

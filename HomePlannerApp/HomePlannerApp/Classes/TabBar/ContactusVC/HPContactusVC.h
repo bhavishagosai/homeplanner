@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LPlaceholderTextView.h"
 
 @interface HPContactusVC : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *txtCategory;
-@property (weak, nonatomic) IBOutlet UITextView *txtViewMessage;
+@property (weak, nonatomic) IBOutlet LPlaceholderTextView *txtViewMessage;
 - (IBAction)btnSendClick:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *btnSend;
 @property (weak, nonatomic) IBOutlet UIButton *btnWhatsApp;

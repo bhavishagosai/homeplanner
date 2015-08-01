@@ -16,7 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.webViewHelp loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://advice.magicbricks.com/"]]];
+    
+    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"Index" ofType:@"html"];
+    NSString* htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
+    [self.webViewHelp loadHTMLString:htmlString baseURL:nil];
     // Do any additional setup after loading the view.
 }
 
