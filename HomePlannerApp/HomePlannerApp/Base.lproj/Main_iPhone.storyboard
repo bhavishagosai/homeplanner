@@ -718,8 +718,8 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your First Name" minimumFontSize="17" id="GmK-PO-8Go">
-                                        <rect key="frame" x="46" y="15" width="229" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter FirstName" minimumFontSize="17" id="GmK-PO-8Go">
+                                        <rect key="frame" x="10" y="112" width="145" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
@@ -727,17 +727,8 @@
                                             <outlet property="delegate" destination="QxM-My-Llt" id="k4a-eE-SOt"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Last Name" minimumFontSize="17" id="b6c-uy-S0z">
-                                        <rect key="frame" x="46" y="55" width="229" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="QxM-My-Llt" id="gmL-YE-nrp"/>
-                                        </connections>
-                                    </textField>
                                     <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Password" minimumFontSize="17" id="xTT-wa-9hd">
-                                        <rect key="frame" x="46" y="135" width="229" height="30"/>
+                                        <rect key="frame" x="10" y="182" width="300" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
@@ -746,7 +737,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Con-Password" minimumFontSize="17" id="qsF-FH-ZUr">
-                                        <rect key="frame" x="46" y="175" width="229" height="30"/>
+                                        <rect key="frame" x="10" y="217" width="300" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
@@ -755,7 +746,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Mobile No" minimumFontSize="17" id="UBL-wn-2rf">
-                                        <rect key="frame" x="46" y="217" width="229" height="30"/>
+                                        <rect key="frame" x="10" y="252" width="300" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next"/>
@@ -764,7 +755,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Street" minimumFontSize="17" id="OZe-kG-3jg">
-                                        <rect key="frame" x="46" y="255" width="229" height="30"/>
+                                        <rect key="frame" x="10" y="287" width="300" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
@@ -773,7 +764,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your City" minimumFontSize="17" id="eT8-2z-wPs" customClass="MLPAutoCompleteTextField">
-                                        <rect key="frame" x="46" y="373" width="229" height="30"/>
+                                        <rect key="frame" x="10" y="392" width="300" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
@@ -784,7 +775,7 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="g9u-SS-qud">
-                                        <rect key="frame" x="100" y="457" width="121" height="32"/>
+                                        <rect key="frame" x="100" y="462" width="121" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
@@ -797,7 +788,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Email" minimumFontSize="17" id="kx1-h2-eFM">
-                                        <rect key="frame" x="46" y="97" width="229" height="30"/>
+                                        <rect key="frame" x="10" y="147" width="300" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
@@ -806,7 +797,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your PinCode" minimumFontSize="17" id="0bL-4Y-Gm3">
-                                        <rect key="frame" x="46" y="409" width="229" height="30"/>
+                                        <rect key="frame" x="10" y="427" width="300" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
@@ -815,7 +806,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Country" minimumFontSize="17" id="n4S-dI-X4Y" customClass="MLPAutoCompleteTextField">
-                                        <rect key="frame" x="46" y="295" width="229" height="30"/>
+                                        <rect key="frame" x="10" y="322" width="300" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
@@ -826,7 +817,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your State" minimumFontSize="17" id="SrR-be-484" customClass="MLPAutoCompleteTextField">
-                                        <rect key="frame" x="46" y="335" width="229" height="30"/>
+                                        <rect key="frame" x="10" y="357" width="300" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
@@ -834,6 +825,25 @@
                                             <outlet property="autoCompleteDataSource" destination="7Bq-9J-Sh6" id="fYK-6V-OzS"/>
                                             <outlet property="autoCompleteDelegate" destination="QxM-My-Llt" id="Cgg-c1-icf"/>
                                             <outlet property="delegate" destination="QxM-My-Llt" id="7dU-UP-25P"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5Dx-f6-ZAk">
+                                        <rect key="frame" x="110" y="5" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="persondefault.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnPhotoSelect:" destination="QxM-My-Llt" eventType="touchUpInside" id="ZYI-4u-atF"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter LastName" minimumFontSize="17" id="b6c-uy-S0z">
+                                        <rect key="frame" x="165" y="112" width="145" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="QxM-My-Llt" id="gmL-YE-nrp"/>
                                         </connections>
                                     </textField>
                                 </subviews>
@@ -845,8 +855,10 @@
                         <color key="backgroundColor" red="1" green="0.54526333039999997" blue="0.57119573140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Register" id="uIt-JV-apt"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="autocompleteDataSource" destination="7Bq-9J-Sh6" id="NTA-fo-fPj"/>
+                        <outlet property="btnPhoto" destination="5Dx-f6-ZAk" id="ELF-Ui-i5N"/>
                         <outlet property="scrMain" destination="WEH-vx-HeQ" id="U7J-iN-hAE"/>
                         <outlet property="txtCity" destination="eT8-2z-wPs" id="q50-a3-Yop"/>
                         <outlet property="txtConfPassword" destination="qsF-FH-ZUr" id="yPe-DH-bcP"/>
@@ -2111,11 +2123,91 @@ Use Rates &amp; Trends as a tool in making property decisions, as it contains lo
                     <connections>
                         <segue destination="UX3-Pn-icQ" kind="push" identifier="FAQSegue" id="1al-HT-KxW"/>
                         <segue destination="gvQ-gS-vBF" kind="push" identifier="HelpSegue" id="nXW-cW-O6n"/>
+                        <segue destination="nxz-Gb-m05" kind="push" identifier="MyProfileSegue" id="xv4-Me-ar3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FZ5-NP-JxQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3276" y="4803"/>
+        </scene>
+        <!--My ProfileVC-->
+        <scene sceneID="iJT-e4-XKz">
+            <objects>
+                <viewController storyboardIdentifier="HPMyProfileVC" automaticallyAdjustsScrollViewInsets="NO" id="nxz-Gb-m05" customClass="HPMyProfileVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FMl-oi-9c3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="mR8-Qu-aUJ">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter FirstName" minimumFontSize="17" id="OqC-NA-FSc">
+                                        <rect key="frame" x="10" y="120" width="300" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Mobile No" minimumFontSize="17" id="BLL-EE-1pH">
+                                        <rect key="frame" x="8" y="240" width="300" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Email" minimumFontSize="17" id="hoG-9H-Qtq">
+                                        <rect key="frame" x="10" y="200" width="300" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UAs-hD-7i2">
+                                        <rect key="frame" x="110" y="10" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="persondefault.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnPhotoClick:" destination="nxz-Gb-m05" eventType="touchUpInside" id="Du4-ML-EjL"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter LastName" minimumFontSize="17" id="0kN-7t-CA0">
+                                        <rect key="frame" x="10" y="160" width="300" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hJj-qQ-PlW">
+                                        <rect key="frame" x="100" y="278" width="121" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnSaveClick:" destination="nxz-Gb-m05" eventType="touchUpInside" id="3fe-cf-M7o"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.54526333039999997" blue="0.57119573140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="t0i-Gc-lsG"/>
+                    <connections>
+                        <outlet property="btnPhoto" destination="UAs-hD-7i2" id="YDn-XO-mT9"/>
+                        <outlet property="btnSave" destination="hJj-qQ-PlW" id="OTp-vm-ECK"/>
+                        <outlet property="scrView" destination="mR8-Qu-aUJ" id="zsc-yH-cUU"/>
+                        <outlet property="txtEmail" destination="hoG-9H-Qtq" id="Ok0-xL-Zoh"/>
+                        <outlet property="txtFirstName" destination="OqC-NA-FSc" id="pAP-gc-30z"/>
+                        <outlet property="txtLastName" destination="0kN-7t-CA0" id="Rls-8f-rCj"/>
+                        <outlet property="txtPhoneNub" destination="BLL-EE-1pH" id="rz7-MU-N5X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ll6-WR-Jfj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3855" y="5661"/>
         </scene>
         <!--Help?-->
         <scene sceneID="6WU-3G-SGu">

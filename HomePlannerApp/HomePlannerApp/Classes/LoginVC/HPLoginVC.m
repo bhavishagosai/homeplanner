@@ -8,6 +8,8 @@
 
 #import "HPLoginVC.h"
 #import "HPHomeVC.h"
+#import <TwitterKit/TwitterKit.h>
+
 
 @interface HPLoginVC ()
 
@@ -38,6 +40,13 @@
         HPHomeVC *objHPHomeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"HPHomeVC"];
         [self.navigationController pushViewController:objHPHomeVC animated:NO];
     }
+    
+//    TWTRLogInButton *logInButton = [TWTRLogInButton buttonWithLogInCompletion:^(TWTRSession *session, NSError *error) {
+//        // play with Twitter session
+//    }];
+//    logInButton.center = self.view.center;
+//    [self.view addSubview:logInButton];
+
     // Do any additional setup after loading the view.
 }
 
