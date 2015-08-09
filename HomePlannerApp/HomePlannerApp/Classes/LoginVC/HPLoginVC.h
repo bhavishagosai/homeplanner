@@ -19,4 +19,5 @@
 - (IBAction)btnSignInClick:(id)sender;
 - (IBAction)btnSignUpClick:(id)sender;
 - (IBAction)btnForgetPasswordClick:(id)sender;
+- (IBAction)btnSkipClick:(id)sender;
 @end

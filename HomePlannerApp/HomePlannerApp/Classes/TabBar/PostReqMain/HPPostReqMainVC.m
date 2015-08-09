@@ -16,26 +16,36 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.btnSignIn.layer.cornerRadius = 5;
+    self.btnSignIn.layer.masksToBounds=YES;
     // Do any additional setup after loading the view.
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    hudProgress = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
-    hudProgress.labelText = @"Loading Requiremnts List...";
-    [self.navigationController.view addSubview:hudProgress];
-    [hudProgress show:YES];
-    mutArrPropertyReq = [[NSMutableArray alloc]init];
-    PFQuery *query = [PFQuery queryWithClassName:@"Property_req"];
-    [query whereKey:@"reqUser" containedIn:[NSArray arrayWithObject:[PFUser currentUser]]];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            mutArrPropertyReq = [[NSMutableArray alloc]initWithArray:objects];
-            [self.tblReqList reloadData];
-        }
-        [hudProgress hide:YES];
-        [hudProgress removeFromSuperview];
-    }];
+    
+    if ([PFUser currentUser]) {
+        hudProgress = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+        hudProgress.labelText = @"Loading Requiremnts List...";
+        [self.navigationController.view addSubview:hudProgress];
+        [hudProgress show:YES];
+        mutArrPropertyReq = [[NSMutableArray alloc]init];
+        PFQuery *query = [PFQuery queryWithClassName:@"Property_req"];
+        [query whereKey:@"reqUser" containedIn:[NSArray arrayWithObject:[PFUser currentUser]]];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error) {
+                mutArrPropertyReq = [[NSMutableArray alloc]initWithArray:objects];
+                [self.tblReqList reloadData];
+            }
+            [hudProgress hide:YES];
+            [hudProgress removeFromSuperview];
+        }];
+    }else{
+        self.btnSignIn.hidden = self.lblInstruction.hidden = NO;
+        self.tblReqList.hidden = YES;
+        self.btnAddNewPost.hidden = YES;
+    }
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -98,4 +108,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 }
 
+- (IBAction)btnSignInClick:(id)sender {
+    
+    [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:1] animated:YES];
+    
+}
 @end

@@ -90,13 +90,6 @@
                                     <action selector="btnSignInClick:" destination="XRC-p2-7aQ" eventType="touchUpInside" id="1EA-r3-VeI"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you a new user?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Abh-aa-251">
-                                <rect key="frame" x="0.0" y="344" width="320" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="20"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wJI-Uk-97n">
                                 <rect key="frame" x="62" y="295" width="192" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -104,6 +97,26 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you a new user?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Abh-aa-251">
+                                <rect key="frame" x="0.0" y="344" width="320" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Lsn-8H-UgE">
+                                <rect key="frame" x="66" y="437" width="188" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
+                                <state key="normal" title="Sign Up Here">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSignUpClick:" destination="XRC-p2-7aQ" eventType="touchUpInside" id="hOj-zg-MQb"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="os5-cs-ByD">
                                 <rect key="frame" x="1" y="535" width="161" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -127,17 +140,27 @@
                                     <action selector="btnForgetPasswordClick:" destination="XRC-p2-7aQ" eventType="touchUpInside" id="Xaj-ze-MhF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Lsn-8H-UgE">
-                                <rect key="frame" x="66" y="437" width="188" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="6X4-fQ-d4Y">
+                                <rect key="frame" x="269" y="535" width="41" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
-                                <state key="normal" title="Sign Up Here">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Skip">
+                                            <attributes>
+                                                <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" size="24" name="Futura-CondensedMedium"/>
+                                                <real key="NSKern" value="0.0"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="14" defaultTabInterval="36">
+                                                    <tabStops/>
+                                                </paragraphStyle>
+                                                <integer key="NSUnderline" value="1"/>
+                                                <color key="NSUnderlineColor" red="0.0" green="0.0" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
                                 <connections>
-                                    <action selector="btnSignUpClick:" destination="XRC-p2-7aQ" eventType="touchUpInside" id="hOj-zg-MQb"/>
+                                    <action selector="btnSkipClick:" destination="XRC-p2-7aQ" eventType="touchUpInside" id="pl1-kt-2yi"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -183,6 +206,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnLogOut" destination="HrH-eK-0xm" id="p1d-GT-HJU"/>
                         <segue destination="Ceb-JT-k3k" kind="push" identifier="propertySegue" id="GfQ-He-1Ax"/>
                         <segue destination="g8U-R7-FAz" kind="push" identifier="nearBySegue" id="uny-c5-Aew"/>
                         <segue destination="bN5-D9-0fS" kind="push" identifier="aboutusSegue" id="Pye-pW-kCc"/>
@@ -1168,6 +1192,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To View Post requirements list &amp; Add new requirement please signin by click below &quot;SignIn&quot; button." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Yre-rM-SGE">
+                                <rect key="frame" x="16" y="206" width="288" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wTW-oS-XKS">
+                                <rect key="frame" x="99" y="300" width="121" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
+                                <state key="normal" title="SignIn">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSignInClick:" destination="H5j-cd-IGx" eventType="touchUpInside" id="OzK-oG-Z7X"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="22" sectionFooterHeight="22" id="3le-VI-udZ">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1241,7 +1285,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.54526333039999997" blue="0.57119573140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Requirements List" id="e58-Fh-jMc">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="wzV-hT-3tt">
@@ -1258,6 +1302,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnAdd" destination="wzV-hT-3tt" id="Q8o-I6-LrM"/>
+                        <outlet property="btnAddNewPost" destination="ZWN-er-fzV" id="zft-WV-eeC"/>
+                        <outlet property="btnSignIn" destination="wTW-oS-XKS" id="Qij-X5-1P9"/>
+                        <outlet property="lblInstruction" destination="Yre-rM-SGE" id="Q6f-kw-3ie"/>
                         <outlet property="tblReqList" destination="3le-VI-udZ" id="bkw-62-PhO"/>
                         <segue destination="FRN-s2-umh" kind="push" identifier="addReqSegue" id="Ci2-ad-TjT"/>
                     </connections>
@@ -2195,6 +2243,7 @@ Use Rates &amp; Trends as a tool in making property decisions, as it contains lo
                         <color key="backgroundColor" red="1" green="0.54526333039999997" blue="0.57119573140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="t0i-Gc-lsG"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="btnPhoto" destination="UAs-hD-7i2" id="YDn-XO-mT9"/>
                         <outlet property="btnSave" destination="hJj-qQ-PlW" id="OTp-vm-ECK"/>

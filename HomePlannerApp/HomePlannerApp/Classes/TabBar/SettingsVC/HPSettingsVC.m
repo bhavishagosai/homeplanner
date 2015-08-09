@@ -27,7 +27,7 @@
     
     NSMutableDictionary *dictMenu = [[NSMutableDictionary alloc]init];
     [dictMenu setObject:@"My Profile" forKeyedSubscript:@"menu_title"];
-    [dictMenu setObject:@"View & Update your profile." forKeyedSubscript:@"menu_sub_title"];
+    [dictMenu setObject:@"To view your profile & Update your profile details." forKeyedSubscript:@"menu_sub_title"];
     
     NSMutableDictionary *dictMenu1 = [[NSMutableDictionary alloc]init];
     [dictMenu1 setObject:@"Help ?" forKeyedSubscript:@"menu_title"];
@@ -127,9 +127,17 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     switch (indexPath.row) {
-        case 0:
-            [self performSegueWithIdentifier:@"MyProfileSegue" sender:nil];
+        case 0:{
+            if ([PFUser currentUser]) {
+                [self performSegueWithIdentifier:@"MyProfileSegue" sender:nil];
+            }else{
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Home Planner" message:@"Oops! to view & edit your profile please signin." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"SignIn", nil];
+                alert.tag = 105;
+                [alert show];
+            }
+            
              break;
+        }
         case 1:
             [self performSegueWithIdentifier:@"HelpSegue" sender:nil];
             break;
@@ -148,6 +156,14 @@
         }
         default:
             break;
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if(alertView.tag==105){
+        if (buttonIndex==1) {
+             [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:1] animated:YES];
+        }
     }
 }
 

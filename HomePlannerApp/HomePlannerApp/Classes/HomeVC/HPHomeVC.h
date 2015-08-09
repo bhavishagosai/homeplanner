@@ -12,5 +12,6 @@
 @interface HPHomeVC : UIViewController{
     CHTumblrMenuView *menuView;
 }
+@property (weak, nonatomic) IBOutlet UIButton *btnLogOut;
 - (IBAction)btnLogoutClick:(id)sender;
 @end

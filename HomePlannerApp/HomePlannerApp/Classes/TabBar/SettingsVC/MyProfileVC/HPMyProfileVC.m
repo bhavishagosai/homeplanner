@@ -112,6 +112,38 @@
 }
 
 - (IBAction)btnSaveClick:(id)sender {
+    if (self.txtFirstName.text.length==0) {
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Home Planner" message:@"Please enter First name" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alert show];
+    }else if (self.txtLastName.text.length==0) {
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Home Planner" message:@"Please enter Last name" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alert show];
+    }else{
+        
+        actLoadingSimple = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+        [self.navigationController.view addSubview:actLoadingSimple];
+        actLoadingSimple.delegate = self;
+        actLoadingSimple.labelText = @"Updating your profile...";
+        [actLoadingSimple show:YES];
+        
+        PFUser *firstObj = [PFUser currentUser];
+        [firstObj setObject:self.txtFirstName.text forKey:@"firstname"];
+        [firstObj setObject:self.txtLastName.text forKey:@"lastname"];
+        [firstObj setObject:self.txtPhoneNub.text forKey:@"phone_number"];
+        PFFile *profileImage = [PFFile fileWithData:UIImageJPEGRepresentation([self.btnPhoto backgroundImageForState:UIControlStateNormal], 0.5) contentType:@"image/jpeg"];
+        [firstObj setObject:profileImage forKey:@"user_photo"];
+        [firstObj saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            [actLoadingSimple hide:YES];
+            if(!error){
+                UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Home Planner" message:@"Your profile updated successfully." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+                [alert show];
+            }else{
+                UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Home Planner" message:[NSString stringWithFormat:@"%@",[error description]] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
+            }
+        }];
+    }
+
 }
 - (IBAction)txtEmail:(id)sender {
 }

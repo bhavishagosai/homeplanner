@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HPMyProfileVC : UIViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIActionSheetDelegate>
+@interface HPMyProfileVC : UIViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIActionSheetDelegate,MBProgressHUDDelegate>{
+    MBProgressHUD *actLoadingSimple;
+}
 @property (weak, nonatomic) IBOutlet UIScrollView *scrView;
 @property (weak, nonatomic) IBOutlet UIButton *btnPhoto;
 @property (weak, nonatomic) IBOutlet UITextField *txtFirstName;

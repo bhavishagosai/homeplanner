@@ -18,7 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.hidesBackButton=YES;
-    
+    if (![PFUser currentUser]) {
+        self.btnLogOut.hidden = YES;
+    }
     // Do any additional setup after loading the view.
 }
 
