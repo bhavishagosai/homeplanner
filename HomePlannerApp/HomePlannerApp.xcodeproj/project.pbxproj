@@ -1835,6 +1835,11 @@
 				CLASSPREFIX = HP;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = BDPartners;
+				TargetAttributes = {
+					B856ED3D1AB1F54800F533D1 = {
+						DevelopmentTeam = 7BCW99KL8P;
+					};
+				};
 			};
 			buildConfigurationList = B856ED391AB1F54800F533D1 /* Build configuration list for PBXProject "HomePlannerApp" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -2380,6 +2385,7 @@
 					"$(inherited)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b7ef52e9-2175-4ca6-9b50-388fd805b39c";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -2406,6 +2412,7 @@
 					"$(inherited)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b7ef52e9-2175-4ca6-9b50-388fd805b39c";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

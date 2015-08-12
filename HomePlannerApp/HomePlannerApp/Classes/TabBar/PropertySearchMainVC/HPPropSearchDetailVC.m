@@ -143,8 +143,9 @@
                 }];
                 
                 [objHPPopUpDetailVC setBtnWhatsappBlockClick:^(UIButton *aCloseBtn){
-                    NSURL *whatsappURL = [NSURL URLWithString:@"whatsapp://send?text=Hello Agent!"];
+                    NSURL *whatsappURL = [NSURL URLWithString:@"whatsapp://"];
                     if ([[UIApplication sharedApplication] canOpenURL: whatsappURL]) {
+                        NSURL *whatsappURL = [NSURL URLWithString:@"whatsapp://send?text=Hello Agent!"];
                         [[UIApplication sharedApplication] openURL: whatsappURL];
                     }else{
                         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Home Planner" message:@"Whatsapp app is not installed on your device." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
