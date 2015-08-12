@@ -8,6 +8,8 @@
 
 #import "HPLoginVC.h"
 #import "HPHomeVC.h"
+#import <TwitterKit/TwitterKit.h>
+
 
 @interface HPLoginVC ()
 
@@ -34,10 +36,18 @@
     [self.view addGestureRecognizer:tapGesture];
     
     if ([PFUser currentUser]) {
-//        [self performSegueWithIdentifier:@"homeSegue" sender:nil];
-        HPHomeVC *objHPHomeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"HPHomeVC"];
-        [self.navigationController pushViewController:objHPHomeVC animated:NO];
+        if ([[[PFUser currentUser] objectForKey:@"emailVerified"] boolValue]) {
+            HPHomeVC *objHPHomeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"HPHomeVC"];
+            [self.navigationController pushViewController:objHPHomeVC animated:NO];
+        }
     }
+    
+//    TWTRLogInButton *logInButton = [TWTRLogInButton buttonWithLogInCompletion:^(TWTRSession *session, NSError *error) {
+//        // play with Twitter session
+//    }];
+//    logInButton.center = self.view.center;
+//    [self.view addSubview:logInButton];
+
     // Do any additional setup after loading the view.
 }
 
@@ -94,7 +104,6 @@
                 [alert show];
             }
         }];
-        //    [self performSegueWithIdentifier:@"homeSegue" sender:nil]; 
     }
 }
 
@@ -117,6 +126,13 @@
     alert.alertViewStyle = UIAlertViewStylePlainTextInput;
     alert.tag = 101;
     [alert show];
+}
+
+- (IBAction)btnSkipClick:(id)sender {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Home Planner" message:@"Oops! some feature will available after SignIn. Are you sure to skip SignIn ?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+        alert.tag = 105;
+        [alert show];
+//    [self performSegueWithIdentifier:@"homeSegue" sender:nil];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
@@ -148,6 +164,13 @@
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [self btnForgetPasswordClick:nil];
             });
+        }
+    }else if(alertView.tag==105){
+        if (buttonIndex==1) {
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self performSegueWithIdentifier:@"homeSegue" sender:nil];
+            });
+           
         }
     }
     

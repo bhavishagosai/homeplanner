@@ -9,6 +9,11 @@
 #import "HPAppDelegate.h"
 #import <Parse/Parse.h>
 #import <GoogleMaps/GoogleMaps.h>
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+#import <TwitterKit/TwitterKit.h>
+
+
 
 @implementation HPAppDelegate
 @synthesize selectedTab;
@@ -18,6 +23,10 @@
     // Override point for customization after application launch.
     
     appDelegate = self;
+    
+    [Fabric with:@[CrashlyticsKit, TwitterKit]];
+
+
     
     //Ad Integration
     [RevMobAds startSessionWithAppID:REVMOB_ID andDelegate:self];

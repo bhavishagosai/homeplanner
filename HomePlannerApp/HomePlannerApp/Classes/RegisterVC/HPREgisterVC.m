@@ -11,6 +11,8 @@
 #import "DEMOCustomAutoCompleteCell.h"
 #import "DEMOCustomAutoCompleteObject.h"
 #import "DEMODataSource.h"
+#import <ImageIO/ImageIO.h>
+#import <MobileCoreServices/MobileCoreServices.h>
 
 @interface HPREgisterVC ()
 
@@ -21,7 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.scrMain.contentSize=CGSizeMake(self.scrMain.frame.size.width,self.scrMain.frame.size.height+50);
-    
+    self.btnPhoto.layer.cornerRadius = 50.0;
+    self.btnPhoto.layer.masksToBounds = YES;
 //    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapClick:)];
 //    [self.view addGestureRecognizer:tapGesture];
     
@@ -165,6 +168,69 @@
 }
 */
 
+- (IBAction)btnPhotoSelect:(id)sender {
+    
+//
+    UIActionSheet *actionSheet = [[UIActionSheet alloc]initWithTitle:@"Select option" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Take Photo" otherButtonTitles:@"Choose form Library", nil];
+    actionSheet.tag = [sender tag];
+    [actionSheet showInView:self.view];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    switch (buttonIndex) {
+        case 0:{
+            if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+                UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
+                imagePicker.delegate = self;
+                imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+                imagePicker.editing = YES;
+                [self presentViewController:imagePicker animated:YES completion:^{
+                    
+                }];
+            }else{
+                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Home Planner" message:@"Your device can not have camera feature!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
+            }
+            
+            break;
+        }
+            
+        case 1:{
+            UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
+            imagePicker.delegate = self;
+            imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+            imagePicker.editing = YES;
+            [self presentViewController:imagePicker animated:YES completion:^{
+                
+            }];
+            break;
+        }
+            
+        default:{
+            
+        }
+            
+    }
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    NSLog(@"%@",info);
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    CGSize newSize = CGSizeMake(200.0f, 200.0f);
+    UIGraphicsBeginImageContext(newSize);
+    [image drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
+    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    [self.btnPhoto setBackgroundImage:newImage forState:UIControlStateNormal];
+
+    [picker dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    
+}
+
 - (IBAction)btnSignUpClick:(id)sender {
     if (self.txtFirstName.text.length==0) {
         UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Home Planner" message:@"Please enter First name" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
@@ -217,8 +283,8 @@
         [userSignUp setObject:self.txtPincode.text forKey:@"pincode"];
         [userSignUp setObject:self.txtState.text forKey:@"state"];
         [userSignUp setObject:self.txtStreet.text forKey:@"street"];
-//        PFFile *profileImage = [PFFile fileWithName:@"bhavisha.png" contentsAtPath:[[NSBundle mainBundle]pathForResource:@"bhavisha" ofType:@"png"]];
-//        [userSignUp setObject:profileImage forKey:@"user_photo"];
+        PFFile *profileImage = [PFFile fileWithData:UIImageJPEGRepresentation([self.btnPhoto backgroundImageForState:UIControlStateNormal], 0.5) contentType:@"image/jpeg"];
+        [userSignUp setObject:profileImage forKey:@"user_photo"];
         [userSignUp signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             [actLoadingSimple hide:YES];
             if(!error){
@@ -231,6 +297,22 @@
             }
         }];
     }
+}
+
+
+
++(UIImage *)resizeImage:(UIImage *)image toResolution:(int)resolution {
+    NSData *imageData = UIImagePNGRepresentation(image);
+    CGImageSourceRef src = CGImageSourceCreateWithData((__bridge CFDataRef)imageData, NULL);
+    CFDictionaryRef options = (__bridge CFDictionaryRef) @{
+                                                           (id) kCGImageSourceCreateThumbnailWithTransform : @YES,
+                                                           (id) kCGImageSourceCreateThumbnailFromImageAlways : @YES,
+                                                           (id) kCGImageSourceThumbnailMaxPixelSize : @(resolution)
+                                                           };
+    CGImageRef thumbnail = CGImageSourceCreateThumbnailAtIndex(src, 0, options);
+    CFRelease(src);
+    UIImage *img = [[UIImage alloc]initWithCGImage:thumbnail];
+    return img;
 }
 
 -(BOOL) NSStringIsValidEmail:(NSString *)checkString

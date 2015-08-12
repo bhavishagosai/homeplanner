@@ -12,10 +12,12 @@
 @class DEMODataSource;
 @class MLPAutoCompleteTextField;
 
-@interface HPREgisterVC : UIViewController<UITextFieldDelegate,UIScrollViewDelegate,MBProgressHUDDelegate, MLPAutoCompleteTextFieldDelegate>{
+@interface HPREgisterVC : UIViewController<UITextFieldDelegate,UIScrollViewDelegate,MBProgressHUDDelegate, MLPAutoCompleteTextFieldDelegate,UIImagePickerControllerDelegate,UIActionSheetDelegate,UINavigationControllerDelegate>{
     MBProgressHUD *actLoadingSimple;
     id selectedTextFiled;
+    NSData *imgData;
 }
+@property (weak, nonatomic) IBOutlet UIButton *btnPhoto;
 @property (weak, nonatomic) IBOutlet UITextField *txtFirstName;
 @property (weak, nonatomic) IBOutlet UITextField *txtLastName;
 @property (weak, nonatomic) IBOutlet UITextField *txtEmail;
@@ -30,6 +32,7 @@
 @property (strong, nonatomic) IBOutlet DEMODataSource *autocompleteDataSource;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrMain;
+- (IBAction)btnPhotoSelect:(id)sender;
 
 - (IBAction)btnSignUpClick:(id)sender;
 @end

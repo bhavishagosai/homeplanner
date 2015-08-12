@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomePlannerApp/Classes/RegisterVC/HPREgisterVC.m"
-            timestampString = "459192781.756095"
+            timestampString = "460718491.122645"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
-            landmarkName = "-btnSignUpClick:"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "-btnPhotoSelect:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomePlannerApp/Classes/RegisterVC/HPREgisterVC.m"
-            timestampString = "459192781.756095"
+            timestampString = "460718491.122645"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "225"
-            endingLineNumber = "225"
+            startingLineNumber = "291"
+            endingLineNumber = "291"
             landmarkName = "-btnSignUpClick:"
             landmarkType = "5">
          </BreakpointContent>
@@ -121,38 +121,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HomePlannerApp/Classes/TabBar/ProjectSearrchMain/HPProjectSearrchMainVC.m"
-            timestampString = "459278753.499004"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HomePlannerApp/Classes/TabBar/AgentSearchMain/HPAgentSearchMainVC.m"
-            timestampString = "450644374.321324"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "HomePlannerApp/Classes/TabBar/PostReqMain/HPNewReqVC.m"
             timestampString = "458592400.247206"
             startingColumnNumber = "9223372036854775807"
@@ -168,8 +136,9 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[HPNewReqVC done:]"
                   moduleName = "HomePlannerApp"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Volumes/DATA/STUDY/MCA/Final%20Project/My%20Project/git/HomePlannerApp/HomePlannerApp/Classes/TabBar/PostReqMain/HPNewReqVC.m"
-                  timestampString = "459454485.175638"
+                  timestampString = "460836398.005558"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "104"
@@ -182,8 +151,9 @@
                   continueAfterRunningActions = "No"
                   symbolName = "__19-[HPNewReqVC done:]_block_invoke"
                   moduleName = "HomePlannerApp"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Volumes/DATA/STUDY/MCA/Final%20Project/My%20Project/git/HomePlannerApp/HomePlannerApp/Classes/TabBar/PostReqMain/HPNewReqVC.m"
-                  timestampString = "459454485.175798"
+                  timestampString = "460836398.005721"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "104"
@@ -262,13 +232,14 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[HPNearBySearchMainVC mapView:viewForAnnotation:]"
                   moduleName = "HomePlannerApp"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Volumes/DATA/STUDY/MCA/Final%20Project/My%20Project/git/HomePlannerApp/HomePlannerApp/Classes/TabBar/NearBySearchMain/HPNearBySearchMainVC.m"
-                  timestampString = "459454485.180255"
+                  timestampString = "460836398.008502"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "296"
-                  endingLineNumber = "296"
-                  offsetFromSymbolStart = "1313">
+                  startingLineNumber = "241"
+                  endingLineNumber = "241"
+                  offsetFromSymbolStart = "1215">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -276,12 +247,13 @@
                   continueAfterRunningActions = "No"
                   symbolName = "__50-[HPNearBySearchMainVC mapView:viewForAnnotation:]_block_invoke"
                   moduleName = "HomePlannerApp"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Volumes/DATA/STUDY/MCA/Final%20Project/My%20Project/git/HomePlannerApp/HomePlannerApp/Classes/TabBar/NearBySearchMain/HPNearBySearchMainVC.m"
-                  timestampString = "459454485.180496"
+                  timestampString = "460836398.008712"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "296"
-                  endingLineNumber = "296"
+                  startingLineNumber = "241"
+                  endingLineNumber = "241"
                   offsetFromSymbolStart = "67">
                </Location>
             </Locations>
@@ -438,27 +410,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomePlannerApp/Classes/LoginVC/HPLoginVC.m"
-            timestampString = "459279443.770301"
+            timestampString = "460836793.096114"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "-btnSignInClick:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HomePlannerApp/Classes/LoginVC/HPLoginVC.m"
-            timestampString = "459279443.770301"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
             landmarkName = "-alertView:clickedButtonAtIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -470,11 +426,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomePlannerApp/Classes/RegisterVC/HPREgisterVC.m"
-            timestampString = "459192781.756095"
+            timestampString = "460718491.122645"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "275"
-            endingLineNumber = "275"
+            startingLineNumber = "357"
+            endingLineNumber = "357"
             landmarkName = "-autoCompleteTextField:didSelectAutoCompleteString:withAutoCompleteObject:forRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -486,11 +442,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomePlannerApp/Classes/RegisterVC/HPREgisterVC.m"
-            timestampString = "459192781.756095"
+            timestampString = "460718491.122645"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "-keyboardDidShowWithNotification:"
             landmarkType = "5">
          </BreakpointContent>
@@ -502,11 +458,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomePlannerApp/Classes/RegisterVC/HPREgisterVC.m"
-            timestampString = "459192781.756095"
+            timestampString = "460718491.122645"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "-keyboardDidHideWithNotification:"
             landmarkType = "5">
          </BreakpointContent>
@@ -549,13 +505,77 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HomePlannerApp/Classes/TabBar/ProjectSearrchMain/HPPopUpDetailVC.m"
-            timestampString = "459455810.387929"
+            filePath = "HomePlannerApp/Classes/TabBar/ProjectSearrchMain/HPProjectDetailVC.m"
+            timestampString = "460663228.372592"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "-btnCloseClick:"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "-btnGetQwnerDetailClick:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomePlannerApp/Classes/TabBar/ProjectSearrchMain/HPProjectDetailVC.m"
+            timestampString = "460663276.953683"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "-btnGetQwnerDetailClick:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomePlannerApp/Classes/HomeVC/HPHomeVC.m"
+            timestampString = "460838303.290755"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "-viewWillAppear:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomePlannerApp/Classes/HomeVC/HPHomeVC.m"
+            timestampString = "460838303.290755"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "-showMenu"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomePlannerApp/Classes/HomeVC/HPHomeVC.m"
+            timestampString = "460838303.290755"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "-showMenu"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
