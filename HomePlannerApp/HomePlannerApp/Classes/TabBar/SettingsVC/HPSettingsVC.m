@@ -121,7 +121,7 @@
         aSettingsCell.lblTitle.text = [[mutArrSettingMenu objectAtIndex:indexPath.row]objectForKey:@"menu_title"];
         aSettingsCell.lblSubTitle.text = [[mutArrSettingMenu objectAtIndex:indexPath.row]objectForKey:@"menu_sub_title"];
     }
-    
+    aSettingsCell.selectionStyle = UITableViewCellSelectionStyleNone;
     return aSettingsCell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

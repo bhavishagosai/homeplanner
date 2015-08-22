@@ -106,6 +106,9 @@
             aPropertyCell.lblSize.text         = @"3 BHK.";
         }
     }
+    
+    
+    aPropertyCell.selectionStyle = UITableViewCellSelectionStyleNone;
     return aPropertyCell;
 }
 
@@ -115,12 +118,12 @@
     [self.navigationController pushViewController:objHPPropSearchDetailVC animated:YES];
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
-    return YES;
-}
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-}
+//- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+//    return YES;
+//}
+//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+//    
+//}
 
 #pragma mark Button Actions
 

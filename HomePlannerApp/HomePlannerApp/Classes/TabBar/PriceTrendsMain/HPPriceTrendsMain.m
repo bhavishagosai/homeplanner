@@ -86,7 +86,7 @@
     if (aHPTrendsCell) {
         aHPTrendsCell.lblName.text = [[mutArrTrendsList  objectAtIndex:indexPath.row]objectForKey:@"city_name"];
     }
-    
+    aHPTrendsCell.selectionStyle = UITableViewCellSelectionStyleNone;
     return aHPTrendsCell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

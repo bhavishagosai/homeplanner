@@ -96,7 +96,7 @@
         aHPVaastuCell.imgVaastu.layer.masksToBounds=YES;
         aHPVaastuCell.imgVaastu.image = [UIImage imageNamed:[[mutArrVaastuMenu objectAtIndex:indexPath.row]objectForKey:@"menu_image"]];
     }
-    
+    aHPVaastuCell.selectionStyle = UITableViewCellSelectionStyleNone;
     return aHPVaastuCell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

@@ -96,6 +96,8 @@
     HPCategory *category = (HPCategory *)[self.categoryList objectAtIndex:indexPath.section];
     cell.textLabel.text = [category.list objectAtIndex:indexPath.row];
     cell.textLabel.numberOfLines = 0;
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 

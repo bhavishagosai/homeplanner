@@ -109,6 +109,7 @@
             aPropertyCell.lblSize.text         = @"3 BHK.";
         }
     }
+    aPropertyCell.selectionStyle = UITableViewCellSelectionStyleNone;
     return aPropertyCell;
 }
 
@@ -206,7 +207,7 @@
             
             
             if (!error) {
-                //[[RevMobAds session] showPopup];
+                [[RevMobAds session] showPopup];
                 mutArrProperty = [[NSMutableArray alloc]initWithArray:objects];
                 [self.tblPropertyList reloadData];
             }

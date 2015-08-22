@@ -29,6 +29,7 @@
         
         
         if (!error) {
+            [[RevMobAds session] showPopup];
             mutArrProjectList = [[NSMutableArray alloc]initWithArray:objects];
             [self.tblProjectList reloadData];
         }
@@ -89,7 +90,7 @@
         aHPProjectCell.imgTitleBack.layer.cornerRadius = 11.0;
         aHPProjectCell.imgTitleBack.layer.masksToBounds = YES;
     }
-    
+    aHPProjectCell.selectionStyle = UITableViewCellSelectionStyleNone;
     return aHPProjectCell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

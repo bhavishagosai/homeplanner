@@ -211,7 +211,7 @@ static NSString *kDefaultAutoCompleteCellIdentifier = @"_DefaultAutoCompleteCell
     
     [self configureCell:cell atIndexPath:indexPath withAutoCompleteString:suggestedString];
     
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 

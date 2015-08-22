@@ -8,9 +8,14 @@
 
 #import "HPNewReqVC.h"
 
-@interface HPNewReqVC ()
+@import GoogleMobileAds;
 
+@interface HPNewReqVC () <GADInterstitialDelegate>
+
+/// The interstitial ad.
+@property(nonatomic, strong) GADInterstitial *interstitial;
 @end
+
 
 @implementation HPNewReqVC
 
@@ -204,7 +209,8 @@
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [hudProgress hide:YES];
                 [hudProgress removeFromSuperview];
-                [self.navigationController popViewControllerAnimated:YES];
+                [self createAndLoadInterstitial];
+                
             });
         } else {
             NSLog(@"Error in Data Store");
@@ -226,4 +232,47 @@
 - (IBAction)btnEmailClick:(UIButton *)sender {
     sender.selected = !sender.selected;
 }
+
+- (void)createAndLoadInterstitial {
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    self.interstitial =
+    [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-9600844165124194/4392078461"];
+    self.interstitial.delegate = self;
+    
+    GADRequest *request = [GADRequest request];
+    // Request test ads on devices you specify. Your test device ID is printed to the console when
+    // an ad request is made. GADInterstitial automatically returns test ads when running on a
+    // simulator.
+//    request.testDevices = @[
+//                            kGADSimulatorID  // Eric's iPod Touch
+//                            ];
+    [self.interstitial loadRequest:request];
+    [self performSelector:@selector(presentAdd) withObject:nil afterDelay:1.0];
+    
+}
+
+-(void)presentAdd{
+    if (self.interstitial.isReady) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        [self.interstitial presentFromRootViewController:self];
+    }else{
+        [self performSelector:@selector(presentAdd) withObject:nil afterDelay:1.0];
+    }
+}
+
+#pragma mark GADInterstitialDelegate implementation
+
+- (void)interstitial:(GADInterstitial *)interstitial
+didFailToReceiveAdWithError:(GADRequestError *)error {
+    NSLog(@"interstitialDidFailToReceiveAdWithError: %@", [error localizedDescription]);
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)interstitialDidDismissScreen:(GADInterstitial *)interstitial {
+    NSLog(@"interstitialDidDismissScreen");
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 @end

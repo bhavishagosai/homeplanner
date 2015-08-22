@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "CHTumblrMenuView.h"
+@class GADBannerView;
+
 
 @interface HPHomeVC : UIViewController{
     CHTumblrMenuView *menuView;
 }
+@property(nonatomic, weak) IBOutlet GADBannerView *bannerView;
 @property (weak, nonatomic) IBOutlet UIButton *btnLogOut;
 - (IBAction)btnLogoutClick:(id)sender;
 @end

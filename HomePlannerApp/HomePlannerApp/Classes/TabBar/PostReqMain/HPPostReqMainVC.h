@@ -11,6 +11,7 @@
 @interface HPPostReqMainVC : UIViewController{
     MBProgressHUD *hudProgress;
     NSMutableArray *mutArrPropertyReq;
+    NSIndexPath *selectedIndex;
 }
 @property (weak, nonatomic) IBOutlet UIButton *btnSignIn;
 @property (weak, nonatomic) IBOutlet UILabel *lblInstruction;

@@ -406,6 +406,8 @@
 		B8CAF9031AB34D0A002D1171 /* HPLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CAF9021AB34D0A002D1171 /* HPLoginVC.m */; };
 		B8E7B1391B2D4FA8006EEBE0 /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E7B1371B2D4FA8006EEBE0 /* 37x-Checkmark.png */; };
 		B8E7B13A1B2D4FA8006EEBE0 /* 37x-Checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E7B1381B2D4FA8006EEBE0 /* 37x-Checkmark@2x.png */; };
+		B8EEDA7A1B879D9D00BAE7A4 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8EEDA721B879D9D00BAE7A4 /* GoogleMobileAds.framework */; };
+		B8EEDA7B1B879D9D00BAE7A4 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = B8EEDA791B879D9D00BAE7A4 /* README.txt */; };
 		B8F5ABDE1ABA02D600AC966F /* HPPropertySearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F5ABDD1ABA02D600AC966F /* HPPropertySearchCell.m */; };
 		B8F5ABED1ABA0CE800AC966F /* btnFav_Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F5ABEB1ABA0CE800AC966F /* btnFav_Selected.png */; };
 		B8F5ABEE1ABA0CE900AC966F /* btnFav.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F5ABEC1ABA0CE800AC966F /* btnFav.png */; };
@@ -886,6 +888,13 @@
 		B8CAF9021AB34D0A002D1171 /* HPLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPLoginVC.m; sourceTree = "<group>"; };
 		B8E7B1371B2D4FA8006EEBE0 /* 37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark.png"; sourceTree = "<group>"; };
 		B8E7B1381B2D4FA8006EEBE0 /* 37x-Checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark@2x.png"; sourceTree = "<group>"; };
+		B8EEDA721B879D9D00BAE7A4 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		B8EEDA741B879D9D00BAE7A4 /* GADMAdNetworkAdapterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMAdNetworkAdapterProtocol.h; sourceTree = "<group>"; };
+		B8EEDA751B879D9D00BAE7A4 /* GADMAdNetworkConnectorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMAdNetworkConnectorProtocol.h; sourceTree = "<group>"; };
+		B8EEDA761B879D9D00BAE7A4 /* GADMEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMEnums.h; sourceTree = "<group>"; };
+		B8EEDA771B879D9D00BAE7A4 /* GADMRewardBasedVideoAdNetworkAdapterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMRewardBasedVideoAdNetworkAdapterProtocol.h; sourceTree = "<group>"; };
+		B8EEDA781B879D9D00BAE7A4 /* GADMRewardBasedVideoAdNetworkConnectorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMRewardBasedVideoAdNetworkConnectorProtocol.h; sourceTree = "<group>"; };
+		B8EEDA791B879D9D00BAE7A4 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		B8F5ABDC1ABA02D600AC966F /* HPPropertySearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPPropertySearchCell.h; sourceTree = "<group>"; };
 		B8F5ABDD1ABA02D600AC966F /* HPPropertySearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPPropertySearchCell.m; sourceTree = "<group>"; };
 		B8F5ABEB1ABA0CE800AC966F /* btnFav_Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnFav_Selected.png; sourceTree = "<group>"; };
@@ -928,6 +937,7 @@
 				B8FA7CC51B6414D10055B662 /* libz.dylib in Frameworks */,
 				B8C88A771AB751DF00E7558C /* CoreLocation.framework in Frameworks */,
 				A93831071AC03BC8002CF93B /* QuartzCore.framework in Frameworks */,
+				B8EEDA7A1B879D9D00BAE7A4 /* GoogleMobileAds.framework in Frameworks */,
 				B8C88A7D1AB7521700E7558C /* Security.framework in Frameworks */,
 				B8FF934E1B69533700A802FD /* GoogleMaps.framework in Frameworks */,
 				B8C88A7B1AB7520800E7558C /* SystemConfiguration.framework in Frameworks */,
@@ -1757,6 +1767,8 @@
 		B8CAF8F31AB34C84002D1171 /* Other Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B8EEDA721B879D9D00BAE7A4 /* GoogleMobileAds.framework */,
+				B8EEDA731B879D9D00BAE7A4 /* Mediation Adapters */,
 				B86D8C4A1B752672005F950F /* TwitterKit.framework */,
 				B86D8C4B1B752672005F950F /* TwitterKitResources.bundle */,
 				B86D8C4C1B752672005F950F /* TwitterCore.framework */,
@@ -1818,6 +1830,19 @@
 			path = BlurVire;
 			sourceTree = "<group>";
 		};
+		B8EEDA731B879D9D00BAE7A4 /* Mediation Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				B8EEDA741B879D9D00BAE7A4 /* GADMAdNetworkAdapterProtocol.h */,
+				B8EEDA751B879D9D00BAE7A4 /* GADMAdNetworkConnectorProtocol.h */,
+				B8EEDA761B879D9D00BAE7A4 /* GADMEnums.h */,
+				B8EEDA771B879D9D00BAE7A4 /* GADMRewardBasedVideoAdNetworkAdapterProtocol.h */,
+				B8EEDA781B879D9D00BAE7A4 /* GADMRewardBasedVideoAdNetworkConnectorProtocol.h */,
+				B8EEDA791B879D9D00BAE7A4 /* README.txt */,
+			);
+			path = "Mediation Adapters";
+			sourceTree = "<group>";
+		};
 		B8F5ABDB1ABA02A300AC966F /* propertySearch */ = {
 			isa = PBXGroup;
 			children = (
@@ -1866,6 +1891,11 @@
 				CLASSPREFIX = HP;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = BDPartners;
+				TargetAttributes = {
+					B856ED3D1AB1F54800F533D1 = {
+						DevelopmentTeam = XZDGN7QEVF;
+					};
+				};
 			};
 			buildConfigurationList = B856ED391AB1F54800F533D1 /* Build configuration list for PBXProject "HomePlannerApp" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -2134,6 +2164,7 @@
 				B86D65181B5D7946007288EE /* Croatia@2x.png in Resources */,
 				B86D65B61B5D7946007288EE /* Spain@2x.png in Resources */,
 				B86D655C1B5D7946007288EE /* Libya@2x.png in Resources */,
+				B8EEDA7B1B879D9D00BAE7A4 /* README.txt in Resources */,
 				B83763851B6166F0005ECC76 /* Conversation_speech_bubbles__128.png in Resources */,
 				B86D64F21B5D7946007288EE /* Azerbaijan@2x.png in Resources */,
 				B86D65861B5D7946007288EE /* Northern-Cyprus@2x.png in Resources */,
@@ -2413,12 +2444,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: bhavisha gosai (QJC49A9TPL)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/HomePlannerApp/Other\\ Classes/GoogleMap",
 					"$(PROJECT_DIR)/HomePlannerApp/Other\\ Classes/RevmobSDK",
+					"$(PROJECT_DIR)/HomePlannerApp/Other\\ Classes",
 					"$(PROJECT_DIR)/HomePlannerApp/Other\\ Classes",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2429,7 +2461,7 @@
 					"$(inherited)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "548a57de-74c9-4491-b976-f5c952fbed88";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -2440,12 +2472,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: bhavisha gosai (QJC49A9TPL)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/HomePlannerApp/Other\\ Classes/GoogleMap",
 					"$(PROJECT_DIR)/HomePlannerApp/Other\\ Classes/RevmobSDK",
+					"$(PROJECT_DIR)/HomePlannerApp/Other\\ Classes",
 					"$(PROJECT_DIR)/HomePlannerApp/Other\\ Classes",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2457,7 +2490,7 @@
 					"$(inherited)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "548a57de-74c9-4491-b976-f5c952fbed88";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

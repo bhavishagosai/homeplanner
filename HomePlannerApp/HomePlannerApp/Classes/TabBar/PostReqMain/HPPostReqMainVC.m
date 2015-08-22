@@ -102,10 +102,53 @@
     
     UILabel *lblBed = (UILabel*)[aHPReqCell.contentView viewWithTag:6];
     lblBed.text = [NSString stringWithFormat:@"%@\nBHK",mutArrPropertyReq[indexPath.row][@"Req_Bed"]];
-
+    aHPReqCell.selectionStyle = UITableViewCellSelectionStyleNone;
     return aHPReqCell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
+}
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"%@",indexPath);
+    selectedIndex = indexPath;
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Home Planner" message:@"Are you sure you want to delete this requirement ?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes",nil];
+    [alert show];
+    
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 1) {
+        hudProgress = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+        hudProgress.labelText = @"Deleting...";
+        [self.navigationController.view addSubview:hudProgress];
+        [hudProgress show:YES];
+
+        PFObject *objDelete = [mutArrPropertyReq objectAtIndex:selectedIndex.row];
+        [objDelete deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (!error) {
+                [mutArrPropertyReq removeObjectAtIndex:selectedIndex.row];
+                [self.tblReqList deleteRowsAtIndexPaths:[NSArray arrayWithObject:selectedIndex] withRowAnimation:UITableViewRowAnimationLeft];
+                
+                UIImageView *imageView;
+                UIImage *image = [UIImage imageNamed:@"37x-Checkmark.png"];
+                imageView = [[UIImageView alloc] initWithImage:image];
+                hudProgress.customView = imageView;
+                hudProgress.mode = MBProgressHUDModeCustomView;
+                hudProgress.labelText = @"Deleted.";
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [hudProgress hide:YES];
+                    [hudProgress removeFromSuperview];
+                });
+            }else{
+                [hudProgress hide:YES];
+                [hudProgress removeFromSuperview];
+            }
+            
+        }];
+    }
 }
 
 - (IBAction)btnSignInClick:(id)sender {

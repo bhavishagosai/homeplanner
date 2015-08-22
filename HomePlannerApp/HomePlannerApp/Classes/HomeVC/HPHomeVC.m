@@ -9,6 +9,8 @@
 #import "HPHomeVC.h"
 #import <Parse/Parse.h>
 
+@import GoogleMobileAds;
+
 @interface HPHomeVC ()
 
 @end
@@ -21,6 +23,13 @@
     if (![PFUser currentUser]) {
         self.btnLogOut.hidden = YES;
     }
+    self.bannerView.adUnitID = @"ca-app-pub-9600844165124194/2915345269";
+    self.bannerView.rootViewController = self;
+    GADRequest *request = [GADRequest request];
+//    request.testDevices = @[
+//                            kGADSimulatorID  // Eric's iPod Touch
+//                            ];
+    [self.bannerView loadRequest:request];
     // Do any additional setup after loading the view.
 }
 

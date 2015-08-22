@@ -132,7 +132,7 @@
         }
         
     }
-    
+    aHPAgentCell.selectionStyle = UITableViewCellSelectionStyleNone;
     return aHPAgentCell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -146,9 +146,9 @@
 }
 
 -(IBAction)btnWhatsaAppClick:(id)sender{
-    NSURL *whatsappURL = [NSURL URLWithString:@"whatsapp://"];
+    NSURL *whatsappURL = [NSURL URLWithString:[@"whatsapp://" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     if ([[UIApplication sharedApplication] canOpenURL: whatsappURL]) {
-        NSURL *whatsappURL = [NSURL URLWithString:@"whatsapp://send?text=Hello Agent!"];
+        NSURL *whatsappURL = [NSURL URLWithString:[@"whatsapp://send?text=Hello Agent!" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         [[UIApplication sharedApplication] openURL: whatsappURL];
     }else{
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Home Planner" message:@"Whatsapp app is not installed on your device." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];

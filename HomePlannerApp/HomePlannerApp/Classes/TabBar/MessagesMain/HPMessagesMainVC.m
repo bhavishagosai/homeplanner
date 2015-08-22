@@ -141,7 +141,7 @@
                 break;
         }
     }
-    
+    aHPMessagesCell.selectionStyle = UITableViewCellSelectionStyleNone;
     return aHPMessagesCell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

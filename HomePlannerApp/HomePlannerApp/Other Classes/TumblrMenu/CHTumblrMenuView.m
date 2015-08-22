@@ -25,7 +25,7 @@
 
 #import "CHTumblrMenuView.h"
 #define CHTumblrMenuViewTag 1999
-#define CHTumblrMenuViewImageHeight 80
+#define CHTumblrMenuViewImageHeight 75
 #define CHTumblrMenuViewTitleHeight 32
 #define CHTumblrMenuViewVerticalPadding 5
 #define CHTumblrMenuViewHorizontalMargin 5
@@ -81,9 +81,9 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        UITapGestureRecognizer *ges = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismiss:)];
-        ges.delegate = self;
-        [self addGestureRecognizer:ges];
+//        UITapGestureRecognizer *ges = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismiss:)];
+//        ges.delegate = self;
+//        [self addGestureRecognizer:ges];
         self.backgroundColor = [UIColor clearColor];
         backgroundView_ = [[UIImageView alloc] initWithFrame:self.bounds];
         backgroundView_.backgroundColor = TumblrBlue;
@@ -310,7 +310,7 @@
     }
     
 //    self.frame = topViewController.view.bounds;
-    self.frame =CGRectMake(0, 64,topViewController.view.bounds.size.width, topViewController.view.bounds.size.height-64);
+    self.frame =CGRectMake(0, 64,topViewController.view.bounds.size.width, topViewController.view.bounds.size.height-114);
     [topViewController.view addSubview:self];
     
     [self riseAnimation];
